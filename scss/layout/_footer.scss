@@ -1,0 +1,26 @@
+@use "../foundation/mixin";
+@use "../foundation/base";
+
+.l-footer{
+    background: base.$pink;
+    position: relative;
+    min-height: 277px;
+    padding-bottom: 62px;
+    
+    .l-footerContent{
+        padding-top: 4rem;
+
+    }
+    .l-footer__btmBar{
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        padding: 2rem 0;
+        width: 100%;
+        text-align: center;
+        background: base.$purple;
+        color: #fff;
+
+    }
+
+}

@@ -1,0 +1,35 @@
+01/20/23 3:23:53: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 3:25:54: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 3:27:54: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 3:29:56: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:47:52: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:48:52: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:49:53: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:50:53: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:51:54: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:53:55: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:55:56: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:57:57: mystyle.scss - parse error: failed at `@use "foundation/base";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 4:59:58: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 5:01:21: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:01:25: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:03:11: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:03:25: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:03:26: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:03:47: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:04:07: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:04:09: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:05:10: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:06:13: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:07:05: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:07:18: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:07:34: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:08:35: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:09:35: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:10:20: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:17:19: mystyle.scss - parse error: failed at `@use "scss/foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:18:20: mystyle.scss - parse error: failed at `@use "/scss/foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:19:20: mystyle.scss - parse error: failed at `@use "/scss/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:20:20: mystyle.scss - parse error: failed at `@use "scss/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:22:21: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0
+01/20/23 8:24:22: mystyle.scss - parse error: failed at `@use "foundation/mixin";` C:\xampp\htdocs\wordpress\wp-content\themes\LP-list\scss\mystyle.scss on line 1, at column 0

@@ -1,0 +1,137 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+
+.postid-184{
+    .c-hTitle{
+        text-align: center;
+        width: 528px;
+        p{
+            font-size: 3.6rem;
+            letter-spacing: 0.1em;
+            color: #fff;
+            font-family: 'Josefin Sans';
+        }
+    }
+
+    .c-cream{
+        display: flex;
+        justify-content: space-between;
+        width: 495px;
+        margin: 0 auto;
+        
+        img{
+            width: 219px;
+            height: 153px;
+        }
+        .c-cream__text{
+            text-align: center;
+
+            h3{
+                font-weight: 500;
+                font-family: 'Josefin Sans';
+                margin-top: 1rem;
+                margin-bottom: 1.3rem;
+                letter-spacing: 0.1em;
+            }
+            .c-cream__price{
+                font-size: 2.0rem;
+                margin-top: 0;
+                letter-spacing: 0.1em;
+                font-family: 'inter';
+                color: #000;
+            }
+        }
+
+    }
+
+    .c-desc{
+        margin-top: 2.5rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.1em;
+    }
+
+    .c-face{
+        display: flex;
+        justify-content: space-between;
+        width: 224px;
+        height: 80px;
+
+        &__img{
+            width: 80px;
+            object-fit: cover;
+        }
+        &__sa{
+            width: 140px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 8rem;
+        }
+    }
+
+    .c-fSocial{
+        width: 182px;
+        margin: 0 auto 5.2rem;
+        display: flex;
+        justify-content: space-between;
+
+
+        .twitter i{
+            color: rgb(85, 172, 238);
+        }
+        .instagram i{
+            color: rgb(64, 93, 230);
+            color: rgb(88, 81, 219);
+            color: rgb(131, 58, 180);
+            color: rgb(193, 53, 132);
+            color: rgb(225, 48, 108);
+            color: rgb(253, 29, 29);
+            color: rgb(245, 96, 64);
+            color: rgb(247, 119, 55);
+            color: rgb(252, 175, 69);
+            color: rgb(255, 220, 128);
+        }
+        .facebook i{
+            color: rgb(49, 80, 150);
+        }
+    }
+
+    .c-fGrid{
+        width: 642px;
+        margin: 0 auto;
+        padding-right: 4rem;
+        .c-fGrid__wrapper{
+            @include mixin.table_layout(0, 552px);
+            height: 4rem;
+            margin-bottom: 6rem;
+    
+            li{
+                text-align: center;
+
+                &:nth-child(1){
+                    width: 185px;
+                }
+                &:nth-child(2){
+                    width: 214px;
+                }
+                &:nth-child(3){
+                    width: 153px;
+                }
+
+                a{
+                    color: #333;
+                }
+    
+                &:not(:nth-child(3)){
+                    border-right: 1px solid #333;
+                }
+            }
+        }
+
+    }
+
+
+}
+
+
+

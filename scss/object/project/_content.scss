@@ -1,0 +1,75 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+.postid-184{
+    .p-cContent{
+        width: 495px;
+        margin: 0 auto;
+    }
+
+
+    .p-block{
+        border-radius: 15px;
+
+        .p-inner{
+            margin: 20px auto;
+            h4{
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+                span{
+                    font-size: 2.4rem;
+                }
+            }
+            p{
+                padding-left: 4.5rem;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .p-odd{
+        width: 540px;
+        margin-top: 4rem;
+        background: base.$pink;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        .p-inner{
+            padding: 40px 30px 50px;
+            border-radius: 15px;
+            width: 500px;
+            background: #fff;
+        }
+
+        &:nth-of-type(1){
+            height: 375px;
+        }
+        &:last-child{
+            height: 345px;
+
+            .p-inner{
+                height: 305px;
+            }
+        }
+
+    }
+
+    .p-even{
+        width: 610px;
+        height: 664px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 40px 30px 50px;
+
+        .p-inner{
+            padding-bottom: 3rem;
+            border-bottom: 3px solid base.$pink;
+            margin: 0 auto;
+        }
+        img{
+            object-fit: cover;
+            width: 550px;
+            height: 315px;
+            margin-top: 4rem;
+        }
+    }
+}

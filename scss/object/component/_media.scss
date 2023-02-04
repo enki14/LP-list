@@ -1,0 +1,68 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+.postid-184{
+    .mb40{
+        margin-bottom: 40px;
+    }
+
+    .c-pImg{
+        width: 500px;
+        margin: 0 auto;
+
+        img{
+            margin: 0 auto;
+            width: 500px;
+            background-size: cover;
+        }
+    }
+
+    .c-dlMedia{
+        padding-left: 5.2rem;
+        position: relative;
+
+        &::before{
+            @include mixin.background_url('c-dl__point.png', 36px, 30px);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        dt{
+            position: relative;
+            padding-bottom: 19px;
+
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 1.2rem;
+                left: -9px;
+                width: 160px;
+                height: 17px;
+                background: base.$pink;
+                border-radius: 50%;
+                box-shadow: inset 0 0 2px 2px #fff;
+                z-index: -1;
+            }
+        }
+
+        dd{
+            margin-left: 0;
+            line-height: 25px;
+            letter-spacing: 10%;
+        }
+    }
+
+    .c-topImg{
+        width: 100%;
+        height: 251px;
+        margin: 0 auto 6rem;
+    }
+    .c-btmImg{
+        display: block;
+        margin: 6rem auto 8rem;
+        width: 668px;
+        height: 744px;
+    }
+}

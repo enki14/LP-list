@@ -1,0 +1,28 @@
+@use "../foundation/mixin";
+@use "../foundation/base";
+
+.l-header{
+    @include mixin.background_url('flower-jumbotron.png', 100%, 696px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__logo{
+        margin: 0 auto;
+        padding: 40px 0 80px 50px;
+        width: 100%;
+    }
+    &__catch{
+        position: relative;
+        width: 810px;
+        height: 361px;
+        margin: 0 auto;
+
+        img{
+            position: absolute;
+            width: 372px;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

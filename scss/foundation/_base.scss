@@ -1,0 +1,72 @@
+@use "mixin";
+
+$gold: #EFBA30;
+$pink:#F7E1E1;
+$purple:#5202A3;
+
+html{
+    font-size: 62.5%;
+    // overflow:auto;
+   
+}
+
+
+.postid-184{
+    font-family: 'Yu Mincho', 'Yu Mincho', '游明朝体', 'Yu Mincho Light', 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
+    color: $purple;
+
+    .content_area{
+        width: 810px;
+        margin: 0 auto;
+        padding-top: 8rem;
+    }
+
+    // h3以外のh1~h4までの共通の見出しクラス
+    .midashi{
+        font-weight: 600;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .last_module{
+        margin-bottom: 0;
+    }
+
+    
+
+    h1{
+        font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+        color: #fff;
+    }
+
+    h2{
+        font-size: clamp(1.8rem, 4vw, 3.6rem);
+        min-height: 0vw;
+    }
+
+    h3{
+        font-size: clamp(1.6rem, 3vw, 3.2rem);
+        min-height: 0vw;
+    }
+
+    h4{
+        font-size: clamp(1.6rem, 2.5vw, 2rem);
+    }
+
+    dt{
+        font-size: 1.8rem;
+    }
+
+    p,
+    a,
+    dd,
+    li,
+    span{
+        @include mixin.font_pattern(15px, 14px, $purple, 400);
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+}

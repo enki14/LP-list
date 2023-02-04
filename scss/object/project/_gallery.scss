@@ -1,0 +1,26 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+
+.postid-184{
+    .p-imgArea{
+        position: relative;
+        width: 791px;
+        margin: 0 auto;
+        &::before{
+            @include mixin.background_url('l-philosophy__before.png', 120px, 217px);
+            position: absolute;
+            top: 0;
+            left: 0; 
+            background-size: cover;
+        }
+        &::after{
+            @include mixin.background_url('l-philosophy__after.png', 110px, 243px,);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-size: cover;
+        }
+
+    }
+}

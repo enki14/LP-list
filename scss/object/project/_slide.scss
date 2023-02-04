@@ -1,0 +1,27 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+.postid-184{
+    .p-unit{
+        width: 274px;
+        height: 452px;
+        margin: 9.5rem auto 0;
+        background: base.$pink;
+        position: relative;
+        box-shadow: 17px 17px #D9D9D9;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+
+        &::before{
+            @include mixin.background_url('p-unit__head.png', 264px, 95px);
+            position: absolute;
+            top: -95px;
+            left: 0;
+        }
+        &__article{
+            width: 224px;
+            margin: 0 auto;
+            padding-top: 2rem;
+        }
+    }
+}

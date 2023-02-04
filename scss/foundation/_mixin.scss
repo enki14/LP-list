@@ -1,0 +1,67 @@
+@use "sass:math";
+
+
+// mixinでメディアクエリを管理する
+$breakpoint: (
+    sp: 'all and (max-width: 420px)',
+    tab: 'all and (max-width: 830px)'
+);
+
+// $bpは$breakpointのそれぞれのキーを示している
+// map-get関数でマップの値を取得する
+@mixin mq($bp){
+    @media #{map-get($breakpoint, $bp)} {
+        @content;
+    }
+}
+
+
+@mixin clearfix{
+    &::after{
+        content: '';
+        display: block;
+        clear: both
+    }
+}
+
+// テーブルレイアウトで要素を横並び
+@mixin table_layout($margin: 0, $width: 100%){
+    display: table;
+    margin: 0 auto;
+    width: #{$width};
+    border-collapse: collapse;
+    
+    > li{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 math.div($margin, 2);
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+}
+
+@mixin font_pattern($pcSize: 15px, $spSize: 14px, $color: #333, $weight: 500){
+    font-size: clamp(#{$spSize}, 2vw, #{$pcSize});
+    color: #{$color};
+    font-weight: #{$weight};
+}
+
+@mixin btn_pattern($width: 100%, $padding: 20px 30px, $background: blue, $radius: 5px){
+    padding: #{$padding};
+    background: #{$background};
+    border-radius: #{$radius};
+    text-align: center;
+    width: #{$width};
+}
+
+@mixin background_url($file: '', $width: '', $height: ''){
+    content: '';
+    display: inline-block;
+    width: #{$width};
+    height: #{$height};
+    background-image: url('../images/#{$file}');
+}

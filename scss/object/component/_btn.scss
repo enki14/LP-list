@@ -1,0 +1,58 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+
+
+.c-Btn{
+    position: relative;
+    width: 435px;
+    border: 3px solid base.$purple;
+    border-Radius: 10px;
+    background: #fff;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem auto 0;
+
+    &::before{
+        @include mixin.background_url('strawberry.png', 114px, 136px);
+        position: absolute;
+        top: -7.3rem;
+        left: -6rem;
+    }
+
+    span{
+        font-family: 'inter';
+        font-weight: 600;
+        font-size: 22.12px;
+        letter-spacing: 0.1em;
+        line-height: 54px;
+        color: base.$gold;
+        text-align: center;
+        width: 301px;
+    }
+    .c-Btn__right{
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: base.$pink;
+
+        i{
+            line-height: 54px;
+            color: base.$purple;
+            font-size: 27px;
+        }
+    }
+
+    &:hover{
+        background: base.$purple;
+        transition: .3s;
+        span{
+            color: #fff;
+        }
+        .c-Btn__right{
+            background: #fff;
+        }
+        
+    }
+}

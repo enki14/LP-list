@@ -1,0 +1,32 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+.postid-184{
+    .p-btmMessage{
+        width: 709px;
+        margin: 60px auto 0;
+        position: relative;
+        &::before{
+            @include mixin.background_url('p-btmMessage__before.png', 104px, 102px);
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        &::after{
+            @include mixin.background_url('p-btmMessage__after.png', 104px, 101px);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .p-btmMessage__text{
+            height: 121px;
+            width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            line-height: 30px;
+            text-align: center;
+
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+
+.postid-184{
+    .c-contentTitle{
+        margin: 0 auto 60px;
+        width: 810px;
+    }
+
+    .c-btmMessage--award{
+        width: 830px;
+        margin: 0 auto;
+
+        img{
+            width: 810px;
+            height: 161px;
+            object-fit: cover;
+        }
+    }
+}
