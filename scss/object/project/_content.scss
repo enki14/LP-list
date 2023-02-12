@@ -5,25 +5,46 @@
     .p-cContent{
         width: 495px;
         margin: 0 auto;
+
+        @include mixin.mq(tab){
+            width: 400px;
+        }
+        @include mixin.mq(sp){
+            min-width: 260px;
+            width: 72.2%;
+        }
     }
 
 
     .p-block{
         border-radius: 15px;
 
+        @include mixin.mq(tab){
+            border-radius: 13px;
+        }
+
         .p-inner{
             margin: 20px auto;
             h4{
+                display: flex;
                 margin-top: 0;
                 margin-bottom: 1.5rem;
-                span{
-                    font-size: 2.4rem;
-                }
+                // span{
+                //     font-size: 2.4rem;
+                // }
             }
             p{
                 padding-left: 4.5rem;
                 line-height: 1.6;
                 margin-bottom: 0;
+            }
+            @include mixin.mq(sp){
+                // h4 span{
+                //     font-size: 1.8rem;
+                // }
+                p{
+                    padding-left: 2.8rem;
+                }
             }
         }
     }
@@ -33,24 +54,50 @@
         margin-top: 4rem;
         background: base.$pink;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+        @include mixin.mq(tab){
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            
+           
+        }
+
+
         .p-inner{
             padding: 40px 30px 50px;
             border-radius: 15px;
             width: 500px;
             background: #fff;
-        }
 
-        &:nth-of-type(1){
-            height: 375px;
-        }
-        &:last-child{
-            height: 345px;
-
-            .p-inner{
-                height: 305px;
+            @include mixin.mq(tab){
+                width: 91.5%;
+                padding: 30px 20px 40px;
+                border-radius: 9px;
+            }
+            @include mixin.mq(sp){
+                width: 90.1%;
             }
         }
-
+    }
+    
+    .mt21-4{
+        @include mixin.mq(tab){
+            margin-top: 21.4%;
+        }
+        @include mixin.mq(tab){
+            margin-top: 43.2%;
+        }
+        
+    }
+    .mt34-5{
+        @include mixin.mq(tab){
+            margin: 34.5% auto 0;
+        }
+        @include mixin.mq(sp){
+            margin-top: 68.6%;
+        }
+        
     }
 
     .p-even{
@@ -60,6 +107,15 @@
         background: #fff;
         padding: 40px 30px 50px;
 
+        @include mixin.mq(tab){
+            width: 93.1%;
+            height: auto;
+            padding: 30px 20px 0;
+        }
+        @include mixin.mq(sp){
+            width: 90.1%;
+        }
+        
         .p-inner{
             padding-bottom: 3rem;
             border-bottom: 3px solid base.$pink;
@@ -70,6 +126,12 @@
             width: 550px;
             height: 315px;
             margin-top: 4rem;
+
+            @include mixin.mq(tab){
+                width: 100%;
+                margin-top: 3rem;
+                height: auto;
+            }
         }
     }
 }

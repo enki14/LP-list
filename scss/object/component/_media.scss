@@ -15,17 +15,38 @@
             width: 500px;
             background-size: cover;
         }
+
+        @include mixin.mq(tab){
+            width: 69%;
+            img{
+                width: 100%;
+            }
+        }
+        @include mixin.mq(sp){
+            width: 65.5%;
+        }
     }
 
     .c-dlMedia{
         padding-left: 5.2rem;
         position: relative;
 
+        @include mixin.mq(sp){
+            padding-left: 3rem;
+        }
+
         &::before{
             @include mixin.background_url('c-dl__point.png', 36px, 30px);
             position: absolute;
             left: 0;
             top: 0;
+
+            @include mixin.mq(sp){
+                width: 17px;
+                height: 14px;
+                top: 5px;
+                background-size: contain;
+            }
         }
 
         dt{
@@ -44,6 +65,12 @@
                 border-radius: 50%;
                 box-shadow: inset 0 0 2px 2px #fff;
                 z-index: -1;
+
+                @include mixin.mq(sp){
+                    width: 120px;
+                    height: 14px;
+                    top: 1.4rem;
+                }
             }
         }
 
@@ -57,12 +84,28 @@
     .c-topImg{
         width: 100%;
         height: 251px;
+        background-size: cover;
         margin: 0 auto 6rem;
+        @include mixin.mq(tab){
+            object-fit: contain;
+            height: auto;
+        }
+        @include mixin.mq(sp){
+            margin-bottom: 3rem;
+        }
     }
     .c-btmImg{
-        display: block;
         margin: 6rem auto 8rem;
         width: 668px;
         height: 744px;
+
+        @include mixin.mq(tab){
+            width: 93.7%;
+            height: auto;
+        }
+        @include mixin.mq(sp){
+            width: 100%;
+            margin: 3rem auto;
+        }
     }
 }

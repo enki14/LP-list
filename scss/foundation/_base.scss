@@ -19,6 +19,15 @@ html{
         width: 810px;
         margin: 0 auto;
         padding-top: 8rem;
+
+        @include mixin.mq(tab){
+            width: 96%;
+            padding-top: 6rem;
+        }
+        @include mixin.mq(sp){
+            width: 93%;
+            
+        }
     }
 
     // h3以外のh1~h4までの共通の見出しクラス
@@ -26,13 +35,64 @@ html{
         font-weight: 600;
         margin-bottom: 60px;
         text-align: center;
+
+        @include mixin.mq(tab){
+            margin-bottom: 4rem;
+        }
+        @include mixin.mq(sp){
+            margin-bottom: 2.7rem;
+        }
     }
 
     .last_module{
         margin-bottom: 0;
     }
 
-    
+    .number{
+        font-size: 2.4rem;
+        @include mixin.mq(sp){
+            font-size: 1.8rem;
+        }
+    }
+
+    .indent{
+        font-size: 2rem;
+        text-indent: -1rem;
+        padding-left: 1rem;
+        @include mixin.mq(sp){
+            font-size: 1.6rem;
+            text-indent: -1.5rem;
+            padding-left: 1.5rem;
+        }
+    }
+
+    .pc{
+        display: block;
+        @include mixin.mq(tab){
+            display: none;
+        }
+        @include mixin.mq(sp){
+            display: none;
+        }
+    }
+    .tab{
+        display: none;
+        @include mixin.mq(tab){
+            display: block;
+        }
+        @include mixin.mq(sp){
+            display: none;
+        }
+    }
+    .sp{
+        display: none;
+        @include mixin.mq(tab){
+            display: none;
+        }
+        @include mixin.mq(sp){
+            display: block;
+        }
+    }
 
     h1{
         font-size: clamp(2.4rem, 5.5vw, 4.8rem);

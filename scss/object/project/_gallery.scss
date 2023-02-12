@@ -22,5 +22,31 @@
             background-size: cover;
         }
 
+        @include mixin.mq(tab){
+            width: 100%;
+
+            &::before{
+                width: 16.8%;
+                height: 42.1%;
+                background-size: contain;
+            }
+            &::after{
+                width: 12.6%;
+                height: 46.6%;
+                background-size: cover;
+            }
+        }
+        @include mixin.mq(sp){
+            &::before{
+                width: 21.4%;
+                height: 38.1%;
+            }
+            &::after{
+                width: 13.5%;
+                height: 42.3%;
+                background-size: contain;
+            }
+        }
+
     }
 }

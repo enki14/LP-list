@@ -20,6 +20,9 @@
         text-align: center;
         background: base.$purple;
         color: #fff;
+        @include mixin.mq(sp){
+            font-size: 1.2rem;
+        }
 
     }
 

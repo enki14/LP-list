@@ -5,5 +5,13 @@
     .p-pList{
         width: 800px;
         margin: 40px auto 0;
+
+        @include mixin.mq(tab){
+            width: 96%;
+        }
+        @include mixin.mq(sp){
+            width: 100%;
+            margin: 31px 0 0;
+        }
     }
 }

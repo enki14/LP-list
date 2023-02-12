@@ -23,17 +23,44 @@
                 right: 0;
                 top: 0;
             }
+
+            @include mixin.mq(tab){
+                &::before,
+                &::after{
+                    width: 33.6%;
+                }
+            }
+            @include mixin.mq(sp){
+                &::before,
+                &::after{
+                    display: none;
+                }
+            }
     
             &__content{
                 text-align: center;
                 
                 h2{
                     margin-top: 0;
+                    @include mixin.mq(sp){
+                        margin-bottom: 3rem;
+                        line-height: 30px;
+                        letter-spacing: 10%;
+                    }
                 }
-                p:not(last-child){
+                
+                p{
                     line-height: 50px;
-                    margin-bottom: 40px;
-
+                    @include mixin.mq(sp){
+                        line-height: 35px;
+                        letter-spacing: 10%;
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 40px;
+                        @include mixin.mq(sp){
+                            margin-bottom: 3rem;
+                        }
+                    }
                 }
             }
         }
@@ -42,30 +69,39 @@
             position: relative;
             margin-top: 8rem;
 
-            .l-commodity__before{
-                position: relative;
-                height: 99px;
-                img{
-                    position: absolute;
-                    top: 0;
-                    width: 71.8%;
-                    height: 100%;
-                    background-size: cover;
-
-                }
+            @include mixin.mq(tab){
+                margin-top: 6rem;
             }
 
+            .l-commodity__before,
             .l-commodity__after{
                 position: relative;
                 height: 99px;
                 img{
                     position: absolute;
-                    bottom: 0;
-                    right: 0;
                     width: 71.8%;
                     height: 100%;
                     background-size: cover;
-
+                }
+                @include mixin.mq(tab){
+                    width: 87.4%;
+                }
+                @include mixin.mq(sp){
+                    height: 37px;
+                    img{
+                        width: 96%;
+                    }
+                }
+            }
+            .l-commodity__before{
+                img{
+                    top: 0;
+                }
+            }
+            .l-commodity__after{
+                img{
+                    bottom: 0;
+                    right: 0;
                 }
             }
 
@@ -80,38 +116,97 @@
             width: 830px;
             margin: 0 auto;
 
+            @include mixin.mq(tab){
+                width: 96%;
+            }
+
             .l-efficacy__beside{
                 position: relative;
                 display: flex;
                 justify-content: end;
 
+                @include mixin.mq(tab){
+                    justify-content: center;
+                    width: 91.3%;
+                }
+                @include mixin.mq(sp){
+                    width: 97.1%;
+                }
+
                 &:nth-of-type(1){
                     margin-bottom: 6rem;
                     position: relative;
-                    &::before{
-                        @include mixin.background_url('l-efficacy__top.png', 300px, 200px);
+                    @include mixin.mq(tab){
+                        height: auto;
+                        margin: 0 auto 40px;
+                    }
+
+                    img{
+                        width: 300px;
+                        height: 200px;
                         position: absolute;
                         top: 0;
                         left: 1.7rem;
-                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+                        @include mixin.mq(tab){
+                            width: 40%;
+                            height: auto;
+                            left: 30%;
+                            z-index: 3;
+                            background-size: contain;
+                            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+                        @include mixin.mq(sp){
+                            width: 77%;
+                            left: 11%;
+                        }
                     }
 
-                    &::after{
+                    &::before{
                         @include mixin.background_url('l-efficacy__before.png', 130px, 238px);
                         position: absolute;
                         top: 66.7%;
                         left: 0;
+                        z-index: 5;
                         background-size: cover;
+
+                        @include mixin.mq(tab){
+                            width: 12%;
+                            height: 31.8%;
+                            position: absolute;
+                            top: 15.3%;
+                            left: -3rem;
+                            background-size: contain;
+
+                        }
+                        @include mixin.mq(sp){
+                            display: none;
+                        }
                     }
                 }
 
                 &:nth-of-type(3){
-                    &::before{
-                        @include mixin.background_url('l-efficacy__bottom.png', 300px, 300px);
+                    @include mixin.mq(tab){
+                        height: auto;
+                        margin: 0 auto 40px;
+                    }
+
+                    img{
                         position: absolute;
                         top: 0;
                         left: 1.7rem;
                         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+                        @include mixin.mq(tab){
+                            width: 40%;
+                            height: auto;
+                            left: 30%;
+                            z-index: 3;
+                        }
+                        @include mixin.mq(sp){
+                            width: 77.6%;
+                            left: 11%;
+                        }
                     }
                 }
 
@@ -126,52 +221,90 @@
                 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
                 position: relative;
 
+                @include mixin.mq(tab){
+                    width: 91.3%;
+                    margin-bottom: 40px;
+                    border-radius: 13px;
+                }
+                @include mixin.mq(sp){
+                    width: 97.1%;
+                }
+
                 &::before{
                     @include mixin.background_url('l-efficacy__after.png', 120px, 245px);
                     position: absolute;
                     top: 78%;
                     right: -92px;
                     background-size: cover;
+
+                    @include mixin.mq(tab){
+                        width: 13.8%;
+                        height: 27.8%;
+                        top: 88.3%;
+                        right: -4.9%;
+                        background-size: contain;
+                    }
+                    @include mixin.mq(sp){
+                        display: none;
+                    }
                 }
             }
         }
 
         .l-award{
-            width: 1000px;
             margin: 0 auto;
             padding-top: 8rem;
+            @include mixin.mq(tab){
+                padding-top: 6rem;
+            }
 
             .l-award__top{
                 width: 830px;
                 margin: 0 auto 6rem;
 
                 img{
-                    height: 880px;
+                    height: auto;
                     width: 100%;
                     object-fit: cover;
+                    background-size: cover;
                 }
                 
+                @include mixin.mq(tab){
+                    width: 96%;
+                    img{
+                        object-fit: contain;
+                    }
+                }
+                @include mixin.mq(sp){
+                    width: 93.3%;
+                }
             }
             &__swiper{
                 display: block;
-                width: 100%;
+                width: 100vw;
                 height: 562px;
                 margin-bottom: 6rem;
-
-                .swiper-wrapper{
-                    .swiper-slide{
-                        
-                    }
+                @include mixin.mq(sp){
+                    height: 396px;
+                    margin-bottom: 3.5rem;
                 }
             }
         }
 
         .l-sale{
             margin-bottom: 12rem;
-            
+            @include mixin.mq(sp){
+                margin-bottom: 0;
+            }
+
             &__content{
                 width: 777px;
                 margin: 0 auto;
+
+                @include mixin.mq(tab){
+                    width: 100%;
+                }
+                
             }
         }
 
@@ -189,6 +322,12 @@
                 margin-right: -200px;
                 padding-left: 200px;
                 padding-right: 200px;
+
+                @include mixin.mq(sp){
+                    min-height: 124px;
+                    border-bottom-right-radius: 75% 124px;
+                    border-bottom-left-radius: 75% 124px;
+                }
             }
         }
 

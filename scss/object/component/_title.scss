@@ -3,9 +3,45 @@
 
 
 .postid-184{
+    .c-hTitle{
+        text-align: center;
+        width: 528px;
+
+        @include mixin.mq(tab){
+            width: 100%;
+        }
+        h1{
+            @include mixin.mq(tab){
+                font-size: 3.2rem;
+                margin-top: 0;
+            }
+            @include mixin.mq(sp){
+                font-size: 2.4rem;
+                margin-top: 0;
+            }
+        }
+        p{
+            font-size: 3.6rem;
+            letter-spacing: 0.1em;
+            color: #fff;
+            font-family: 'Josefin Sans';
+            @include mixin.mq(tab){
+                font-size: 2.4rem;
+            }
+            @include mixin.mq(sp){
+                font-size: 1.6rem;
+            }
+        }
+    }
+
     .c-contentTitle{
         margin: 0 auto 60px;
         width: 810px;
+
+        @include mixin.mq(tab){
+            width: 96vw;
+            margin-bottom: 40px;
+        }
     }
 
     .c-btmMessage--award{
@@ -15,7 +51,23 @@
         img{
             width: 810px;
             height: 161px;
-            object-fit: cover;
+            background-size: cover;
         }
+
+        @include mixin.mq(tab){
+            width: 96%;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            
+        }
+        // @include mixin.mq(sp){
+        //     width: 100%;
+        //     img{
+
+        //     }
+        // }
     }
 }
