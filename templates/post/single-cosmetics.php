@@ -151,8 +151,10 @@
             <h2 class="c-contentTitle midashi">アンケートの声</h2>
             <div class="swiper l-award__swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -166,8 +168,10 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+                            
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -181,8 +185,10 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+                            
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -196,8 +202,10 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+                            
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -211,8 +219,10 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+                            
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -226,8 +236,10 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+                            
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -241,7 +253,8 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
                             <article class="p-unit__article">
                                 <div class="c-face">
@@ -256,8 +269,10 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide p-slide">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/p-unit__head--sp.png'); ?>" class="p-unit__top" alt="三角のピンク">
                         <div class="p-unit">
+                            
                             <article class="p-unit__article">
                                 <div class="c-face">
                                     <div class="c-face__img">
@@ -272,6 +287,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
             <div class="c-btmMessage--award">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/c-btmMessage.png'); ?>" class="pc" alt="多くの肌に合った化粧品を目指して">

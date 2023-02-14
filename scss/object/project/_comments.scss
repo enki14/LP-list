@@ -18,33 +18,11 @@
 
         &::before{
             @include mixin.background_url('p-btmMessage__before.png', 104px, 102px);
-            // position: absolute;
-            // top: 0;
             left: 0;
-            
-            // @include mixin.mq(tab){
-            //     width: 50px;
-            //     height: 49px;
-            //     background-size: cover;
-            // }
-            // @include mixin.mq(sp){
-            //     width: 60px;
-            //     height: 59px;
-            // }
-
         }
         &::after{
             @include mixin.background_url('p-btmMessage__after.png', 104px, 101px);
-            // position: absolute;
-            // top: 0;
             right: 0;
-
-            // @include mixin.mq(tab){
-            //     width: 50px;
-            //     height: 49px;
-            //     background-size: cover;
-
-            // }
         }
 
         &::before,

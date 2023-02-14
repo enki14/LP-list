@@ -23,8 +23,8 @@
         }
         @include mixin.mq(sp){
             img{
-                width: 116px;
-                height: 81px;
+                width: 47.5%;
+                height: 64.8%;
             }
         }
         
@@ -44,6 +44,9 @@
                 margin-top: 1rem;
                 margin-bottom: 1.3rem;
                 letter-spacing: 0.1em;
+                @include mixin.mq(sp){
+                    font-size: 4.4%;
+                }
             }
             .c-cream__price{
                 font-size: 2.0rem;
@@ -53,7 +56,7 @@
                 color: #000;
 
                 @include mixin.mq(sp){
-                    font-size: 1.2rem;
+                    font-size: 3.3%;
                 }
             }
         }
@@ -88,9 +91,9 @@
             object-fit: cover;
             width: 100%;
             @include mixin.mq(sp){
-                width: 50px;
+                width: auto;
                 img{
-                    width: 50px;
+                    width: 100%;
                 }
             }
         }
@@ -101,6 +104,7 @@
             line-height: 8rem;
             @include mixin.mq(sp){
                 line-height: 5rem;
+                font-size: 9.87%;
             }
         }
     }
@@ -124,6 +128,7 @@
         }
         @include mixin.mq(sp){
             width: 33.3%;
+            min-width: 100px;
         }
 
 

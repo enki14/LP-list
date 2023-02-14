@@ -97,11 +97,23 @@
                 img{
                     top: 0;
                 }
+                @include mixin.mq(tab){
+                    width: 100%;
+                    img{
+                        width: 87%;
+                    }
+                }
             }
             .l-commodity__after{
                 img{
                     bottom: 0;
                     right: 0;
+                }
+                @include mixin.mq(tab){
+                    width: 100%;
+                    img{
+                        width: 87%;
+                    }
                 }
             }
 
@@ -284,9 +296,38 @@
                 width: 100vw;
                 height: 562px;
                 margin-bottom: 6rem;
+
+                .swiper-pagination{
+                    bottom: 20px;
+                }
+                .swiper-button-prev{
+                    left: 20px;
+                    &::after{
+                        font-family: 'Font Awesome 5 Free';
+                        content: '\f053';
+                        font-weight: 900;
+                        color: rgba(82, 2, 163, 0.5);
+                    }
+                }
+                .swiper-button-next{
+                    right: 20px;
+                    &::after{
+                        font-family: 'Font Awesome 5 Free';
+                        content: '\f054';
+                        font-weight: 900;
+                        color: rgba(82, 2, 163, 0.5);
+                    }
+                }
+
                 @include mixin.mq(sp){
-                    height: 396px;
                     margin-bottom: 3.5rem;
+                    height: auto;
+
+                    .swiper-pagination{
+                        bottom: 0;
+                        padding-top: 15px;
+                        position: relative;
+                    }
                 }
             }
         }

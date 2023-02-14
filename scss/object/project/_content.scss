@@ -10,8 +10,7 @@
             width: 400px;
         }
         @include mixin.mq(sp){
-            min-width: 260px;
-            width: 72.2%;
+            width: 77.6%;
         }
     }
 
@@ -85,7 +84,7 @@
         @include mixin.mq(tab){
             margin-top: 21.4%;
         }
-        @include mixin.mq(tab){
+        @include mixin.mq(sp){
             margin-top: 43.2%;
         }
         

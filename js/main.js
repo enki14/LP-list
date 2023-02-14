@@ -2,35 +2,33 @@ const mainSwiper = new Swiper('.l-award__swiper', {
     // Optional parameters
     loop: true,
     loopedSlides: 8,
-    slidesPerView: 'auto',
-    // spaceBetween: 50,
     watchSlidesVisibility: true,
+    loopFillGroupWithBlank: true,
     breakpoints: {
         1380: {
+            slidesPerView: 4.5
+        },
+        1250: {
             slidesPerView: 3.5
         },
-        1080: {
+        1100: {
             slidesPerView: 3
         },
-        970: {
+        831: {
             slidesPerView: 2.5
         },
-        831: {
+        650: {
             slidesPerView: 2
-        },
-        421: {
-            slidesPerView: 1.25
         }
     },
     slidesPerGroup: 1,
     centeredSlides : true,
-    // effect: 'slide',
 
     // speed: 1000,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
 
     // If we need pagination
     pagination: {

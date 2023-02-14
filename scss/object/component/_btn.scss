@@ -19,8 +19,8 @@
         padding: 8px 25px;
     }
     @include mixin.mq(sp){
-        width: 256px;
-        height: 54px;
+        width: 98.4%;
+        height: auto;
         margin: 4rem auto 0;
         padding: 9.8px 17px;
     }
@@ -54,7 +54,7 @@
             font-size: 18px;
         }
         @include mixin.mq(sp){
-            font-size: 13px;
+            font-size: 3.6%;
             line-height: 29px;
             width: 176px;
         }
