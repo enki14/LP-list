@@ -4,6 +4,36 @@
 
 .postid-184{
 
+    .c-cream__text{
+        text-align: center;
+
+        @include mixin.mq(sp){
+            width: 53.8%;
+        }
+
+        h3{
+            font-weight: 500;
+            font-family: 'Josefin Sans';
+            margin-top: 1rem;
+            margin-bottom: 1.3rem;
+            letter-spacing: 0.1em;
+            // @include mixin.mq(sp){
+            //     font-size: 4.4%;
+            // }
+        }
+        .c-cream__price{
+            font-size: 2.0rem;
+            margin-top: 0;
+            letter-spacing: 0.1em;
+            font-family: 'inter';
+            color: #000;
+
+            @include mixin.mq(sp){
+                font-size: 1.2rem;
+            }
+        }
+    }
+
     .c-cream{
         display: flex;
         justify-content: space-between;
@@ -18,8 +48,12 @@
             width: 100%;
             img{
                 width: 44.2%;
-                height: 31%;
+                height: 87.3%;
             }
+            .c-cream__text{
+                width: 53.2%;
+            }
+
         }
         @include mixin.mq(sp){
             img{
@@ -27,43 +61,26 @@
                 height: 64.8%;
             }
         }
-        
-        .c-cream__text{
-            text-align: center;
-
-            @include mixin.mq(tab){
-                width: 214px;
-            }
-            @include mixin.mq(sp){
-                width: 53.8%;
-            }
-
-            h3{
-                font-weight: 500;
-                font-family: 'Josefin Sans';
-                margin-top: 1rem;
-                margin-bottom: 1.3rem;
-                letter-spacing: 0.1em;
-                @include mixin.mq(sp){
-                    font-size: 4.4%;
-                }
-            }
-            .c-cream__price{
-                font-size: 2.0rem;
-                margin-top: 0;
-                letter-spacing: 0.1em;
-                font-family: 'inter';
-                color: #000;
-
-                @include mixin.mq(sp){
-                    font-size: 3.3%;
-                }
-            }
-        }
 
     }
 
-    .w77-6{
+    .c-cream--sale{
+        display: flex;
+        justify-content: space-between;
+        width: 498px;
+        margin: 0 auto;
+        @include mixin.mq(tab){
+            width: 57.5%;
+            img{
+                width: 44%;
+                height: auto;
+                object-fit: contain;
+            }
+            .c-cream__text{
+                width: 53.2%;
+            }
+
+        }
         @include mixin.mq(sp){
             width: 77.6%;
         }
@@ -148,34 +165,60 @@
             position: relative;
             width: 20px;
             height: 20px;
-            img{
-                width: 20px;
-                height: 20px;
-                background-size: cover;
+            border-radius: 30%;
+            transition: .3s;
+            background: radial-gradient(
+                circle at 33% 100%,
+                #fed373 4%,
+                #f15245 30%,
+                #d92e7f 62%,
+                #9836b7 85%,
+                #515ecf
+            );
+
+            &:hover{
+                // transition: .3s;
+                background: base.$purple;
                 
             }
 
             &::before{
                 content: '';
-                display: none;
-                width: 20px;
-                height: 20px;
-                transition:.3s;
-                bottom: -1px;
+                border: 1.3px solid #fff;
+                border-radius: 30%;
+                width: 14px;
+                height: 14px;
                 position: absolute;
-                background-size: cover;
-                object-fit: cover;
-                background-image: url('../images/hover_instagram.png');
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
             }
 
-            &:hover{
-                img{
-                    display: none;
-                }
-                &::before{
-                    display: block;
-                    transition: .3s;
-                }
+            &::after{
+                content: '';
+                border: 1.3px solid #fff;
+                border-radius: 100%;
+                width: 6px;
+                height: 6px;
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            span{
+                border: 1.3px solid #fff;
+                border-radius: 100%;
+                width: 0;
+                height: 0;
+                position: absolute;
+                right: 5.7px;
+                top: 5.7px;
+                margin: auto;
             }
         } 
         .facebook{

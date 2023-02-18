@@ -15,28 +15,28 @@
     <main>
         <section class="l-hedding">
             <article class="l-hedding__content content_area">
-                <h2 class="midashi">スキンケアを選ぶ時代は終わった</h2>
+                <h2 class="midashi"><span class="first_span">スキンケアを</span><span>選ぶ時代は終わった</span></h2>
                 <p>
-                    色彩豊かな花の数ほど人の肌も多彩。<br>
-                    そして各々に個性があります。<br>
-                    だからこそ悩みは人それぞれ。
+                    <span>色彩豊かな花の数ほど</span><span>人の肌も多彩。</span><br>
+                    <span>そして各々に個性があります。</span><br>
+                    <span>だからこそ悩みは人それぞれ。</span>
                 </p>
                 <p>
-                    荒れやすいから<br>
-                    普通の肌じゃないから<br>
-                    私には不向きと思っていませんか？<br>
-                    分かります。
+                    <span>荒れやすいから</span><br>
+                    <span>普通の肌じゃないから</span><br>
+                    <span>私には不向きと思っていませんか？</span><br>
+                    <span>分かります。</span>
                 </p>
                 <p class="last_module">
-                    しかし、これまでに前例のなかった多くの人が使える<br>
-                    ボディークリームがあったとしたら。<br>
-                    乾燥肌にもアトピーの方にも、アンチエイジングとしても、<br>
-                    とにかく多くの人を幸せにしてくれる心強い味方です。
+                    <span>しかし、これまでに前例のなかった</span><span>多くの人が使える</span><br>
+                    <span>ボディークリームが</span><span>あったとしたら。</span><br>
+                    <span>乾燥肌にもアトピーの方にも、</span><span>アンチエイジングとしても、</span><br>
+                    <span>とにかく多くの人を</span><span>幸せにしてくれる</span><span>心強い味方です。</span>
                 </p>
             </article>
         </section>
         <section class="l-philosophy content_area">
-            <h2 class="midashi">私たちが目指すもの</h2>
+            <h2 class="midashi"><span class="first_span">私たちが目指すもの</span></h2>
             <div class="p-imgArea">
                 <div class="c-pImg">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/images/l-philosophy__img.png'); ?>" class="pc" alt="4つの目標">
@@ -88,7 +88,7 @@
                         てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと
                     </p>
                     <button class="c-Btn">
-                        <span>オンラインストアで購入</span>
+                        <p class="c-Btn__p"><span>オンラインストア</span><span>で購入</span></p>
                         <div class="c-Btn__right"><i class="fa-solid fa-angle-right"></i></div>
                     </button>
                 </div>
@@ -98,7 +98,7 @@
             </div>
         </section>
         <section class="l-efficacy content_area">
-            <h2 class="c-contentTitle midashi">効能ポイント</h2>
+            <h2 class="c-contentTitle midashi"><span class="first_span">効能ポイント</span></h2>
             <div class="l-efficacy__beside">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/l-efficacy__top.png'); ?>" class="pc" alt="潤い">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tab/l-efficacy__top--tab.png'); ?>" class="tab" alt="潤い">
@@ -148,7 +148,7 @@
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tab/l-award__img--tab.png'); ?>" class="tab" alt="コスメ部門第一位">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/l-award__img--sp.png'); ?>" class="sp" alt="コスメ部門第一位">
             </div>
-            <h2 class="c-contentTitle midashi">アンケートの声</h2>
+            <h2 class="c-contentTitle midashi"><span class="first_span">アンケートの声</span></h2>
             <div class="swiper l-award__swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide p-slide">
@@ -302,7 +302,7 @@
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/c-topImg.png'); ?>" class="c-topImg pc" alt="40％オフ">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tab/c-topImg__tab.png'); ?>" class="c-topImg tab" alt="40％オフ">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/c-topImg__sp.png'); ?>" class="c-topImg sp" alt="40％オフ">
-                <div class="c-cream w77-6">
+                <div class="c-cream--sale">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/images/c-cream__img.png'); ?>" alt="モイスチャボディクリーム">
                     <div class="c-cream__text">
                         <h3>Moistuer Body<br>Cream</h3>
@@ -312,7 +312,7 @@
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tab/c-btmImg__tab.png'); ?>" class="c-btmImg tab" alt="特別価格741円">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/sp/c-btmImg__sp.png'); ?>" class="c-btmImg sp" alt="特別価格741円">
                 <button class="c-Btn">
-                    <span>オンラインストアで購入</span>
+                    <p class="c-Btn__p"><span>オンラインストア</span><span>で購入</span></p>
                     <div class="c-Btn__right"><i class="fa-solid fa-angle-right"></i></div>
                 </button>
             </div>
@@ -329,7 +329,7 @@
                     <i class="fa-brands fa-twitter fa-lg"></i>
                 </a>
                 <a href="#" class="instagram">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/instagram.png'); ?>" alt="instagramのロゴ">
+                    <span></span>
                 </a>
                 <a href="#" class="facebook">
                     <i class="fa-brands fa-facebook fa-lg"></i>

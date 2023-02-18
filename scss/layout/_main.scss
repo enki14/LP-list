@@ -42,6 +42,10 @@
                 
                 h2{
                     margin-top: 0;
+                    margin-bottom: 60px;
+                    @include mixin.mq(tab){
+                        margin-bottom: 4rem;
+                    }
                     @include mixin.mq(sp){
                         margin-bottom: 3rem;
                         line-height: 30px;
@@ -50,15 +54,29 @@
                 }
                 
                 p{
-                    line-height: 50px;
-                    @include mixin.mq(sp){
-                        line-height: 35px;
-                        letter-spacing: 10%;
-                    }
+                    
                     &:not(:last-child){
                         margin-bottom: 40px;
+                        @include mixin.mq(tab){
+                            margin-bottom: 30px;
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 33px;
+                        @include mixin.mq(tab){
+                            margin-bottom: 85px;
+                        }
                         @include mixin.mq(sp){
-                            margin-bottom: 3rem;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    span{
+                        line-height: 50px;
+                        margin-top: 0;
+                        display: inline-block;
+                        @include mixin.mq(sp){
+                            line-height: 35px;
                         }
                     }
                 }
@@ -120,6 +138,9 @@
             &__content{
                 padding-top: 0;
                 margin: 6rem auto;
+                @include mixin.mq(sp){
+                    margin: 3rem auto;
+                }
             }
 
         }
@@ -159,6 +180,7 @@
                         position: absolute;
                         top: 0;
                         left: 1.7rem;
+                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
                         @include mixin.mq(tab){
                             width: 40%;
@@ -166,7 +188,6 @@
                             left: 30%;
                             z-index: 3;
                             background-size: contain;
-                            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
                         }
                         @include mixin.mq(sp){
                             width: 77%;
@@ -201,6 +222,9 @@
                     @include mixin.mq(tab){
                         height: auto;
                         margin: 0 auto 40px;
+                    }
+                    @include mixin.mq(sp){
+                        margin: 0 auto;
                     }
 
                     img{
@@ -293,7 +317,7 @@
             }
             &__swiper{
                 display: block;
-                width: 100vw;
+                width: 100%;
                 height: 562px;
                 margin-bottom: 6rem;
 
