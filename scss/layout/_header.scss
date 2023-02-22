@@ -42,10 +42,11 @@
 
         img{
             position: absolute;
-            width: 329px;
-            height: 195px;
-            bottom: 0;
-            right: 0;
+            width: 229px;
+            height: auto;
+            bottom: 3rem;
+            right: 3rem;
+            background-size: cover;
         }
         
         @include mixin.mq(tab){
@@ -53,16 +54,16 @@
             height: 73.5%;
             
             img{
-                width: 160px;
-                height: 95px;
-                right: 5px;
-                bottom: 5px;
+                display: none;
             }
         }
         @include mixin.mq(sp){
             img{
+                display: block;
                 width: 77px;
                 height: 46px;
+                bottom: 1.5rem;
+                right: 1.5rem;
             }
 
         }

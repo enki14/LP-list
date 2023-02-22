@@ -13,6 +13,13 @@
     add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
 
+    function google_fonts_add() {
+        wp_register_style( 'noteSerif', 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+        wp_enqueue_style( 'noteSerif');
+    }
+    add_action( 'wp_enqueue_scripts', 'google_fonts_add' );
+
+
     function theme_enqueue_scripts(){
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0');

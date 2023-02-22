@@ -25,9 +25,13 @@
             }
 
             @include mixin.mq(tab){
-                &::before,
+                &::before{
+                    width: 33.6%;
+                    background-position: 150% top;
+                }
                 &::after{
                     width: 33.6%;
+                    background-position: -50% top;
                 }
             }
             @include mixin.mq(sp){

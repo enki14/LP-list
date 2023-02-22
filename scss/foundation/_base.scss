@@ -12,7 +12,7 @@ html{
 
 
 .postid-184{
-    font-family: 'Yu Mincho', 'Yu Mincho', '游明朝体', 'Yu Mincho Light', 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
+    font-family: 'Yu Mincho', 'YuMincho', '游明朝体', 'Yu Mincho Light', 'Noto Serif JP', serif, 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
     color: $purple;
 
     .content_area{
@@ -81,6 +81,7 @@ html{
         font-size: 2rem;
         text-indent: -1rem;
         padding-left: 1rem;
+        padding-top: 3px;
         @include mixin.mq(sp){
             font-size: 1.6rem;
             text-indent: -1.5rem;

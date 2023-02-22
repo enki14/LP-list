@@ -45,6 +45,7 @@
         .c-Btn__p{
             text-align: center;
             margin: 0;
+            width: calc(100% - 60px);
             
             span{
                 display: inline-block;
@@ -62,6 +63,7 @@
                 }
             }
             @include mixin.mq(sp){
+                width: calc(100% - 35px);
                 span{
                     font-size: 13px;
                     line-height: 29px;

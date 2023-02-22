@@ -7,7 +7,7 @@
         <article class="l-header__catch">
             <div class="c-hTitle">
                 <h1 class="midashi">多くの肌に<br>馴染んでいく優しさ</h1>
-                <p>Moistuer Body<br>Cream</p>
+                <p class="c-hTitle__p">Moistuer Body<br>Cream</p>
             </div>
             <img src="<?php echo esc_url(get_template_directory_uri() . '/images/header-cream.png'); ?>" alt="MoistuerBodyCream">
         </article>

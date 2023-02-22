@@ -4,7 +4,7 @@ html {
 }
 
 .postid-184 {
-  font-family: "Yu Mincho", "Yu Mincho", "游明朝体", "Yu Mincho Light", "ＭＳ 明朝", "MS Mincho", "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "TsukuBRdGothic-Regular", "Georgia", sans-serif;
+  font-family: "Yu Mincho", "YuMincho", "游明朝体", "Yu Mincho Light", "Noto Serif JP", serif, "ＭＳ 明朝", "MS Mincho", "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "TsukuBRdGothic-Regular", "Georgia", sans-serif;
   color: #5202A3;
 }
 .postid-184 .content_area {
@@ -78,6 +78,7 @@ html {
   font-size: 2rem;
   text-indent: -1rem;
   padding-left: 1rem;
+  padding-top: 3px;
 }
 @media all and (max-width: 420px) {
   .postid-184 .indent {
@@ -212,10 +213,11 @@ html {
 }
 .l-header__catch img {
   position: absolute;
-  width: 329px;
-  height: 195px;
-  bottom: 0;
-  right: 0;
+  width: 229px;
+  height: auto;
+  bottom: 3rem;
+  right: 3rem;
+  background-size: cover;
 }
 @media all and (max-width: 830px) {
   .l-header__catch {
@@ -223,16 +225,16 @@ html {
     height: 73.5%;
   }
   .l-header__catch img {
-    width: 160px;
-    height: 95px;
-    right: 5px;
-    bottom: 5px;
+    display: none;
   }
 }
 @media all and (max-width: 420px) {
   .l-header__catch img {
+    display: block;
     width: 77px;
     height: 46px;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }
 
@@ -264,8 +266,13 @@ html {
   top: 0;
 }
 @media all and (max-width: 830px) {
-  .postid-184 main .l-hedding::before, .postid-184 main .l-hedding::after {
+  .postid-184 main .l-hedding::before {
     width: 33.6%;
+    background-position: 150% top;
+  }
+  .postid-184 main .l-hedding::after {
+    width: 33.6%;
+    background-position: -50% top;
   }
 }
 @media all and (max-width: 420px) {
@@ -1202,6 +1209,7 @@ html {
 .postid-184 .c-Btn .c-Btn__p {
   text-align: center;
   margin: 0;
+  width: calc(100% - 60px);
 }
 .postid-184 .c-Btn .c-Btn__p span {
   display: inline-block;
@@ -1218,6 +1226,9 @@ html {
   }
 }
 @media all and (max-width: 420px) {
+  .postid-184 .c-Btn .c-Btn__p {
+    width: calc(100% - 35px);
+  }
   .postid-184 .c-Btn .c-Btn__p span {
     font-size: 13px;
     line-height: 29px;
@@ -1287,28 +1298,47 @@ html {
   .postid-184 .c-hTitle h1 {
     font-size: 3.2rem;
     margin-top: 0;
+    margin-bottom: 2.5rem;
   }
 }
 @media all and (max-width: 420px) {
   .postid-184 .c-hTitle h1 {
     font-size: 2.4rem;
     margin-top: 0;
+    margin-bottom: 0.5rem;
   }
 }
-.postid-184 .c-hTitle p {
+.postid-184 .c-hTitle__p {
   font-size: 3.6rem;
   letter-spacing: 0.1em;
   color: #fff;
   font-family: "Josefin Sans";
 }
 @media all and (max-width: 830px) {
-  .postid-184 .c-hTitle p {
+  .postid-184 .c-hTitle__p {
     font-size: 2.4rem;
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+  }
+  .postid-184 .c-hTitle__p::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 95px;
+    background-image: url("../images/header-cream.png");
+    right: -100px;
+    top: 4rem;
+    background-size: cover;
   }
 }
 @media all and (max-width: 420px) {
-  .postid-184 .c-hTitle p {
+  .postid-184 .c-hTitle__p {
     font-size: 1.6rem;
+  }
+  .postid-184 .c-hTitle__p::after {
+    display: none;
   }
 }
 .postid-184 .c-contentTitle {
