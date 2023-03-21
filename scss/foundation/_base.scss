@@ -10,10 +10,20 @@ html{
    
 }
 
+// 上下左右に余白ができたときの対応
+// 参考：http://mamo.wp.xdomain.jp/2016/08/14/post-965/
+// →　その他の対応方法も記されている
+*{
+    padding: 0;
+    margin: 0;
+}
+
 
 .postid-184{
     font-family: 'Yu Mincho', 'YuMincho', '游明朝体', 'Yu Mincho Light', 'Noto Serif JP', serif, 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
     color: $purple;
+    width: 100%;
+    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     .content_area{
         width: 810px;
@@ -155,4 +165,74 @@ html{
         text-decoration: none;
     }
 
+}
+
+
+.postid-212{
+    font-family: 'Yu Mincho', 'YuMincho', '游明朝体', 'Yu Mincho Light', 'Noto Serif JP', serif, 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
+    color: $purple;
+    width: 100%;
+    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    .pc{
+        display: block;
+        @include mixin.mq(tab){
+            display: none;
+        }
+        @include mixin.mq(sp){
+            display: none;
+        }
+    }
+    .tab{
+        display: none;
+        @include mixin.mq(tab){
+            display: block;
+        }
+        @include mixin.mq(sp){
+            display: none;
+        }
+    }
+    .sp{
+        display: none;
+        @include mixin.mq(tab){
+            display: none;
+        }
+        @include mixin.mq(sp){
+            display: block;
+        }
+    }
+
+
+    h2{
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        min-height: 0vw;
+    }
+
+    h3{
+        font-size: clamp(1.6rem, 3vw, 3.2rem);
+        min-height: 0vw;
+    }
+
+    h4{
+        font-size: clamp(1.6rem, 2.5vw, 2rem);
+    }
+
+    dt{
+        font-size: 1.8rem;
+        @include mixin.mq(sp){
+            font-size: 1.6rem
+        }
+    }
+
+    p,
+    a,
+    dd,
+    li,
+    span{
+        @include mixin.font_pattern(15px, 14px, $purple, 400);
+    }
+
+    a{
+        text-decoration: none;
+    }
 }

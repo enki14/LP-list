@@ -3,9 +3,15 @@ html {
   font-size: 62.5%;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .postid-184 {
   font-family: "Yu Mincho", "YuMincho", "游明朝体", "Yu Mincho Light", "Noto Serif JP", serif, "ＭＳ 明朝", "MS Mincho", "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "TsukuBRdGothic-Regular", "Georgia", sans-serif;
   color: #5202A3;
+  width: 100%;
 }
 .postid-184 .content_area {
   width: 810px;

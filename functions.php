@@ -6,9 +6,6 @@
     function theme_enqueue_styles(){
         wp_enqueue_style('sanitize', get_template_directory_uri(). '/css/sanitize.css', array(), false, 'all');
         wp_enqueue_style('my_styles', get_template_directory_uri().'/css/mystyle.css', array('sanitize'), '', 'all');
-        // wp_enqueue_style('google_icons', '//fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone', array(), '', 'all');
-        // wp_enqueue_style('material_icons', '//fonts.googleapis.com/icon?family=Material+Icons+Outlined', array(), '', 'all');
-
     }
     add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
@@ -62,6 +59,7 @@
     }
     add_filter( 'manage_posts_columns', 'customize_manage_posts_columns' );
     
+
     //投稿ページのサムネイル画像表示
     function customize_manage_posts_custom_column($column_name, $post_id) {
         if ( 'thumbnail' == $column_name) {
@@ -161,6 +159,95 @@
         }
     }
     add_action('wp_head', 'my_meta_ogp');
+
+
+    
+
+
+    // 「よくあるご質問」部分
+    function shortcode_cosmetics(){
+        global $wpdb;
+
+        $sql = $wpdb->get_results("select * from cosmetics");
+
+        ob_start();
+        foreach($sql as $data){
+            echo 
+            '<div class="swiper-slide p-slide">
+                <img src="'. esc_url(get_template_directory_uri(). '/images/cosmetics/sp/p-unit__head--sp.png').'" class="p-unit__top" alt="三角のピンク">
+                <div class="p-unit">
+                    <article class="p-unit__article">
+                        <div class="c-face">
+                            <div class="c-face__img">
+                                <img src="' . esc_url(get_template_directory_uri() . $data->face_img). '" alt="人の顔">
+                            </div>
+                            <span class="c-face__sa">'. $data->age_sex .'</span>
+                        </div>
+                        <p class="c-unitText">'. $data->comment .'</p>
+                    </article>
+                </div>
+            </div>';
+        }
+        return ob_get_clean();
+    }
+    add_shortcode('questionnaire', 'shortcode_cosmetics');
+
+
+    // テントのサイズ部分
+    function tento_capacity(){
+        global $wpdb;
+
+        $sql = $wpdb->get_results("select * from capacity");
+
+        ob_start();
+        foreach($sql as $data){
+            echo 
+            '<div class="p-size">
+                <h3 class="p-size__title">'. $data->tento_name .'</h3>
+                <ul class="c-sizelist">
+                    <li>
+                        <p>収納時</p>
+                        <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/storage.png') . '" alt="収納時">
+                    </li>
+                    <li>
+                        <p>解放時</p>
+                        <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/release.png') . '" alt="解放時">
+                    </li>
+                    <li>
+                        <p>定員</p>
+                        <img src="' . esc_url(get_template_directory_uri() . $data->png) . '" alt="' . $data->img_alt . '">
+                    </li>
+                </ul>
+            </div>';
+        }
+        return ob_get_clean();
+    }
+    add_shortcode('capacity', 'tento_capacity');
+    
+
+
+    // カスタム投稿　corporation
+    function create_post_type(){
+        $exampleSupports = [
+            'title',
+            'editor',
+            'thumbnail',
+            'revisions'
+        ];
+    
+        register_post_type('corporation', 
+            array(
+                'label' => 'Nazuca-corporation',
+                'public' => true,
+                'has_archive' => true,
+                'supports' => $exampleSupports 
+            )
+        );
+    }
+    add_action('init', 'create_post_type');
+    
+
+
 
 
     
