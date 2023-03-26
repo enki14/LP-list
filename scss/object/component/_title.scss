@@ -34,7 +34,7 @@
                 position: relative;
                 &::after{
                     position: absolute;
-                    @include mixin.background_url('header-cream.png', 160px, 95px);
+                    @include mixin.background_url('cosmetics/header-cream.png', 160px, 95px);
                     right: -100px;
                     top: 4rem;
                     background-size: cover;

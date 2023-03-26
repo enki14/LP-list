@@ -128,3 +128,96 @@
         }
     }
 }
+
+
+.postid-212{
+    .p-dura{
+        padding: 7.5rem 0 0 7.5rem;
+        position: relative;
+
+        &:nth-child(1){
+            margin-bottom: 3rem;
+
+            &::before{
+                @include mixin.background_url('tento/pc/p-dura-ma.png', 150px, 150px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 4;
+            }
+
+
+        }
+        &:nth-child(2){
+            &::before{
+                @include mixin.background_url('tento/pc/p-dura-st.png', 150px, 150px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 4;
+            }
+
+        }
+        &__article{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 40px 40px 78px;
+            border-radius: 4px;
+        }
+    }
+    .p-dura:nth-child(1) .p-dura__article{
+        &::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            background-image: linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%);
+            border-radius: inherit;
+            content: "";
+            z-index: 1;
+            top: 0;
+            left: 0;
+            
+        }
+        &::after{
+            position: absolute;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            background: linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%) rgba(255, 255, 255, 0.9);
+            border-radius: inherit;
+            z-index: 2;
+            content: "";
+            top: 3px;
+            left: 3px;
+            
+        }
+    }
+    .p-dura:nth-child(2) .p-dura__article{
+        &::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            background-image: base.$linear_gold;
+            border-radius: inherit;
+            content: "";
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            position: absolute;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%) rgba(255, 255, 255, 0.9);
+            border-radius: inherit;
+            z-index: 2;
+            content: "";
+            top: 3px;
+            left: 3px;
+            
+
+        }
+    }
+}

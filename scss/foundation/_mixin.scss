@@ -24,6 +24,33 @@ $breakpoint: (
     }
 }
 
+// absolute を左右中央寄せ
+@mixin beside_center{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+// absolute を上下中央寄せ
+@mixin vertical_center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+// absolute を上下左右中央寄せ
+@mixin cross_center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
 // テーブルレイアウトで要素を横並び
 @mixin table_layout($margin: 0, $width: 100%){
     display: table;

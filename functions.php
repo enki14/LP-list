@@ -204,20 +204,22 @@
             echo 
             '<div class="p-size">
                 <h3 class="p-size__title">'. $data->tento_name .'</h3>
-                <ul class="c-sizelist">
-                    <li>
-                        <p>収納時</p>
-                        <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/storage.png') . '" alt="収納時">
-                    </li>
-                    <li>
-                        <p>解放時</p>
-                        <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/release.png') . '" alt="解放時">
-                    </li>
-                    <li>
-                        <p>定員</p>
-                        <img src="' . esc_url(get_template_directory_uri() . $data->png) . '" alt="' . $data->img_alt . '">
-                    </li>
-                </ul>
+                <div class="p-size__list">
+                    <ul> 
+                        <li>
+                            <p>収納時</p>
+                            <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/storage.png') . '" alt="収納時">
+                        </li>
+                        <li>
+                            <p>解放時</p>
+                            <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/release.png') . '" alt="解放時">
+                        </li>
+                        <li>
+                            <p>定員</p>
+                            <img src="' . esc_url(get_template_directory_uri() . $data->png) . '" alt="' . $data->img_alt . '">
+                        </li>
+                    </ul>
+                </div>
             </div>';
         }
         return ob_get_clean();

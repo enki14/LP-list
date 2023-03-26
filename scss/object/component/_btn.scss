@@ -28,7 +28,7 @@
         }
     
         &::before{
-            @include mixin.background_url('strawberry.png', 114px, 136px);
+            @include mixin.background_url('cosmetics/strawberry.png', 114px, 136px);
             position: absolute;
             top: -7.3rem;
             left: -6rem;
@@ -124,4 +124,131 @@
         
     }
     
+}
+
+
+.postid-212{
+    .c-logo{
+        width: 70px;
+        height: 70px;
+
+    }
+    .c-backtop{
+        position: fixed;
+        bottom: 12px;
+        right: 60px;
+        z-index: 10;
+
+        .allow_wrapper{
+            width: 100%;
+            text-align: center;
+
+            img{
+                filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
+            }
+            
+        }
+        &__circle{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            position: relative;
+
+            small{
+                font-family: base.$georgia;
+                position: absolute;
+                height: 26px;
+                width: 80px;
+                top: 9px;
+                display: block;
+                font-size: 1.4rem;
+                text-align: center;
+                color: base.$dark;
+                font-style: italic;
+                font-weight: 700;
+            }
+
+            p{
+                font-family: base.$georgia;
+                font-size: 2rem;
+                font-style: italic;
+                font-weight: 700;
+                text-align: center;
+                line-height: 80px;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+
+
+
+    .c-hBtn{
+        margin-top: 28px;
+        margin-right: 12px;
+        padding: 16px 36px;
+        position: relative;
+        border: 1px solid base.$dark;
+        background: none;
+        border-radius: 18px;
+
+        &__link{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 64px;
+        }
+
+        &__text{
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 32px;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            width: 146px;
+        }
+
+        .c-hAllow{
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            .c-hAllow__item{
+                display: inline-block;
+                position: relative;
+                width: 35px;
+                height: 8px;
+                border-bottom: 1px solid base.$dark;
+
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background: base.$dark;
+                    width: 1px;
+                    height: 12px;
+                    right: 17.5px;
+                    top: 0;
+                    
+                }
+
+                &::after{
+                    position: absolute; 
+                    background: base.$dark;
+                    right: 8.5px;
+                    top: -5.5px;
+                    width: 1px;
+                    height: 20px;
+                    content: "";
+                    transform: rotate(110deg);
+                }
+            }
+        }
+
+    }
+
 }

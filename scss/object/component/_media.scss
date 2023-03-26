@@ -36,7 +36,7 @@
         }
 
         &::before{
-            @include mixin.background_url('c-dl__point.png', 36px, 30px);
+            @include mixin.background_url('cosmetics/c-dl__point.png', 36px, 30px);
             position: absolute;
             left: 0;
             top: 0;
@@ -106,6 +106,128 @@
         @include mixin.mq(sp){
             width: 100%;
             margin: 3rem auto;
+        }
+    }
+}
+
+.postid-212{
+    .c-accessories{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 297px;
+
+        &__map{
+            width: 110px; 
+            height: 86px;
+            position: absolute;
+            left: 0;
+            top: -8px;
+        }
+        &__rantan{
+            width:122px; 
+            height: 138px;
+            position: absolute;
+            right: 103px;
+            top: 0;
+        }
+
+    }
+
+    .c-duraImg{
+        margin-right: 3rem;
+        z-index: 3;
+
+        img{
+            margin-bottom: 3rem;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        small{
+            position: relative;
+            display: block;
+            padding-left: 1.7rem;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0.15em;
+
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "※";
+            }
+        }
+    }
+
+    .c-explanation{
+        word-break: break-all;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        line-height: 26px;
+        z-index: 3;    
+
+        &:nth-child(1){
+            margin-bottom: 16px;
+        }
+
+        &__ul{
+            padding-left: 1.8rem;
+
+            li::marker{
+                font-size: 70%;
+            }
+        }
+    }
+
+    .c-twoColumn{
+        display: flex;
+        justify-content: space-around;
+
+
+        .c-setImage{
+            margin-top: 175px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        .c-setCatch{
+            width: 400px;
+            height: 294px;
+        }
+    }
+    .c-oneColumn{
+        position: relative;
+
+        img{
+            margin-left: 12.5rem;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .c-middleImg{
+        text-align: center;
+        margin-bottom: 6rem;
+
+        img{
+            width: 465px;
+            height: 310px;
+        }
+    }
+
+    .c-videoInfo{
+        font-size: 22px;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        line-height: 70px;
+        letter-spacing: 0.05em;
+        color: base.$dark;
+
+        i{
+            margin-right: 20px;
+        }
+        span{
+            font-size: 32px;
+            font-weight: 700;
+            color: rgba(201, 211, 90, 1);
         }
     }
 }

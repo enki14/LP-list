@@ -1,3 +1,39 @@
 @use "../../foundation/mixin";
 @use "../../foundation/base";
 
+
+
+.postid-212{
+    .c-hCatch{
+        position: relative;
+        padding-left: 40px;
+        margin-top: 38.5px;
+        font-size: 24px;
+        font-weight: 600;
+        color: base.$dark;
+        line-height: 43px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        z-index: 5;
+    
+    }
+    .c-hPrice{
+        width: 100%;
+        margin-top: 22px;
+        text-align: right;
+    
+        i{
+            margin-right: 8px;
+            width: 17.4px;
+            height: 25px;
+            color: base.$dark;
+        }
+        span{
+            color: base.$dark;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 0.05em;
+        }
+    }
+}

@@ -1,8 +1,19 @@
 @use "mixin";
 
+// 化粧品の配色
 $gold: #EFBA30;
 $pink:#F7E1E1;
 $purple:#5202A3;
+
+// LPテントの配色
+$black: #333;
+$dark: rgba(56, 52, 52, 0.76);
+$pale_purple: rgba(139, 46, 119, 0.39);
+$linear_gold: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
+
+
+$georgia: Georgia, 'Times New Roman', Times, serif;
+
 
 html{
     font-size: 62.5%;
@@ -169,10 +180,47 @@ html{
 
 
 .postid-212{
-    font-family: 'Yu Mincho', 'YuMincho', '游明朝体', 'Yu Mincho Light', 'Noto Serif JP', serif, 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
-    color: $purple;
+    font-family: 'Roboto', sans-serif, 'Merriweather', serif, 'Oswald', 'Raleway';
     width: 100%;
     // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
+    .sectionTitle{
+        color: #fff;
+        padding: 2rem 0;
+        background: linear-gradient(90deg, #2E6A8B 0%, rgba(84, 132, 62, 0.741667) 25.98%, #2E6A8B 61.82%, rgba(139, 46, 119, 0.39) 100.59%);
+    }
+
+    .c-sectionTitle{
+        display: block;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 46px;
+        letter-spacing: 0.15em;
+        text-align: center;
+        color: #fff;
+
+    }
+
+    .sectionContent{
+        width: 900px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.9);
+        margin: 0 auto;
+    }
+    .content_wrap{
+        background-size: cover;
+        width: 100%;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        margin: 0 auto;
+    }
+
+    .c-btnWrap{
+        width: 100%;
+        text-align: center;
+    }
 
     .pc{
         display: block;
@@ -204,24 +252,32 @@ html{
 
 
     h2{
-        font-size: clamp(2rem, 4vw, 3.6rem);
-        min-height: 0vw;
+        font-family: $georgia;
+        font-size: clamp(2.4rem, 4vw, 4.6rem);
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: 0.15em;
+        text-align: center;
     }
 
     h3{
-        font-size: clamp(1.6rem, 3vw, 3.2rem);
         min-height: 0vw;
+        font-size: clamp(2.4rem, 3vw, 3.6rem);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 1.8em;
+        letter-spacing: 5%;
+        font-weight: 700;
+        
     }
 
     h4{
-        font-size: clamp(1.6rem, 2.5vw, 2rem);
-    }
-
-    dt{
-        font-size: 1.8rem;
-        @include mixin.mq(sp){
-            font-size: 1.6rem
-        }
+        font-size: clamp(2rem, 2.5vw, 3.2rem);
+        font-weight: 700;
+        font-family: Georgia;
+        font-style: italic;
+        line-height: 25.44px;
+        letter-spacing: 10%;
+        text-align: center;
     }
 
     p,
@@ -229,10 +285,14 @@ html{
     dd,
     li,
     span{
-        @include mixin.font_pattern(15px, 14px, $purple, 400);
+        @include mixin.font_pattern(14px, 12px, $black, 400);
     }
 
     a{
         text-decoration: none;
     }
+
+
 }
+
+

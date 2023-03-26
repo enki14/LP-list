@@ -8,14 +8,14 @@
         width: 791px;
         margin: 0 auto;
         &::before{
-            @include mixin.background_url('l-philosophy__before.png', 120px, 217px);
+            @include mixin.background_url('cosmetics/l-philosophy__before.png', 120px, 217px);
             position: absolute;
             top: 0;
             left: 0; 
             background-size: cover;
         }
         &::after{
-            @include mixin.background_url('l-philosophy__after.png', 110px, 243px,);
+            @include mixin.background_url('cosmetics/l-philosophy__after.png', 110px, 243px,);
             position: absolute;
             bottom: 0;
             right: 0;
@@ -48,5 +48,38 @@
             }
         }
 
+    }
+}
+
+
+.postid-212{
+    .p-hImg{
+        .p-hImg__onepole{
+            margin-top: 34px;
+            margin-left: 31px;
+            box-shadow: -31px -34px 0 base.$pale_purple;
+        }
+    }
+
+    .p-setImg{
+        position: relative;
+        margin-bottom: 6rem;
+
+        &::before{
+            @include mixin.background_url('tento/pc/LetsEnjoy.png', 303px, 124px);
+            position: absolute;
+            top: 0;
+            left: -10.8rem;;
+        }
+        &::after{
+            @include mixin.background_url('tento/pc/VeryHappy.png', 303px, 124px);
+            position: absolute;
+            bottom: 9.1rem;
+            right: -10.9rem;
+        }
+    }
+
+    .p-setVideo{
+        margin-bottom: 6rem;
     }
 }

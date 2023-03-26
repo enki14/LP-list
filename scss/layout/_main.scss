@@ -7,7 +7,7 @@
             position: relative;
 
             &::before{
-                @include mixin.background_url('l-headding__left.png', 250px, 841px);
+                @include mixin.background_url('cosmetics/l-headding__left.png', 250px, 841px);
                 background-repeat: no-repeat;
                 background-position: right;
                 position: absolute;
@@ -16,7 +16,7 @@
 
             }
             &::after{
-                @include mixin.background_url('l-headding__right.png', 250px, 841px);
+                @include mixin.background_url('cosmetics/l-headding__right.png', 250px, 841px);
                 background-repeat: no-repeat;
                 background-position: left;
                 position: absolute;
@@ -200,7 +200,7 @@
                     }
 
                     &::before{
-                        @include mixin.background_url('l-efficacy__before.png', 130px, 238px);
+                        @include mixin.background_url('cosmetics/l-efficacy__before.png', 130px, 238px);
                         position: absolute;
                         top: 66.7%;
                         left: 0;
@@ -271,7 +271,7 @@
                 }
 
                 &::before{
-                    @include mixin.background_url('l-efficacy__after.png', 120px, 245px);
+                    @include mixin.background_url('cosmetics/l-efficacy__after.png', 120px, 245px);
                     position: absolute;
                     top: 78%;
                     right: -92px;
@@ -403,4 +403,49 @@
         
     }
 
+}
+
+
+.postid-212{
+    .l-size{
+        &__content{
+            @include mixin.background_url('tento/pc/l-size__background.jpg', 100%, auto);
+            position: relative;
+
+            .sectionContent{
+                padding: 40px 50px;
+            }    
+        }
+    }
+
+    .l-durability{
+        &__content{
+            @include mixin.background_url('tento/pc/l-durability__background.jpg', 100%, auto);
+            position: relative;
+            // width: 100%;
+            // height: auto;
+
+            // &::before{
+            //     @include mixin.background_url('tento/pc/l-durability__background.jpg', 100%, 100%);
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            // }
+
+            .sectionContent{
+                padding: 40px 40px 60px;
+            }    
+        }
+    }
+
+    .l-setup{
+        &__content{
+            @include mixin.background_url('tento/pc/l-setup__background.jpg', 100%, auto);
+            position: relative;
+            .sectionContent{
+                padding: 50px;
+                width: 785px;
+            }
+        }
+    }
 }

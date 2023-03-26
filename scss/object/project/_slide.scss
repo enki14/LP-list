@@ -25,7 +25,7 @@
             }
     
             &::before{
-                @include mixin.background_url('p-unit__head.png', 264px, 95px);
+                @include mixin.background_url('cosmetics/p-unit__head.png', 264px, 95px);
                 position: absolute;
                 filter: drop-shadow(17px 17px #D9D9D9);
                 top: -95px;
