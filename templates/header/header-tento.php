@@ -25,7 +25,7 @@
             </div>
             <div class="c-btnWrap">
                 <button class="c-hBtn">
-                    <a href="<?php get_permalink(222) ?>" class="c-hBtn__link"></a>
+                    <a href="<?php echo get_permalink(222) ?>" class="c-hBtn__link"></a>
                     <span class="c-hBtn__text">商品詳細へ</span>
                     <div class="c-hAllow">
                         <span class="c-hAllow__item"></span>

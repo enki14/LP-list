@@ -225,6 +225,46 @@
         return ob_get_clean();
     }
     add_shortcode('capacity', 'tento_capacity');
+
+
+    // テントの詳細情報
+    function tento_detail(){
+        global $wpdb;
+        
+        $sql = $wpdb->get_results("select * from detail");
+        
+
+        ob_start();
+        // p-individualの横は半角必須
+        foreach($sql as $data){
+            echo 
+            '<article class="p-individual ' . $data->backcolor . '">
+                <div class="p-individual__img">
+                    <img src="' . esc_url(get_template_directory_uri() . '/images/tento/' . $data->pc_img). '" alt="' . $data->tento_name. '">
+                    <h3>' . $data->tento_name . '</h3>
+                </div>
+                <div class="p-individual__spec">
+                    <dl><dt>品番</dt><dd>000-000-0000</dd></dl>
+                    <dl><dt>重量</dt><dd>840g</dd></dl>
+                    <dl><dt>サイズ</dt><dd>210cm × 200cm × 200cm</dd></dl>
+                    <dl><dt>カラー</dt>
+                        <dd>
+                            <div class="yellow_box"></div>
+                            <div class="green_box"></div>
+                        </dd>
+                    </dl>
+                    <div class="c-btnWrap">
+                        <button class="c-detailBtn">
+                            <a href="' . get_permalink($data->postid) . '" class="c-detailBtn__link"></a>
+                            <span class="c-detailBtn__text">商品詳細はこちら</span>
+                        </button>
+                    </div>
+                </div>
+            </article>';
+        }
+        return ob_get_clean();
+    }
+    add_shortcode('detailTento', 'tento_detail');
     
 
 
@@ -243,6 +283,26 @@
                 'public' => true,
                 'has_archive' => true,
                 'supports' => $exampleSupports 
+            )
+        );
+
+        register_post_type('event_info', 
+            array(
+                'label' => 'イベント情報',
+                'public' => true,
+                'has_archive' => true,
+                'supports' => $exampleSupports 
+            )
+        );
+
+        // 'event_info'の編集画面でタグを設定できるようにする
+        register_taxonomy(
+            'tag',
+            'event_info',
+            array(
+                'label' => 'タグ',
+                'rewrite' => array('slug' => 'event'),
+                'hierarchical' => false,
             )
         );
     }

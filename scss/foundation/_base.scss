@@ -220,6 +220,39 @@ html{
     .c-btnWrap{
         width: 100%;
         text-align: center;
+        position: relative;
+
+        .absolute{
+            position: absolute;
+            width: 100%;
+            top: -34px;
+        }
+    }
+
+    .yellow_box{
+        width: 3rem;
+        height: 3rem;
+        background: rgba(208, 211, 62, 1);
+    }
+
+    .green_box{
+        width: 3rem;
+        height: 3rem;
+        background: rgba(103, 202, 57, 1);
+    }
+
+
+    .bg_purple{
+        background: rgba(139, 46, 119, 0.18);
+    }
+
+    .bg_blue{
+        background: rgba(46, 139, 111, 0.25);
+    }
+
+    .bg_green{
+        background: rgba(109, 174, 79, 0.51);
+
     }
 
     .pc{
@@ -273,7 +306,7 @@ html{
     h4{
         font-size: clamp(2rem, 2.5vw, 3.2rem);
         font-weight: 700;
-        font-family: Georgia;
+        font-family: $georgia;
         font-style: italic;
         line-height: 25.44px;
         letter-spacing: 10%;

@@ -164,4 +164,28 @@
         
     }
 
+    .p-applyBadge{
+        background: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 15.8rem;
+        width: 877px;
+
+        img{
+            height: 84px;
+            object-fit: cover;
+
+            &:nth-child(1){
+                width: 250px;
+            }
+            &:nth-child(2){
+                width: 280px;
+            }
+            &:nth-child(3){
+                width: 230px;
+            }
+            
+        } 
+    }
+
 }

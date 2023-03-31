@@ -251,4 +251,144 @@
 
     }
 
+    .c-detailBtn{
+        border: 1px solid rgba(0, 0, 0, 1);
+        padding: 30px 50px;
+        position: relative;
+        background: rgba(0,0,0,0);
+        transition: 300ms;
+        animation-timing-function: ease-in;
+
+        &:hover{
+            background: linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%);
+            transition: 300ms;
+            animation-timing-function: ease-in;
+            border: 1px solid transparent;
+            .c-detailBtn__text{
+                color: #fff;
+            }
+        }
+
+        &__text{
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: 0.1em;
+        }
+        &__link{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 100%;
+        }
+    }
+
+    .c-proBtn{
+        position: relative;
+        padding: 30px 50px 30px 50px;
+        border: 1px solid rgba(0, 0, 0, 1);
+        background: none;
+        transition: 300ms;
+        &__link{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 100%;
+        }
+        &__inside{
+            display: inline;
+            img{
+                width: 70px;
+                height: 70px;
+                margin-right: 30px;
+            }
+            span{
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 70px;
+                letter-spacing: 0.05em;
+            }
+        }
+
+        &:hover{
+            background: linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%);
+            transition: 300ms;
+            animation-timing-function: ease-in;
+            border: 1px solid transparent;
+            .c-proBtn__inside span{
+                color: #fff;
+            }
+        }
+    }
+
+
+    .c-entBtn{
+        padding: 10px 30px;        
+        position: relative;
+        border: 1px solid base.$dark;
+        background: none;
+        margin-left: 8px;
+
+        &__link{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 64px;
+        }
+
+        &__text{
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 19px;
+            letter-spacing: 0.05em;
+        }
+
+        .c-hAllow{
+            position: absolute;
+            top: 8px;
+            right: 3px;
+            .c-hAllow__item{
+                display: inline-block;
+                position: relative;
+                width: 21px;
+                height: 8px;
+                border-bottom: 1px solid base.$dark;
+
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background: base.$dark;
+                    width: 1px;
+                    height: 8px;
+                    right: 14px;
+                    top: 2px;
+                    
+                }
+
+                &::after{
+                    position: absolute; 
+                    background: base.$dark;
+                    right: 7px;
+                    top: -2.5px;
+                    width: 1px;
+                    height: 15px;
+                    content: "";
+                    transform: rotate(110deg);
+                }
+            }
+        }
+    }
+
 }

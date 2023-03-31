@@ -220,4 +220,18 @@
 
         }
     }
+
+    .p-schedule{
+        width: 829px;
+        margin: 80px auto;
+        padding: 4rem;
+
+        dl{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 4rem;
+            padding: 4px 0;
+        }
+    }
+
 }
