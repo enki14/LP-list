@@ -1,7 +1,7 @@
 <header class="l-header">
     <nav class="l-header__top">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/c-logo.png'); ?>" class="c-logo" alt="nazucaのロゴ">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-navigation', 'menu_class' => 'p-nav', 'container' => false, 'depth' => 1 ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'header-navigation', 'menu_class' => 'p-nav') ); ?>
     </nav>
     <div class="c-backtop">
         <div class="allow_wrapper">
@@ -27,8 +27,9 @@
                 <button class="c-hBtn">
                     <a href="<?php echo get_permalink(222) ?>" class="c-hBtn__link"></a>
                     <span class="c-hBtn__text">商品詳細へ</span>
-                    <div class="c-hAllow">
-                        <span class="c-hAllow__item"></span>
+                    <div class="allow_wrap">
+                        <div class="c-hAllow">
+                        </div>
                     </div>
                 </button>
             </div>

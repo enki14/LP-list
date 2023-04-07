@@ -51,7 +51,6 @@
             height: calc(100% + 8px);
             width: 8px;
             border-radius: 2px;
-            background: rgba(201, 211, 90, 1);
         }
         &__date{
             font-size: 16px;
@@ -70,6 +69,27 @@
         &__triangle{
             margin: 8px 0 12px;
             padding-left: 4.9rem;
+        }
+    }
+
+    .yellow{
+        &::after{
+            background: rgba(201, 211, 90, 1);
+        }
+    }
+    .puple{
+        &::after{
+            background: rgba(139, 46, 119, 0.39);
+        }
+    }
+    .blue{
+        &::after{
+            background: rgba(46, 106, 139, 1);
+        }
+    }
+    .green{
+        &::after{
+            background: rgba(46, 139, 111, 1);
         }
     }
 

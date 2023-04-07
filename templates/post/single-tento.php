@@ -194,40 +194,43 @@
             </article>
         </div>
         <div class="l-event__schedule">
-            <div class="p-schedule sectionContent">
-                <h4>イベントの日程</h4>
-                <dl>
-                    <dt class="c-timeDay">
-                        <p class="c-timeDay__date">2023 / 3 / 6</p>
-                        <p class="c-timeDay__time">
-                            <span class="start">AM11:00</span>
-                            <span class="triangle">▶</span>
-                            <span class="end">PM16:00</span>
-                        </p>
-                    </dt>
-                    <dd class="c-schTitle">
-                        <p class="c-schTitle__tag"><a href="">#鳥来湖</a><a href="">#カヤック</a></p>
-                        <h5 class="c-schTitle__ttl"><a href="#">鳥来湖カヤック体験</a></h5>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="c-timeDay">
-                        <p class="c-timeDay__date">2023 / 5 / 1</p>
-                        <p class="c-timeDay__time">
-                            <span class="start">AM11:00</span>
-                        </p>
-                        <p class="c-timeDay__triangle">▼</p>
-                        <p class="c-timeDay__date">2023 / 5 / 2</p>
-                        <p class="c-timeDay__time">
-                            <span class="end">AM11:00</span>
-                        </p>
-                    </dt>
-                    <dd class="c-schTitle">
-                        <p class="c-schTitle__tag"><a href="">#キャンプ</a><a href="">#家族</a><a href="">#西湖</a></p>
-                        <h5 class="c-schTitle__ttl"><a href="">ファミリーキャンプ2023&nbsp;&nbsp;春</a></h5>
-                    </dd>
-                </dl>
+            <?php get_template_part('templates/content/content', 'event') ?>
+        </div>
+    </section>
+    <section class="l-lineup">
+        <h2 class="l-lineup__title sectionTitle">Line Up<p class="c-sectionTitle">その他のテント</p></h2>
+        <div class="l-lineup__slide swiper">
+            <div class="swiper-wrapper">
+            <?php 
+                $html = 
+                '<article class="p-slideCard swiper-slide">
+                    <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/25779492_s 1.png').'" alt="コーポレートソロテント">
+                    <p class="p-slideCard__title">コーポレートソロテント</p>
+                    <div class="c-spec spec_margin">
+                        <dl><dt>重量</dt><dd>840<span>g</span></dd></dl>
+                        <dl><dt>サイズ</dt><dd>210<span>cm</span> × 200<span>cm</span> × 200<span>cm</span></dd></dl>
+                        <dl><dt>カラー</dt>
+                            <dd>
+                                <div class="yellow_box"></div>
+                                <div class="green_box"></div>
+                            </dd>
+                        </dl>
+                        <div class="c-btnWrap">
+                            <button class="c-luBtn">
+                                <a href="#" class="c-luBtn__link"></a>
+                                <span class="c-luBtn__text">商品詳細はこちら</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>';
+                for($i = 1; $i <= 10; $i++){
+                    echo $html;
+                }
+            ?>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 </main>

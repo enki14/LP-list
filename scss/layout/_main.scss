@@ -573,4 +573,41 @@
             }
         }
     }
+
+    .l-lineup{
+        &__slide{
+            .swiper-wrapper{
+                padding: 8rem 0;
+                margin-bottom: 10rem;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next{
+                color: rgba(0, 0, 0, 0.25);
+                filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+
+            }
+
+            .swiper-button-prev{
+                @include mixin.background_url('tento/pc/left.png', 32px, 54px);
+                left: 64px;
+                top: 43%;
+                &::after{
+                    display: none;
+                }
+            }
+            .swiper-button-next{
+                @include mixin.background_url('tento/pc/right.png', 32px, 54px);
+                right: 64px;
+                top: 43%;
+                &::after{
+                    display: none;
+                }
+            }
+            .swiper-pagination{
+                bottom: 110px;
+            }
+            
+        }
+    }
 }

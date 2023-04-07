@@ -10,7 +10,7 @@ $black: #333;
 $dark: rgba(56, 52, 52, 0.76);
 $pale_purple: rgba(139, 46, 119, 0.39);
 $linear_gold: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-
+$linear_rainbow: linear-gradient(90deg, #2E6A8B 0%, rgba(84, 132, 62, 0.741667) 25.98%, #2E6A8B 61.82%, rgba(139, 46, 119, 0.39) 100.59%);
 
 $georgia: Georgia, 'Times New Roman', Times, serif;
 
@@ -188,7 +188,7 @@ html{
     .sectionTitle{
         color: #fff;
         padding: 2rem 0;
-        background: linear-gradient(90deg, #2E6A8B 0%, rgba(84, 132, 62, 0.741667) 25.98%, #2E6A8B 61.82%, rgba(139, 46, 119, 0.39) 100.59%);
+        background: $linear_rainbow;
     }
 
     .c-sectionTitle{
@@ -228,6 +228,57 @@ html{
             top: -34px;
         }
     }
+
+    .allow_wrap{
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        transition: all .4s;
+
+    }
+
+    // 詳細情報やその他のテントの共通クラス
+    .c-spec{
+        dl{
+            border-bottom: 1px solid #000;
+            padding: 1rem 0;
+            margin-bottom: 2.8rem;
+
+            &:nth-child(4){
+                margin-bottom: 4rem;
+            }
+            dt{
+                font-family: $georgia;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0.1em;
+                padding-left: 1rem;
+            }
+            dd{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                padding-left: 7.4rem;
+
+                div{
+                    display: inline-block;
+                    &:not(:last-child){
+                        margin-right: 1.2rem;
+                    }
+                }
+                span{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+        
+    }
+
 
     .yellow_box{
         width: 3rem;
@@ -319,6 +370,10 @@ html{
     li,
     span{
         @include mixin.font_pattern(14px, 12px, $black, 400);
+    }
+
+    ul{
+        list-style: none;
     }
 
     a{

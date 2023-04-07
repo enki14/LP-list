@@ -1,10 +1,12 @@
     <?php if(is_front_page() && is_home()): ?>
-        <footer>
-            <h2>ここはLP集トップページのフッターです</h1>
+    <footer>
+        <h2>ここはLP集トップページのフッターです</h1>
     </footer>
     <?php 
         elseif(is_single(184)):
             get_template_part('templates/footer/footer', 'cosmetics');
+        elseif(is_single(212)):
+            get_template_part('templates/footer/footer', 'tento');    
         endif; 
     ?>
     <script src="//unpkg.com/swiper@8.4.0/swiper-bundle.min.js"></script>

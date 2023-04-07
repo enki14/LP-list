@@ -26,7 +26,7 @@
 
     
     function register_my_menu(){
-        register_nav_menu('header-navigation', 'Header Navigation');
+        register_nav_menu('header-navigation', 'Header-Navigation');
     }
     add_action('after_setup_theme', 'register_my_menu');
 
@@ -243,10 +243,10 @@
                     <img src="' . esc_url(get_template_directory_uri() . '/images/tento/' . $data->pc_img). '" alt="' . $data->tento_name. '">
                     <h3>' . $data->tento_name . '</h3>
                 </div>
-                <div class="p-individual__spec">
+                <div class="p-individual__atl c-spec">
                     <dl><dt>品番</dt><dd>000-000-0000</dd></dl>
-                    <dl><dt>重量</dt><dd>840g</dd></dl>
-                    <dl><dt>サイズ</dt><dd>210cm × 200cm × 200cm</dd></dl>
+                    <dl><dt>重量</dt><dd>840<span>g</span></dd></dl>
+                    <dl><dt>サイズ</dt><dd>210<span>cm</span> × 200<span>cm</span> × 200<span>cm</span></dd></dl>
                     <dl><dt>カラー</dt>
                         <dd>
                             <div class="yellow_box"></div>
@@ -307,7 +307,7 @@
         );
     }
     add_action('init', 'create_post_type');
-    
+
 
 
 

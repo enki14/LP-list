@@ -23,23 +23,105 @@
         border-collapse: collapse;
         margin-top: 4px;
 
-        
         li{
+            position: relative;
             display: table-cell;
             padding-right: 32px;
+            transition: all .3s;
             &:last-child{
                 padding-right: 0;
             }
-            
-        } a{
-            color: base.$dark;
-            font-family: Inter;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 36px;
-            text-align: left;
 
+            a{
+                color: base.$dark;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 36px;
+                text-align: left;
+    
+            }
+
+            .sub-menu{
+                display: none;
+            }
+
+            &:hover a{
+                background: base.$linear_rainbow;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;  
+            }
+        } 
+
+        .bg_translucent{
+            
+            &:hover{
+                background: rgba(255,255,255,0.9);
+                padding: 3.2rem;
+                width: 35%;
+                text-align: center;
+
+                &::before{
+                    @include mixin.background_url('tento/pc/tento.png', 36px, 28.5px);
+                    position: absolute;
+                    left: 1.2rem;
+                }
+                &::after{
+                    @include mixin.beside_center;
+                    background: base.$linear_rainbow;
+                    content: '';
+                    display: inline-block;
+                    bottom: 1.2rem;
+                    width: 92%;
+                    height: 3px;
+                    border-radius: 1.5px;
+                    position: absolute;
+                }
+    
+                a{
+                    background: none;
+                    -webkit-background-clip: border-box;
+                    -webkit-text-fill-color: base.$dark; 
+                    color: base.$dark;       
+                }
+    
+                .sub-menu{
+                    display: block;
+                    background: rgba(255,255,255,0.9);
+                    position: absolute;
+                    padding-top: 3.6rem;
+                    padding-bottom: 2rem;
+                    width: 100%;
+                    left: 0;
+                    li{
+                        display: block;
+                        transition: all .3s;
+                        position: relative;
+                        padding: 2rem 3.2rem 2rem 5.6rem;
+                        list-style-type: none;
+                        color: base.$dark;
+                        text-align: left;
+
+                        &::before{
+                            @include mixin.background_url('tento/pc/right_turn.png', 18px, 20px);
+                            position: absolute;
+                            left: 2.4rem;
+                            bottom: 3.3rem;
+                        }
+                       
+                        &:hover{
+                            a{
+                                background: base.$linear_rainbow;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;            
+                            }
+                        }
+                    }
+                }
+               
+            }
         }
+
     }
 
     .p-size{
@@ -186,6 +268,70 @@
             }
             
         } 
+    }
+
+    .p-fLink{
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        
+
+        .sns_wrapper{
+            width: 67.7%;
+            align-items: center;
+            position: relative;
+
+            .p-fLink__sns{
+                @include mixin.table_layout(3.6rem, 672px);
+                left: -19%; 
+                position: absolute;
+                line-height: 160px;
+                margin: auto 0;
+    
+            }
+        }
+        &__overview{
+
+            width: auto;
+            li:not(:last-child){
+                margin-bottom: 2rem;
+            }
+
+            li{
+                position: relative;
+                transition: 300ms;
+                animation-timing-function: ease-in;
+                padding-left: 2rem;
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 35px;
+                letter-spacing: 0em;
+
+
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    display: block;
+                    width: 4px;
+                    height: 100%;
+                    background: base.$dark;
+                    border-radius: 1px;
+                }
+
+                &:hover{
+                    background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    &::before{
+                        background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
+                    }
+                }
+            }
+        }
     }
 
 }

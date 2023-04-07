@@ -1,29 +1,58 @@
 @use "../foundation/mixin";
 @use "../foundation/base";
 
-.l-footer{
-    background: base.$pink;
-    position: relative;
-    min-height: 277px;
-    padding-bottom: 62px;
+.postid-184{
+    .l-footer{
+        background: base.$pink;
+        position: relative;
+        min-height: 277px;
+        padding-bottom: 62px;
+        
+        .l-footerContent{
+            padding-top: 4rem;
     
-    .l-footerContent{
-        padding-top: 4rem;
-
-    }
-    .l-footer__btmBar{
-        position: absolute;
-        bottom: 0;
-        margin: 0;
-        padding: 2rem 0;
-        width: 100%;
-        text-align: center;
-        background: base.$purple;
-        color: #fff;
-        @include mixin.mq(sp){
-            font-size: 1.2rem;
         }
-
+        .l-footer__btmBar{
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            padding: 2rem 0;
+            width: 100%;
+            text-align: center;
+            background: base.$purple;
+            color: #fff;
+            @include mixin.mq(sp){
+                font-size: 1.2rem;
+            }
+    
+        }
+    
     }
+}
 
+
+.postid-212{
+    .l-footer{
+        &__main{
+            background: rgba(217, 217, 217, 1);
+            padding: 6rem 0 8rem;
+            border-top: 1px solid linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%);
+        }
+        &__copyright{
+            background: linear-gradient(90deg, #2E6A8B 0%, rgba(84, 132, 62, 0.741667) 25.98%, 
+            #2E6A8B 61.82%, rgba(139, 46, 119, 0.39) 100.59%);
+            padding: 30px 0;
+            
+            p{
+                text-align: center;
+                font-family: base.$georgia;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0.05em;
+            }
+
+
+        }
+    }
 }

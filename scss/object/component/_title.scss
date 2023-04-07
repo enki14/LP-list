@@ -109,10 +109,10 @@
         margin: auto 0;
         &__tag{
             line-height: 22px;
-            color: base.$dark;
             margin-bottom: 4px;
             a{
                 margin-right: 12px;
+                color: base.$dark;
             }
         }
         &__ttl{
