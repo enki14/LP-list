@@ -76,18 +76,28 @@
 
 
 .postid-212{
+    .nav_top{
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        padding: 28px 40px 0;
+        z-index: 10;
+    }
+
+
     .l-header{
         position: relative;
-        @include mixin.background_url('tento/pc/l-header__background.jpg', 100%, auto);
-        background-size: cover;
+        width: 100%;
+        height: auto;
 
-        &__top{
+        &__img{
             width: 100%;
-            position: fixed;
-            display: flex;
-            justify-content: space-between;
-            padding: 28px 40px 0;
-            z-index: 10;
+            height: 100%;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         &__content{

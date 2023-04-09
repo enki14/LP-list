@@ -208,6 +208,15 @@ html{
         position: relative;
         background: rgba(255, 255, 255, 0.9);
         margin: 0 auto;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.5s, transform 1s;
+
+    }
+
+    .active{
+        opacity: 1;
+        transform: translateY(0);
     }
     .content_wrap{
         background-size: cover;

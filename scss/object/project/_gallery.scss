@@ -54,6 +54,7 @@
 
 .postid-212{
     .p-hImg{
+        z-index: 3;
         .p-hImg__onepole{
             margin-top: 34px;
             margin-left: 31px;
@@ -120,6 +121,9 @@
 
     .p-eCard{
         display: grid;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.5s, transform 1s;
 
         .article_wrap{
             display: flex;
