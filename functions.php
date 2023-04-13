@@ -291,6 +291,7 @@
                 'label' => 'イベント情報',
                 'public' => true,
                 'has_archive' => true,
+                'hierarchical' => true,
                 'supports' => $exampleSupports 
             )
         );

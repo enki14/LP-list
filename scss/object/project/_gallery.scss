@@ -55,10 +55,9 @@
 .postid-212{
     .p-hImg{
         z-index: 3;
-        .p-hImg__onepole{
+        .p-hImg__tento{
             margin-top: 34px;
             margin-left: 31px;
-            box-shadow: -31px -34px 0 base.$pale_purple;
         }
     }
 
@@ -120,6 +119,7 @@
     }
 
     .p-eCard{
+        position: relative;
         display: grid;
         opacity: 0;
         transform: translateY(30px);
@@ -129,7 +129,7 @@
             display: flex;
 
             .p-eCard__article{
-                width: 58.83%;
+                width: 333px;
                 padding: 20px 24px 49px;
                 position: relative;
                 background: #fff;
@@ -164,6 +164,7 @@
 
         &:nth-child(1){
             grid-template-columns: 41.43vw 1fr 1fr;
+            z-index: 3;
 
             .article_wrap{
                 justify-content: end;
@@ -172,6 +173,7 @@
                 .p-eCard__article{
                     &::before{
                         @include mixin.background_url('tento/pc/top_comic.png', 100px, 91px);
+                        transform: translateY(0);
                         position: absolute;
                         bottom: -13px;
                         left: 44px;
@@ -181,6 +183,7 @@
         }
         &:nth-child(2){
             grid-template-columns: 1fr 1fr 41.43vw;
+            z-index: 2;
 
             .article_wrap{
                 justify-content: start;
@@ -197,12 +200,10 @@
                 }
             }
             
-            .c-img_1{
-                height: 100.05%;
-            }
         }
         &:nth-child(3){
             grid-template-columns: 41.43vw 1fr 1fr;
+            z-index: 1;
 
             .article_wrap{
                 justify-content: end;

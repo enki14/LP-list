@@ -13,7 +13,6 @@
             </div>
         </div>
         <div class="p-fLink">
-            <div class="sns_wrapper">
                 <ul class="p-fLink__sns">
                     <li>
                         <button class="c-snsBtn">
@@ -37,13 +36,11 @@
                         </button>
                     </li>
                 </ul>
-
-            </div>
             <ul class="p-fLink__overview">
-                <li>会社概要</li>
-                <li>個人情報保護方針</li>
-                <li>プライバシーポリシー</li>
-                <li>利用規約</li>
+                <li><a href="#">会社概要</a></li>
+                <li><a href="#">個人情報保護方針</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="#">利用規約</a></li>
             </ul>
         </div>
     </div>

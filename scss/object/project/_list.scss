@@ -32,6 +32,12 @@
                 padding-right: 0;
             }
 
+            img{
+                position: absolute;
+                top: 30%;
+                left: -1.6rem;
+                transition: .3s;
+            }
             a{
                 color: base.$dark;
                 font-family: Inter;
@@ -52,6 +58,10 @@
                 -webkit-text-fill-color: transparent;  
             }
         } 
+
+        li:not(:nth-child(1)) img{
+            display: none;
+        }
 
         .bg_translucent{
             
@@ -83,6 +93,10 @@
                     -webkit-background-clip: border-box;
                     -webkit-text-fill-color: base.$dark; 
                     color: base.$dark;       
+                }
+
+                img{
+                    display: none;
                 }
     
                 .sub-menu{
@@ -270,26 +284,26 @@
         } 
     }
 
+
     .p-fLink{
-        width: 900px;
-        margin: 0 auto;
+        width: 77%;
+        margin-left: 4.1vw;
+        top: 0;
         display: flex;
-        justify-content: center;
-        
+        justify-content: space-between;
+        flex-flow: wrap;
 
-        .sns_wrapper{
-            width: 67.7%;
-            align-items: center;
-            position: relative;
+        &__sns{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+            line-height: 160px;
+            margin: auto 0;
 
-            .p-fLink__sns{
-                @include mixin.table_layout(3.6rem, 672px);
-                left: -19%; 
-                position: absolute;
-                line-height: 160px;
-                margin: auto 0;
-    
+            li{
+                margin-right: 3.6rem;
             }
+
         }
         &__overview{
 
@@ -303,12 +317,6 @@
                 transition: 300ms;
                 animation-timing-function: ease-in;
                 padding-left: 2rem;
-                font-family: Inter;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 35px;
-                letter-spacing: 0em;
-
 
                 &::before{
                     position: absolute;
@@ -329,6 +337,15 @@
                     &::before{
                         background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
                     }
+                }
+
+                a{
+                    text-decoration: none;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 35px;
+                    letter-spacing: 0em;
                 }
             }
         }

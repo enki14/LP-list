@@ -107,7 +107,7 @@
             <div class="c-btnWrap">
                 <div class="absolute">
                     <button class="c-proBtn">
-                        <a href="#" class="c-proBtn__link"></a>
+                        <a href="/index.php?p=265" class="c-proBtn__link"></a>
                         <div class="c-proBtn__inside">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/nazucaApply.png'); ?>" alt="nazucaアプリミニ">
                             <span>について詳しく</span>
@@ -134,7 +134,7 @@
                         </p>
                         <div class="c-btnWrap">
                             <button class="c-entBtn">
-                                <a href="#" class="c-entBtn__link"></a>
+                                <a href="/index.php?p=306" class="c-entBtn__link"></a>
                                 <span class="c-entBtn__text">詳しく</span>
                                 <div class="c-hAllow">
                                     <span class="c-hAllow__item"></span>
@@ -159,7 +159,7 @@
                         </p>
                         <div class="c-btnWrap">
                             <button class="c-entBtn">
-                                <a href="#" class="c-entBtn__link"></a>
+                                <a href="/index.php?p=304" class="c-entBtn__link"></a>
                                 <span class="c-entBtn__text">詳しく</span>
                                 <div class="c-hAllow">
                                     <span class="c-hAllow__item"></span>
@@ -180,7 +180,7 @@
                         </p>
                         <div class="c-btnWrap">
                             <button class="c-entBtn">
-                                <a href="#" class="c-entBtn__link"></a>
+                                <a href="/index.php?p=302" class="c-entBtn__link"></a>
                                 <span class="c-entBtn__text">詳しく</span>
                                 <div class="c-hAllow">
                                     <span class="c-hAllow__item"></span>
@@ -217,7 +217,7 @@
                         </dl>
                         <div class="c-btnWrap">
                             <button class="c-luBtn">
-                                <a href="#" class="c-luBtn__link"></a>
+                                <a href="/index.php?p=291" class="c-luBtn__link"></a>
                                 <span class="c-luBtn__text">商品詳細はこちら</span>
                             </button>
                         </div>

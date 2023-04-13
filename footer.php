@@ -10,7 +10,11 @@
         endif; 
     ?>
     <script src="//unpkg.com/swiper@8.4.0/swiper-bundle.min.js"></script>
-    <script src="<?php echo esc_url(get_template_directory_uri() . '/js/main.js'); ?>" type="text/javascript" defer></script>
+    <?php if(is_single(184)): ?> 
+        <script src="<?php echo esc_url(get_template_directory_uri() . '/js/main.js'); ?>" type="text/javascript" defer></script>
+    <?php elseif(is_single(212)): ?>
+        <script src="<?php echo esc_url(get_template_directory_uri() . '/js/tento.js'); ?>" type="text/javascript" defer></script>    
+    <?php endif; ?>
     <?php wp_footer(); ?>
 </body>
 </html>
