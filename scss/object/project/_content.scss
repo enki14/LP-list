@@ -134,23 +134,23 @@
     .p-dura{
         padding: 7.5rem 0 0 7.5rem;
         position: relative;
-
         &:nth-child(1){
             margin-bottom: 3rem;
 
             &::before{
                 @include mixin.background_url('tento/pc/p-dura-ma.png', 150px, 150px);
+                background-size: cover;
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 4;
+
             }
-
-
         }
         &:nth-child(2){
             &::before{
                 @include mixin.background_url('tento/pc/p-dura-st.png', 150px, 150px);
+                background-size: cover;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -165,62 +165,25 @@
             padding: 40px 40px 40px 78px;
             border-radius: 4px;
         }
+
     }
     .p-dura:nth-child(1) .p-dura__article{
         &::before{
             @include mixin.background_url('tento/pc/amount.png', 100%, calc(100% + 6px));
             position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: transparent;
-        //     background-image: linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%);
-        //     border-radius: inherit;
-        //     content: "";
-        //     z-index: 1;
             top: 0;
             left: 0;
             
         }
-        // &::after{
-            // position: absolute;
-        //     width: calc(100% - 6px);
-        //     height: calc(100% - 6px);
-        //     background: linear-gradient(89.72deg, #F4BEE8 0.23%, rgba(23, 179, 179, 0.55) 99.76%) rgba(255, 255, 255, 0.9);
-        //     border-radius: inherit;
-        //     z-index: 2;
-        //     content: "";
-        //     top: 3px;
-        //     left: 3px;
-            
-        // }
     }
     .p-dura:nth-child(2) .p-dura__article{
         &::before{
             @include mixin.background_url('tento/pc/amount_gold.png', 100%, calc(100% + 6px));
             position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: transparent;
-        //     background-image: base.$linear_gold;
-        //     border-radius: inherit;
-        //     content: "";
-        //     z-index: 1;
             top: 0;
             left: 0;
-        }
-        // &::after{
-        //     position: absolute;
-        //     width: calc(100% - 6px);
-        //     height: calc(100% - 6px);
-        //     background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%) rgba(255, 255, 255, 0.9);
-        //     border-radius: inherit;
-        //     z-index: 2;
-        //     content: "";
-        //     top: 3px;
-        //     left: 3px;
-            
 
-        // }
+        }
     }
 
     .p-schedule{
@@ -238,22 +201,23 @@
         &__archive{
             display: inline-block;
             width: 100%;
-            text-decoration: none;
-            color: base.$dark;
-            text-align: right;
             padding-right: 4rem;
             margin-bottom: 4rem;
-            font-family: base.$georgia;
-            font-size: 20px;
-            font-weight: 700;
             line-height: 22px;
-            letter-spacing: 0em;
-            transition: .3s;
+            text-align: right;
 
-            &:hover{
-                color: #000;
+            a{
+                text-decoration: none;
+                color: base.$dark;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0em;
+                transition: .3s;        
+
+                &:hover{
+                    color: #000;
+                }    
             }
-
         }
     }
 
@@ -268,4 +232,112 @@
         }
     }
 
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+        .p-dura{
+            &__article{
+                padding: 40px;
+                flex-wrap: wrap;
+            }
+        }
+
+        .p-dura:nth-child(1) .p-dura__article{
+            &::before{    
+                @include mixin.background_url('tento/tab/amount-tab.png', 581px, 690px);
+            }
+        }
+        .p-dura:nth-child(2) .p-dura__article{
+            &::before{
+                @include mixin.background_url('tento/tab/amount_gold-tab.png', 581px, 579px);
+            }
+        }
+        .p-schedule{
+            width: 696px;
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .p-dura{
+            padding-left: 0;
+
+            &:nth-child(1){
+                &::before{    
+                    width: 120px;
+                    height: 120px;
+                    left: 19px;            
+                }
+            }
+            &:nth-child(2){
+                &::before{
+                    width: 120px;
+                    height: 120px;
+                    left: 19px;    
+                }   
+            }
+            &__article{
+                padding: 6rem 2rem 4rem;
+                background: rgba(255, 255, 255, 0.9);
+
+            }
+        }
+        #duraAtl_1::before{
+            display: none;
+        }
+        #duraAtl_2::before{
+            display: none;
+        }
+
+        .p-schedule{
+            width: 100%;
+            margin: 0;
+            padding: 4rem 2rem;
+            background: rgba(255,255,255,0.76);
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .p-schedule{
+            padding: 4rem 1.2rem;
+            h4{
+                margin-left: 8px;
+                margin-bottom: 3.2rem;
+                font-size: 2rem;
+                width: 62.8%;
+                &::before,
+                &::after{
+                    width: 2.4rem;
+                }
+            }
+            &__archive{
+                a{
+                    font-size: 1.4rem;
+                    line-height: 25px;
+                }
+            }
+        }
+        .p-logoArea{
+            margin-bottom: 3rem;
+            &__content{
+                width: 93.3vw;
+            }
+        }
+    }
 }

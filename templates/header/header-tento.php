@@ -1,11 +1,19 @@
 <header>
     <nav class="nav_top">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/c-logo.png'); ?>" class="c-logo" alt="nazucaのロゴ">
-        <?php wp_nav_menu( array( 
-            'theme_location' => 'header-navigation', 
-            'menu_class' => 'p-nav',
-            'before' => '<img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/navplus.png'). '" alt="プラスマーク">'
-        ) ); ?>
+        <div class="drawer">
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" id="burger" class="btn-burger">
+                <span class="icon"></span>
+            </label>
+            <div id="navArea" class="p-navArea">
+                <?php wp_nav_menu( array( 
+                    'theme_location' => 'header-navigation', 
+                    'menu_class' => 'p-nav',
+                    'before' => '<img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/navplus.png'). '" class="pc" alt="プラスマーク">'
+                ) ); ?>
+            </div>
+        </div>
     </nav>
     <div class="c-backtop">
         <div class="allow_wrapper">
@@ -29,7 +37,7 @@
                         <div class="c-accessories">
                         </div>
                     </div>
-                    <div class="p-hArticle">
+                    <div id="p-harticle" class="p-hArticle">
                         <h3>LP<?php echo $data->t_name ?></h3>
                         <p class="c-hCatch"><?php echo $data->catch ?></p>
                         <div class="c-hPrice">

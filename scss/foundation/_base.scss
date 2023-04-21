@@ -184,7 +184,6 @@ html{
     width: 100%;
     // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-
     .sectionTitle{
         color: #fff;
         padding: 2rem 0;
@@ -211,7 +210,6 @@ html{
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 1.5s, transform 1s;
-
     }
 
     .active{
@@ -257,9 +255,7 @@ html{
                 margin-bottom: 4rem;
             }
             dt{
-                font-family: $georgia;
                 font-size: 16px;
-                font-style: italic;
                 font-weight: 700;
                 line-height: 25px;
                 letter-spacing: 0.1em;
@@ -270,7 +266,6 @@ html{
                 font-weight: 400;
                 line-height: 19px;
                 padding-left: 7.4rem;
-
                 div{
                     display: inline-block;
                     &:not(:last-child){
@@ -343,7 +338,7 @@ html{
     .solo_access{
         .p-hImg{
             &__tento{
-                box-shadow: -31px -34px 0 rgba(46, 139, 111, 0.45);
+                box-shadow: -31px -34px 0 rgba(46,106,139,0.5);
             }
             .c-accessories{
                 &::before{
@@ -362,7 +357,7 @@ html{
             
         }
         .p-hArticle::after{
-            background: rgba(46, 139, 111, 0.45);
+            background: rgba(46,106,139,0.5);
         }
     }
 
@@ -404,30 +399,12 @@ html{
 
     .pc{
         display: block;
-        @include mixin.mq(tab){
-            display: none;
-        }
-        @include mixin.mq(sp){
-            display: none;
-        }
     }
     .tab{
         display: none;
-        @include mixin.mq(tab){
-            display: block;
-        }
-        @include mixin.mq(sp){
-            display: none;
-        }
     }
     .sp{
         display: none;
-        @include mixin.mq(tab){
-            display: none;
-        }
-        @include mixin.mq(sp){
-            display: block;
-        }
     }
 
 
@@ -475,8 +452,121 @@ html{
     a{
         text-decoration: none;
     }
-
-
 }
 
 
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{    
+        .sectionContent{
+            width: 744px;
+        }
+    
+        // 詳細情報やその他のテントの共通クラス
+        .c-spec dl dd{
+            padding-left: 10.4rem;
+        }
+    
+        .pc{
+            display: none;
+        }
+        .tab{
+            display: block;
+        }
+        .sp{
+            display: none;
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .sectionContent{
+            width: 89.57vw;    
+        }
+ 
+        // 詳細情報やその他のテントの共通クラス
+        .c-spec dl{
+            dt{
+                font-size: 14px;
+                line-height: 23px;
+            }
+            dd{
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    
+        .two_access{
+            .p-hImg{    
+                &::before{
+                    display: none;
+                }
+                
+            }
+        } 
+
+        .c-btnWrap .absolute{
+            top: 2px;
+        }
+    
+        .pc{
+            display: none;
+        }
+        .tab{
+            display: none;
+        }
+        .sp{
+            display: block;
+        }
+
+        .sectionTitle{
+            font-size: 3.2rem;
+            line-height: 1.8em;
+            .c-sectionTitle{
+                font-size: 1.8rem;
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .sectionContent{
+            width: 93.3vw;
+        }
+
+        .content_wrap{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .allow_wrap{
+            right: 8px;
+        }
+
+        .two_access{
+            .p-hArticle .c-btnWrap .c-hBtn {
+                margin-top: 6.5rem;
+            }
+        }
+        .sectionTitle{
+            font-size: 2.4rem;
+            .c-sectionTitle{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

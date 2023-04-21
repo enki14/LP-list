@@ -237,22 +237,6 @@
                     }
                 }
 
-                li:nth-child(2){
-                    &::before{
-                        left: 3rem;
-                    }
-                    p, img{
-                        margin-left: 3rem;
-                    }
-                }
-                li:nth-child(3){
-                    &::before{
-                        left: 3rem;
-                    }
-                    p, img{
-                        margin-left: 3rem;
-                    }
-                }
             }
 
 
@@ -264,6 +248,7 @@
         background: none;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin: 0 auto 15.8rem;
         width: 877px;
 
@@ -280,7 +265,6 @@
             &:nth-child(3){
                 width: 230px;
             }
-            
         } 
     }
 
@@ -303,7 +287,6 @@
             li{
                 margin-right: 3.6rem;
             }
-
         }
         &__overview{
 
@@ -351,4 +334,173 @@
         }
     }
 
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+        .p-size{
+            &__list{
+                ul{    
+                    li{
+                        padding-left: 2.4rem;
+                        img{
+                            height: 170px;
+                            width: 170px;
+                        }
+                    }
+                }
+            } 
+        }
+
+        .p-applyBadge{
+            width: 696px;
+            img{                    
+                &:nth-child(1){
+                    width: 220px;
+                    height: 66px;
+                }
+                &:nth-child(2){
+                    width: 240px;
+                    height: 66px;
+                }
+                &:nth-child(3){
+                    width: 190px;
+                    height: 69px;
+                }
+            } 
+        }
+
+        .p-fLink{
+            margin: 0 auto;
+            justify-content: end;
+    
+            &__sns{
+                margin-left: 0;
+                margin-right: auto;
+                flex-basis: 200px;
+                line-height: 84px;
+
+                li:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .p-size{
+    
+            &__list{
+                ul{    
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    gap: 2.8rem;
+                    li{
+                        display: block;
+                        padding-left: 0;
+                        p{
+                            padding-left: 1.7rem;
+                            margin-bottom: 1.2rem;
+                        }
+                    }
+                }    
+            } 
+            
+        } 
+        
+        .p-applyBadge{
+            width: 89.57vw;
+            justify-content: space-around;
+            row-gap: 3.2rem;
+        }
+
+        .p-fLink{
+            row-gap: 2rem;
+            justify-content: start;
+            &__sns{
+                margin: 0 auto;
+                li{
+                    margin: 0;
+                }
+    
+            }
+        }
+    }
+
+}
+
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .p-size{
+            &__list{
+                background: rgba(255,255,255,0.95);
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                ul li{
+                    p{
+                        width: 100%;
+                    }
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            &__title{
+                padding: 4rem 2rem 3rem;
+            }
+            &:nth-child(1){
+                .p-size__title{
+                    background: rgba(139, 46, 119, 0.7);
+                    border: 1px solid rgba(139, 46, 119, 1);
+
+                }
+            }
+            &:nth-child(2){
+                .p-size__title{
+                    &::before{
+                        background: rgb(41 109 89);
+                    }
+                    background: rgba(46, 139, 111, 0.9);
+                    border: 1px solid rgba(46, 139, 111, 1);
+
+
+                }
+            }
+            &:nth-child(3){
+                .p-size__title{
+                    &::before{
+                        background: rgba(46, 106, 139, 1);
+                    }
+                    background: rgba(92, 99, 163, 0.8);
+                    border: 1px solid rgba(92, 99, 163, 1);
+
+                }
+            }
+
+        }
+        .p-fLink{
+            row-gap: 3rem;
+            &__sns{
+                justify-content: center;
+                line-height: 62px;
+            }
+        }
+    }
 }

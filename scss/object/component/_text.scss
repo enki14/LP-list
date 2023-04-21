@@ -8,19 +8,21 @@
         position: relative;
         padding-left: 40px;
         margin-top: 38.5px;
+        font-family: 'Roboto', sans-serif, 'Merriweather', serif, 'Oswald', 'Raleway';
         font-size: 24px;
         font-weight: 600;
         color: base.$dark;
         line-height: 43px;
         letter-spacing: 0.05em;
         text-align: left;
-        z-index: 5;
-    
+        z-index: 5;    
     }
     .c-hPrice{
         width: 100%;
         margin-top: 22px;
         text-align: right;
+        z-index: 3;
+        position: relative;
     
         i{
             margin-right: 8px;
@@ -48,7 +50,17 @@
         z-index: 5;
     }
 
-    
+    .c-appCatch{
+        font-size: 24px;
+        color: base.$dark;
+        font-weight: 700;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 2rem;
+        width: calc(100% - 18px);
+        margin-left: 18px;
+    }
+
     .c-timeDay{
         width: 213px;
         position: relative;
@@ -104,4 +116,104 @@
         }
     }
 
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+        .c-appCatch{
+            font-size: 2.2rem;
+            line-height: 53px;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .c-hCatch{
+            font-size: 2rem;
+            line-height: 1.8em;        
+        }
+        .c-hPrice{        
+            i{
+                width: 13px;
+                height: auto;
+            }
+            span{
+                font-size: 1.8rem;
+                line-height: 1.8em;        
+            }
+        }
+    
+        .c-hFour{
+            font-size: 2.4rem;
+            line-height: 64px;
+        }
+
+        .c-timeDay{
+            width: 38%;
+            .pRight{
+                padding-left: 2.7rem;
+            }
+        }
+        .c-spec{
+            width: 100%;
+        }
+
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .c-hCatch{
+            padding-right: 0.8rem;
+            font-size: 1.8rem;
+        }
+        .c-hPrice{
+            padding-right: 1.3rem;
+            i{
+                font-size: 2.3rem;
+                margin-right: 7px;
+            }
+        }
+        .c-hFour{
+            line-height: 4rem;
+            font-size: 1.6rem;
+        }
+        .c-appCatch{
+            font-size: 12px;
+            line-height: 36px;
+            letter-spacing: 0.05em;
+        }
+        .c-timeDay__date{
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .c-spec{
+            dl{
+                dt{
+                    font-size: 1.2rem;
+                    line-height: 2.1rem;
+                }
+                dd{
+                    padding-left: 6.8rem;
+                }
+
+            } 
+        }
+    }
 }

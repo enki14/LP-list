@@ -34,8 +34,9 @@
                 <p class="c-timeDay__date"><?php echo $start[0] ?></p>
                 <p class="c-timeDay__time">
                     <span class="start"><?php echo $start[1] ?></span>
-                    <span class="triangle">▶</span>
-                    <span class="end"><?php echo $end[1] ?></span>
+                    <span class="triangle pc tab">▶</span>
+                    <p class="c-timeDay__triangle sp">▼</p>                    
+                    <span class="end pRight"><?php echo $end[1] ?></span>
                 </p>
             </dt>
             <dd class="c-schTitle">
@@ -96,5 +97,5 @@
             </dd>
         </dl>
     <?php endif; endwhile; wp_reset_postdata(); endif; ?>
-    <a href="<?php echo get_post_type_archive_link('event_info'); ?>" class="p-schedule__archive">もっと見る...</a>
+    <p class="p-schedule__archive"><a href="<?php echo get_post_type_archive_link('event_info'); ?>">もっと見る...</a></p>
 </div>

@@ -13,9 +13,11 @@
         <div class="l-durability__content content_wrap">
             <div class="sectionContent">
                 <div class="p-dura">
-                    <article class="p-dura__article">
+                    <article id="duraAtl_1" class="p-dura__article">
                         <div class="c-duraImg">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/material.jpg'); ?>" alt="撥水素材">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/material.jpg'); ?>" class="pc" alt="撥水素材">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/tab/material_tab.jpg'); ?>" class="tab" alt="撥水素材">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/sp/material_sp.jpg'); ?>" class="sp" alt="撥水素材">
                             <small>LPソロテント（ブルー）の撥水効果を実証した結果です。</small>
                         </div>
                         <div class="c-explanation">
@@ -32,9 +34,11 @@
                     </article>
                 </div>
                 <div class="p-dura">
-                    <article class="p-dura__article">
+                    <article id="duraAtl_2" class="p-dura__article">
                         <div class="c-duraImg">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/structure.jpg'); ?>" alt="ツールームテントの室内">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/structure.jpg'); ?>" class="pc" alt="ツールームテントの室内">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/tab/structure_tab.jpg'); ?>" class="tab" alt="ツールームテントの室内">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/sp/structure_sp.jpg'); ?>" class="sp" alt="ツールームテントの室内">
                             <small>LPツールームテント（ベージュ）の室内構造</small>
                         </div>
                         <div class="c-explanation">
@@ -67,7 +71,7 @@
                 </div>
                 <div class="p-setVideo">
                     <p class="c-videoInfo"><i class="fa-solid fa-video"></i>詳しくはこちらの<span>動画</span>でご確認ください</p>
-                    <iframe width="680" height="381" src="https://www.youtube.com/embed/eEo0HMEGL5k" title="YouTube video player" frameborder="0" 
+                    <iframe src="https://www.youtube.com/embed/eEo0HMEGL5k" title="YouTube video player" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
@@ -87,10 +91,13 @@
             <span>Nazuca</span>
             <div class="p-applyImg sectionContent">
                 <div class="p-applyImg__top">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-applyImg__top.png'); ?>" alt="Nazucaアプリ">
+                    <p class="c-appCatch">今すぐ会員登録して<br>お買い物をもっと楽しもう！</p>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/nazucaApply.png'); ?>" alt="Nazucaアプリ">
                 </div>
                 <div class="p-applyImg__middle">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-applyImg__mdl.png'); ?>" alt="lets shopping">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-applyImg__mdl.png'); ?>" class="pc" alt="lets shopping">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/tab/p-appImg__mdl-tab.png'); ?>" class="tab" alt="lets shopping">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/sp/p-appImg__mdl-sp.png'); ?>" class="sp" alt="lets shopping">
                 </div>
                 <div class="p-applyImg__btm">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-applyImg__btm.png'); ?>" alt="10%キャッシュバック">
@@ -123,75 +130,77 @@
             <p class="c-sectionTitle">キャンプイベント</p>
         </div>
         <div class="l-event__pickup">
-            <article class="p-eCard">
-                <div class="article_wrap">
-                    <article class="p-eCard__article">
-                        <h4>Climbing</h4>
-                        <p class="c-subTitle">登山のいろは</p>
-                        <p class="c-message">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                        <div class="c-btnWrap">
-                            <button class="c-entBtn">
-                                <a href="/index.php?p=306" class="c-entBtn__link"></a>
-                                <span class="c-entBtn__text">詳しく</span>
-                                <div class="c-hAllow">
-                                    <span class="c-hAllow__item"></span>
-                                </div>
-                            </button>
-                        </div>
-                    </article>
-                </div>
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__top1.jpg'); ?>" class="c-img_1" alt="地図を確認">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__top2.jpg'); ?>" class="c-img_2" alt="富士山を拝む">
-            </article>
-            <article class="p-eCard">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__mdl1.jpg'); ?>" class="c-img_1" alt="川釣り">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__mdl2.jpg'); ?>" class="c-img_2" alt="家族でBBQ">
-                <div class="article_wrap">
-                    <article class="p-eCard__article">
-                        <h4>Family</h4>
-                        <p class="c-subTitle">ファミリーキャンプ</p>
-                        <p class="c-message">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                        <div class="c-btnWrap">
-                            <button class="c-entBtn">
-                                <a href="/index.php?p=304" class="c-entBtn__link"></a>
-                                <span class="c-entBtn__text">詳しく</span>
-                                <div class="c-hAllow">
-                                    <span class="c-hAllow__item"></span>
-                                </div>
-                            </button>
-                        </div>
-                    </article>
-                </div>
-            </article>
-            <article class="p-eCard">
-                <div class="article_wrap">
-                    <article class="p-eCard__article">
-                        <h4>Survival</h4>
-                        <p class="c-subTitle">自然と生きる</p>
-                        <p class="c-message">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                        <div class="c-btnWrap">
-                            <button class="c-entBtn">
-                                <a href="/index.php?p=302" class="c-entBtn__link"></a>
-                                <span class="c-entBtn__text">詳しく</span>
-                                <div class="c-hAllow">
-                                    <span class="c-hAllow__item"></span>
-                                </div>
-                            </button>
-                        </div>
-                    </article>
-                </div>
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__btm1.jpg'); ?>" class="c-img_1" alt="水難訓練">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__btm2.jpg'); ?>" class="c-img_2" alt="キャンプで寛ぐ">
-            </article>
+            <div class="pu_wrap">
+                <article class="p-eCard">
+                    <div class="article_wrap">
+                        <article id="eca_1" class="p-eCard__article">
+                            <h4>Climbing</h4>
+                            <p class="c-subTitle">登山のいろは</p>
+                            <p class="c-message">
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <div class="c-btnWrap">
+                                <button class="c-entBtn">
+                                    <a href="/index.php?p=306" class="c-entBtn__link"></a>
+                                    <span class="c-entBtn__text">詳しく</span>
+                                    <div class="c-hAllow">
+                                        <span class="c-hAllow__item"></span>
+                                    </div>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__top1.jpg'); ?>" class="c-img_1" alt="地図を確認">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__top2.jpg'); ?>" class="c-img_2" alt="富士山を拝む">
+                </article>
+                <article class="p-eCard">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__mdl1.jpg'); ?>" class="c-img_1" alt="川釣り">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__mdl2.jpg'); ?>" class="c-img_2" alt="家族でBBQ">
+                    <div class="article_wrap">
+                        <article id="eca_2" class="p-eCard__article">
+                            <h4>Family</h4>
+                            <p class="c-subTitle">ファミリーキャンプ</p>
+                            <p class="c-message">
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <div class="c-btnWrap">
+                                <button class="c-entBtn">
+                                    <a href="/index.php?p=304" class="c-entBtn__link"></a>
+                                    <span class="c-entBtn__text">詳しく</span>
+                                    <div class="c-hAllow">
+                                        <span class="c-hAllow__item"></span>
+                                    </div>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+                <article class="p-eCard">
+                    <div class="article_wrap">
+                        <article id="eca_3" class="p-eCard__article">
+                            <h4>Survival</h4>
+                            <p class="c-subTitle">自然と生きる</p>
+                            <p class="c-message">
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <div class="c-btnWrap">
+                                <button class="c-entBtn">
+                                    <a href="/index.php?p=302" class="c-entBtn__link"></a>
+                                    <span class="c-entBtn__text">詳しく</span>
+                                    <div class="c-hAllow">
+                                        <span class="c-hAllow__item"></span>
+                                    </div>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__btm1.jpg'); ?>" class="c-img_1" alt="水難訓練">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/p-eCard__btm2.jpg'); ?>" class="c-img_2" alt="キャンプで寛ぐ">
+                </article>
+            </div>
         </div>
         <div class="l-event__schedule">
             <?php get_template_part('templates/content/content', 'event') ?>
@@ -203,7 +212,7 @@
             <div class="swiper-wrapper">
             <?php 
                 $html = 
-                '<article class="p-slideCard swiper-slide">
+                '<article class="p-slideCard int swiper-slide">
                     <img src="' . esc_url(get_template_directory_uri() . '/images/tento/pc/25779492_s 1.png').'" alt="コーポレートソロテント">
                     <p class="p-slideCard__title">コーポレートソロテント</p>
                     <div class="c-spec spec_margin">

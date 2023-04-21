@@ -1,0 +1,308 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+
+.postid-212{
+    .drawer{
+        .nav-toggle{
+            display: none;
+        }
+        .btn-burger{
+            cursor: pointer;
+            display: none;
+            width: 56px;
+            height: 60px;
+            position: absolute;
+            top: 1rem;
+            right: 3rem;
+            z-index: 40;
+    
+            .icon, .icon::before, .icon::after{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 35px;
+                border-radius: 2px;
+                background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
+                display: block;
+                content: '';
+                cursor: pointer;
+                margin: auto;
+            }
+    
+            .icon::before{
+                top: 15px;
+            }
+    
+            .icon::after{
+                top: -25px;
+            }
+        }
+    
+    }
+}
+
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+        .drawer{
+            .btn-burger{
+                display: block;
+            }
+    
+            .nav-toggle:checked ~ .btn-burger .icon{
+                background: transparent;
+            }
+    
+            .nav-toggle:checked ~ .btn-burger .icon::before{
+                transform: rotate(-45deg);
+                top: 0;
+            }
+            .nav-toggle:checked ~ .btn-burger .icon::after{
+                transform: rotate(45deg);
+                top: 0;
+            }
+    
+            .nav-toggle:checked ~ .btn-burger{
+                animation: fadeout .6s ease .8s;
+                top: 12vh;
+                right: 27vw;
+        
+            }
+            @keyframes fadeout {
+                from{
+                    opacity: 1;
+                }
+                to{
+                    opacity: 0;
+                }
+            }
+    
+            .btn-burger .icon,
+            .btn-burger .icon::before,
+            .btn-burger .icon::after{
+                transition: all .8s;
+            }
+    
+            .p-navArea{
+                display: none;
+                width: 100%;
+                height: 100%;
+                z-index: 30;         
+                position: fixed;
+                overflow: auto;
+                top: 0;
+                left: 0;
+                background: rgba(0,0,0,0.8);
+    
+                .menu-nazuca-menu-container{
+                    display: block;
+                    background: rgba(255, 255, 255, 0.9);
+                    border: 10px solid rgba(139, 46, 119, 0.39);  
+                    width: 50%;
+                    height: 80%;
+                    padding: 120px 40px 50px;
+                    @include mixin.cross_center;
+                    
+                    .p-nav{
+                        display: block;
+    
+                        .main_li{
+                            display: block;
+                            position: relative;
+                            padding-right: 0;
+                            margin-bottom: 3.2rem;
+    
+                            &::before{
+                                left: 0;
+                            }
+    
+    
+                            &::after{
+                                @include mixin.beside_center;
+                                background: base.$linear_rainbow;
+                                content: '';
+                                display: inline-block;
+                                bottom: 0;
+                                width: 100%;
+                                height: 3px;
+                                border-radius: 1.5px;
+                                position: absolute;
+                            }
+                            a{
+                                background: none;
+                                -webkit-background-clip: border-box;
+                                -webkit-text-fill-color: base.$dark; 
+                                color: base.$dark;  
+                                padding-left: 4.8rem;     
+                                font-family: Inter;
+                                font-weight: 600;
+                                line-height: 43px;
+                                letter-spacing: 0em;    
+                                transition: .3s;
+                                &:hover{
+                                    background: base.$linear_gold;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;                  
+                                }
+                            }
+        
+        
+                            .sub-menu{
+                                width: 100%;
+                                position: relative;
+                                display: block;
+                                
+                                .sub_li{
+                                    display: block;
+                                    position: relative;
+                                    margin-bottom: 2rem;
+                                    text-indent: 0;
+                                    padding-left: 8.3rem;
+                                    padding-right: 0;
+    
+                                    &::before{
+                                        @include mixin.background_url('tento/pc/right_turn.png', 18px, 20px);
+                                        position: absolute;
+                                        left: 4.9rem;
+                                        top: 4px;
+                                    }
+    
+                                    &:nth-child(1){
+                                        margin-top: 2rem;
+                                    }
+    
+                                    a{
+                                        padding-left: 0;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        line-height: 29px;
+                                        letter-spacing: 0em;    
+                                        transition: .3s;
+                                        &:hover{
+                                            background: base.$linear_gold;
+                                            -webkit-background-clip: text;
+                                            -webkit-text-fill-color: transparent;                  
+                                        }        
+                                    }
+                                }
+                                
+                            }
+                            &:nth-child(2){
+                                &::before{
+                                    @include mixin.background_url('tento/tab/logo_mini.png', 32px, 32px);
+                                    position: absolute;
+                                    background-size: cover;
+                                }
+                            }
+                            &:nth-child(3){
+                                &::before{
+                                    @include mixin.background_url('tento/tab/applogo_mini.png', 30px, 30px);
+                                    position: absolute;
+                                    background-size: cover;
+                                }
+                            }
+        
+                            &:nth-child(4){
+                                &::before{
+                                    @include mixin.background_url('tento/tab/takibi.png', 28px, 33px);
+                                    position: absolute;
+                                    background-size: cover;
+                                }
+                            }
+                            
+                        }
+    
+                        .bg_translucent{
+                            &:hover{
+                                background: none;
+                                padding: 0;
+                                width: 100%;
+                                text-align: left;
+                                .sub-menu{
+                                    background: none;
+                                    padding-top: 0;
+                                    padding-bottom: 0;
+                                    .sub_li{
+                                        padding: 0 0 0 8.3rem;
+                                        background: none;              
+
+                                        a{
+                                            background: base.$linear_gold;
+                                            -webkit-background-clip: text;
+                                            -webkit-text-fill-color: transparent;                  
+
+                                        }
+                                    }
+                                }
+                            }
+                            &::before{
+                                @include mixin.background_url('tento/pc/tento.png', 36px, 28.5px);
+                                position: absolute;
+                            }
+                            &::after{
+                                top: 3.4rem;
+                                bottom: auto;
+                            }
+                        }
+                        
+    
+                    }
+                }
+            }
+            .nav-toggle:checked ~ .p-navArea{
+                display: block;
+            }
+        }    
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .drawer{
+        top: 2.2rem;
+        right: 2.4rem;
+
+        .nav-toggle:checked ~ #burger{
+            top: 12vh;
+            right: 11vw;
+    
+        }
+        #navArea{
+            .menu-nazuca-menu-container{
+                width: 90%;
+                height: 80%;
+            }
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        #navArea{
+            .menu-nazuca-menu-container{
+                width: 100%;
+                height: 100%;
+
+            }
+        } 
+        .nav-toggle:checked ~ #burger{
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+}

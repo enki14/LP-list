@@ -227,7 +227,6 @@
         border-radius: 18px;
         box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-
         &__link{
             position: absolute;
             top: 0;
@@ -283,6 +282,7 @@
             right: -10%;
         }
     }
+
 
     .c-detailBtn{
         border: 1px solid rgba(0, 0, 0, 1);
@@ -478,13 +478,11 @@
             margin-left: 5rem;
         }
 
-        &:hover{
-            img,
-            p{
-                opacity: 70%;
-                transition: 300ms;
-                animation-timing-function: ease-in;    
-            }
+        img:hover,
+        p:hover{
+            opacity: 70%;
+            transition: 300ms;
+            animation-timing-function: ease-in;    
         }
 
         img{
@@ -569,3 +567,120 @@
     }
 
 }
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .c-hBtn{
+            margin-top: 6rem;
+        }
+
+        .c-fLogo:nth-child(1),
+        .c-fLogo:nth-child(1){
+            margin-left: 3rem;
+        }
+
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .c-hBtn{
+            padding: 13px 29px;
+            &__text{
+                font-size: 14px;
+                line-height: 25px;
+                width: 117px;
+            }
+            .c-hAllow{
+                &::before{
+                    width: 65%;
+                    left: 35%;
+                }
+                &::after{
+                    width: 30%;
+                    bottom: -4px;
+                }
+            }
+        }
+
+        .c-detailBtn{
+            padding: 2rem 4rem;
+            &__text{
+                font-size: 1.4rem;
+                line-height: 2.7rem;
+            }
+        }
+
+        .c-proBtn{
+            padding: 1.4rem 3rem;
+            &__inside{
+                img{
+                    width: 60px;
+                    height: 60px;
+                    margin-right: 18px;
+                }
+                span{
+                    font-size: 12px;
+                    line-height: 60px;
+                }
+            }        
+        }
+        .c-luBtn{
+            padding: 1.2rem 2rem;
+            span{
+                font-size: 1.2rem;
+                line-height: 21px;
+            }
+        }
+        .c-fLogo{
+            img{
+                width: 90px;
+                height: 90px;
+            }
+            &:nth-child(1){
+                p{
+                    font-size: 1.4rem;
+                }
+            }
+            &:nth-child(2){
+                margin-left: 0;
+                img{
+                    margin: 0 5rem 1.2rem;
+                    line-height: 2.4rem;
+                }
+            }
+    
+        }
+        .c-logoTitle{
+            font-size: 2rem;
+            line-height: 2.4rem;
+            span{
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+        }
+        
+        .c-snsBtn{
+            padding: 1.2rem 0;
+            width: 160px;
+            i::before{
+                font-size: 1.6rem;
+                top: 16px;
+            }
+            &__text{
+                font-size: 1.6rem;
+                line-height: 18.18px;
+            }
+        }
+        
+    }
+}
+

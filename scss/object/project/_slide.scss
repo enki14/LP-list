@@ -77,7 +77,6 @@
         }
 
         .swiper-pagination{
-            bottom: -5rem;
             &-bullet{
                 width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
                 height:  var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
@@ -86,12 +85,12 @@
                 background: base.$pale_purple;
             }
             .swiper-pagination-bullet-active:nth-child(2){
+                background: rgba(46,106,139,0.5);
+            }
+            .swiper-pagination-bullet-active:nth-child(3){
                 background: rgba(84, 132, 62, 0.741667) 25.98%;
             }
-            .swiper-pagination-bullet-active:nth-child(3){
-                background: #2E6A8B 61.82%;
-            }
-            .swiper-pagination-bullet-active:nth-child(3){
+            .swiper-pagination-bullet-active:nth-child(4){
                 background: #fff;
             }
             
@@ -108,14 +107,11 @@
 
         img{
             width: 100%;
-            height: 178px;
-            object-fit: cover;
+            height: auto;
         }
 
         &__title{
-            font-family: base.$georgia;
             font-size: 16px;
-            font-style: italic;
             font-weight: 700;
             line-height: 25px;
             letter-spacing: 0.1em;
@@ -133,5 +129,36 @@
             }
         }
         
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .p-slideCard{
+            width: auto;
+            img, 
+            &__title{
+                width: 100%;
+            } 
+            
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .p-slideCard{
+            &__title{
+                font-size: 1.4rem;
+            }
+        }
     }
 }

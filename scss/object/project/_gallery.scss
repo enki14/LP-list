@@ -69,7 +69,7 @@
             @include mixin.background_url('tento/pc/LetsEnjoy.png', 303px, 124px);
             position: absolute;
             top: 0;
-            left: -10.8rem;;
+            left: -10.8rem;
         }
         &::after{
             @include mixin.background_url('tento/pc/VeryHappy.png', 303px, 124px);
@@ -81,30 +81,39 @@
 
     .p-setVideo{
         margin-bottom: 6rem;
+        iframe{
+            width: 680px; 
+            height: 381px;
+        }
     }
 
     .p-applyImg{
         background: none;
-        margin: 18.8rem auto 9.9rem;
+        margin: 10.8rem auto 9.9rem;
 
         &__top{
             margin: 0 auto 5.9rem;
-            width: 326px;
+            width: 336px;
             img{
-                width: 100%;
-                height: 372px;    
-            }
+                display: block;
+                width: 74.4%;
+                height: auto; 
+                margin: 0 auto; 
+                text-align: center;
+            }    
         }
         &__middle{
             margin-bottom: 6.5rem;
             display: flex;
             justify-content: end;
+            flex-wrap: wrap;
             width: 100%;
 
             img{
-                margin-right: 3.2rem;
+                margin-right: 3.6rem;
                 width: 714px;
                 height: 107px;
+                object-fit: cover;
             }
         }
         &__btm{
@@ -220,13 +229,210 @@
             }
     
         }
-
-
         .c-img_1,
         .c-img_2{
             width: 100%;
         }
-       
+    }
+}
 
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+        .p-hImg{
+            width: 50%;
+            &__tento{
+                width: 90%;
+            }
+        }
+
+        .p-setVideo{
+            iframe{
+                width: 100%;
+                height: auto;
+                aspect-ratio: 34/19;
+            }
+        }
+
+        .p-applyImg{   
+            &__top{
+                width: 320px;
+            }
+            &__middle{
+                img{
+                    margin-right: 0;
+                    width: 640px;
+                    height: 96px;
+                }
+            }
+            &__btm{
+                img{
+                    width: 290px;
+                    height: 104px;
+                }
+            }
+            &__Badge{
+                row-gap: 2rem;
+            }
+        }
+    
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .p-hImg{
+            width: 100%;
+            margin-bottom: 2.2rem;
+            &__tento{
+                width: 90%;
+            }
+        }
+
+        .p-setImg{
+            margin-bottom: 2.3rem;
+            &::before{
+                top: 3px;
+                left: -2rem;
+                width: 31.39vw;
+                background-size: contain;
+            }
+            &::after{
+                width: 31.39vw;
+                right: -4rem;
+                top: 12.8rem;
+                bottom: auto;
+                background-size: contain;
+
+            }
+        }
+    
+        .p-setVideo{
+            margin-bottom: 0;
+        }
+
+        .p-applyImg{
+            &__top{
+                width: 260px;
+            }
+            &__middle{
+                img{
+                    width: 88%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+            &__btm{
+                width: 100%;
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .p-eCard{
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 4rem 2rem 0;
+            box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(56, 52, 52, 0.76);
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            background: #fff;
+            .article_wrap .p-eCard__article{
+                width: 100%;
+            }
+        }
+        .p-eCard:nth-child(1){
+            grid-template-columns: 1fr;
+            .article_wrap{
+                grid-row: 3;
+            }
+        }
+        .p-eCard:nth-child(2){
+            grid-template-columns: 1fr;
+            
+        }
+        .p-eCard:nth-child(3){
+            grid-template-columns: 1fr;
+            .article_wrap{
+                grid-row: 3;
+            }
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .p-applyImg{
+            margin-bottom: 4rem;
+            &__top{
+                width: 71%;
+                img{
+                    width: 41%;
+                }
+            }
+        }
+        .p-eCard{
+            padding-bottom: 2rem;
+            .article_wrap{
+                #eca_1, 
+                #eca_2,
+                #eca_3{
+                    padding-bottom: 0;
+                    top: -2rem;
+                    h4{
+                        font-size: 20px;
+                        line-height: 32px;
+                    }
+                    
+                }
+            }
+        }
+        .p-eCard:nth-child(1){
+            .article_wrap{
+                background: transparent;
+                #eca_1{
+                    &::before{
+                        bottom: -5rem;
+                    }    
+                }
+                
+            }
+        } 
+        .p-eCard:nth-child(2){
+            .article_wrap{
+                background: transparent;
+                #eca_2{
+                    &::before{
+                        bottom: -4.5rem;
+                    }    
+                }
+            }
+        } 
+        .p-eCard:nth-child(3){
+            .article_wrap{
+                background: transparent;
+                #eca_3{
+                    &::before{
+                        bottom: -4.8rem;
+                    }    
+                }
+            }
+        }
+    
     }
 }

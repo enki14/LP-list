@@ -15,6 +15,19 @@ $breakpoint: (
     }
 }
 
+// テント情報のブレークポイント
+$tento_bp: (
+    sp: 'all and (max-width: 390px)',
+    spw: 'all and (max-width: 767px)',
+    tab: 'all and (max-width: 1000px)',
+);
+
+@mixin mqt($bp){
+    @media #{map-get($tento_bp, $bp)} {
+        @content;
+    }
+}
+
 
 @mixin clearfix{
     &::after{

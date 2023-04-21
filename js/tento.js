@@ -1,29 +1,87 @@
 
-const headerSwiper = new Swiper('.swiper-container', {
+// const swiperSlides = document.getElementsByClassName('swiper-slide');
+// const breakpoint = 768;
+// let headerSwiper;
+
+// window.addEventListener('load', () =>{
+//     setTimeout(() => {
+//         if(breakpoint < window.innerWidth){
+//             createSwiper();
+//         }else if(breakpoint >= window.innerWidth){
+//             headerSwiper.autoplay.stop();
+//             headerSwiper = undefined;
+//         }
+//     }, 1000);
+// });
+
+// window.addEventListener('resize', () =>{
+//     if(breakpoint < window.innerWidth && !headerSwiper){
+//         createSwiper();
+//     }else if(breakpoint >= window.innerWidth && headerSwiper){
+//         headerSwiper.autoplay.stop();
+//         headerSwiper = undefined;
+//     }
+// });
+
+// const createSwiper = () => {
+//     headerSwiper = new Swiper('.swiper-container', {
+//         loop: true,
+//         loopedSlides: swiperSlides.length,
+//         slidesPerView: 1,
+//         slidesPerGroup: 1,
+//         centeredSlides : true,
+//         effect: 'fade',
+//         initialSlide: 0,
+    
+//         // 前後の画像が被らないようにする
+//         fadeEffect: {
+//             crossFade: true
+//         },
+    
+//         // If we need pagination
+//         pagination: {
+//             el: '.swiper-pagination',
+//             type: 'bullets',
+//         },
+    
+//         autoplay: {
+//             delay: 5000,
+//         },
+    
+//     });   
+    
+// }
+
+headerSwiper = new Swiper('.swiper-container', {
     loop: true,
-    loopedSlides: 3,
+    loopedSlides: 4,
     slidesPerView: 1,
     slidesPerGroup: 1,
+    loopedSlides: 4,
     centeredSlides : true,
     effect: 'fade',
-    initialSlide: 0,
 
     // 前後の画像が被らないようにする
     fadeEffect: {
         crossFade: true
     },
-
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
     },
-
     autoplay: {
         delay: 5000,
     },
+    breakpoints: {
+        390: {
+            autoplay: false
+        }
+    }
 
-});
+});   
+
+
 
 
 
@@ -41,14 +99,14 @@ const lineUpSwiper = new Swiper('.l-lineup__slide', {
         1250: {
             slidesPerView: 3.5
         },
-        1100: {
+        1000: {
             slidesPerView: 3
         },
-        831: {
-            slidesPerView: 2.5
+        767: {
+            slidesPerView: 2,
         },
-        650: {
-            slidesPerView: 2
+        390: {
+            slidesPerView: 'auto'
         }
     },
     slidesPerGroup: 1,
@@ -141,3 +199,56 @@ function scroll_to_top(){
 }
 
 
+// html構造が複雑だったため、javascriptで処理しようとしたがまだ解決できていない
+const toggle = document.getElementById('navToggle');
+const swiper_pagi = document.getElementsByClassName('swiper-pagination');
+const sp_array = Array.from(swiper_pagi);
+if(toggle.checked){
+
+    sp_array.forEach((elem) => {
+        elem.style.display = 'none';
+    });
+}else{
+    sp_array.forEach((elem) => {
+        elem.style.display = 'block';
+    })
+}
+
+
+// document.getElementById('navArea').addEventListener('click', () => {
+//     const navArea = document.getElementById('navArea');
+//     navArea.classList.toggle('p-navArea');
+// });
+// document.addEventListener('click', (e) => {
+//     if(!e.target.closest('div#navArea')){
+//         const navArea = document.getElementById('navArea');
+//         const burger = document.getElementById('burger').children;
+//         const btn_burger = burger[0];
+
+//         navArea.classList.add('p-navArea');
+//         const before = getComputedStyle(btn_burger, "::before");
+//         before.transform = 'rotate(0)';
+//     }
+// });
+
+
+
+    // const burger = document.getElementById('burger');
+    // const nav = document.querySelector('.menu-nazuca-menu-container');
+    // const navArea = document.getElementById('navArea');
+  
+    // burger.addEventListener('click', function() {
+    //   nav.classList.toggle('active');
+    //   burger.classList.toggle('active');
+    //   navArea.classList.toggle('active');
+  
+    //   // nav以外をタップした時
+    //   if (burger.classList.contains('active')) {
+    //     navArea.addEventListener('click', function handleClick() {
+    //         burger.classList.remove('active');
+    //         navArea.classList.remove('active');
+    //         nav.classList.remove('active');
+    //         nav.removeEventListener('click', handleClick);
+    //     });
+    //   }
+    // });

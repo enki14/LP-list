@@ -138,3 +138,57 @@
         }
     }
 }
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .c-schTitle{
+            flex: 1;
+            &__tag a{
+                display: inline;
+            }
+            &__ttl a{
+                font-size: 16px;
+                
+            }
+        }
+        .c-detailTitle{
+            h2{
+                font-size: 3.2rem;
+            }
+            p{
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .c-detailTitle{
+            margin-bottom: 4rem;
+        }
+        #eca_1,
+        #eca_2,
+        #eca_3{
+            .c-subTitle{
+                font-size: 12px;
+                line-height: 20px;
+            }    
+        }
+        .c-schTitle__ttl{
+            a{
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+}

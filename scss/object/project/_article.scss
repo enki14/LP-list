@@ -7,7 +7,6 @@
         width: 47.3%;
         padding-right: 1.1rem;
         position: relative;
-
         &::before{
             content: '';
             position: absolute;
@@ -32,8 +31,15 @@
             border-bottom: 2px solid #C9D35A;
             border-image: base.$linear_gold;
             border-image-slice: 1;
+            position: relative;
+            z-index: 3;
         }
+    }
 
+    #p-harticle{
+        &::before{
+            top: 69px;
+        }
     }
 
     .p-individual{
@@ -66,14 +72,17 @@
                 position: absolute;
                 top: -134px;
                 left: 377px;
+
             }
             &::after{
                 @include mixin.background_url('tento/pc/235538481.png', 200px, 200px);
                 position: absolute;
                 bottom: -66px;
                 left: 60px;
+
             }
         }
+
 
         &__img{
             img{
@@ -115,4 +124,131 @@
             width: 340px;
         }     
     }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+        .p-individual{
+            width: 696px;
+            margin: 0 auto 4rem;
+           
+            &__img{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 3.6rem;
+                h3{
+                    width: 450px;
+                    margin: 0 auto;
+                } 
+            }   
+            &__atl{
+                width: 100%;
+                padding: 0 3.2rem;
+            }
+            
+            &:nth-child(2)::before{
+                @include mixin.background_url('tento/tab/473891_s_1.png', 100px, 67px);
+                top: -5.3rem;
+            } 
+            &:nth-child(3)::before{
+                @include mixin.background_url('tento/tab/1622870_1.png', 100px, 87px);
+                @include mixin.beside_center;
+                top: -6.3rem;
+            } 
+            &:nth-child(4){
+                &::before{
+                    top: -5.8rem;
+                    right: 4.4rem;
+                    left: auto;
+                    @include mixin.background_url('tento/tab/22271217_1.png', 61px, 91px);
+                }
+            }   
+            &:nth-child(4)::after{
+                @include mixin.background_url('tento/tab/23553848_1.png', 130px, 130px);
+                bottom: -7rem;
+                left: 0;
+            }
+        } 
+
+        
+
+        
+        
+    }
+    
+}
+
+
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .p-hArticle{
+            width: 100%;
+
+            &::after{
+                display: none;
+            }
+        }
+
+        .p-individual{
+            width: 100%;
+            padding: 2rem 4rem;
+    
+            &__img{
+                img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;    
+                }
+                h3{
+                    width: 100%;
+                    font-size: 20px;
+                    line-height: 36px;
+                    &::before,
+                    &::after{
+                        width: 2.4rem;
+                    }
+                }
+            }   
+            &__atl{
+                padding: 0;
+            }     
+        }
+    }
+    
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .p-individual{
+            padding: 4rem;
+            &__img{
+                margin-bottom: 1.2rem;
+                img{
+                    margin-bottom: 1.2rem;
+                }
+            }
+            &__atl{
+                dl{
+                    margin-bottom: 1.2rem;
+                }
+            }
+        }
+        #p-indi_3{
+            margin-bottom: 3.2rem;
+        }
+    }
+
 }

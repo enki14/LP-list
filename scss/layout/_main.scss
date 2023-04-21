@@ -426,6 +426,7 @@
             .sectionContent{
                 padding: 40px 40px 60px;
             }    
+            
         }
     }
 
@@ -459,8 +460,7 @@
         &__cachback{
             @include mixin.background_url('tento/pc/l-apply__background.png', 100%, auto);
             position: relative;
-            background-size: cover;
-            
+            background-size: cover;           
             span{
                 position: absolute;
                 top: 8rem;
@@ -480,6 +480,7 @@
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 1.5s, transform 1s;
+ 
             .c-proImg{
                 width: 100%;
                 height: 100%;
@@ -638,3 +639,187 @@
         }
     }
 }
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqt(tab){
+    .postid-212{
+    
+        .l-durability{
+            &__content{
+    
+                .sectionContent{
+                    width: 744px;
+                    padding-left: 20px;
+                    padding-right: 68px;
+                }    
+                
+            }
+        }
+    
+        .l-setup{
+            &__content{    
+                .sectionContent{
+                    width: 626px;
+                }
+            }
+        }
+
+        .l-detail{
+            padding-bottom: 0;
+        }
+    
+        .l-apply{            
+            &__cachback{
+                padding-bottom: 0;
+            }
+            &__procedure{
+                width: 626px;
+            }
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/ 
+/***************************************************************/
+@include mixin.mqt(spw){
+    .postid-212{
+        .l-durability{
+            &__content{
+                .sectionContent{
+                    width: 89.57vw;
+                    padding-right: 0;
+                    padding-left: 0;
+                    background: transparent;
+                }    
+                
+            }
+        }
+    
+        .l-setup{
+            &__content{
+                width: 100%;
+                padding: 1.2rem;
+                .sectionContent{
+                    width: 80vw;
+                    padding: 2rem;
+                }
+            }
+        }
+
+        .l-apply__procedure{
+            width: 93.3%;
+        }
+
+        .l-event{
+            background: base.$linear_gold;
+            &__title{
+                &::before{
+                    z-index: 0;
+                }
+                h2{
+                    font-size: 4.2rem;
+                    top: 1rem;
+                    position: relative;    
+                }
+                &::after{
+                    background: transparent;
+                }
+
+                    
+            }
+            &__pickup{
+                background: transparent;  
+                padding: 4rem 0; 
+
+                .pu_wrap{
+                    width: 89.57vw;
+                    margin: 0 auto;
+                }
+            }
+            &__schedule{
+                background-position: 65%;
+            }
+        }
+
+        .l-lineup__slide{
+            .swiper-wrapper{
+                .swiper-slide{
+                    width: 76.1%;
+                }
+            }
+            .swiper-button-prev{
+                left: 2.4rem;
+            }
+            .swiper-button-next{
+                right: 2.4rem;
+            }
+        }
+    
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqt(sp){
+    .postid-212{
+        .l-size{
+            &__content .sectionContent{
+                background: transparent;
+                padding: 4rem 4.5rem;
+            }
+        }
+
+        .l-durability__content{
+            .sectionContent{
+                padding: 4rem 0;
+            }
+            
+        }
+
+        .l-setup__content{
+            .sectionContent{
+                width: 87.2%;
+                padding: 8px 12px;
+            }
+        }
+        .l-detail__content{
+            padding-top: 4rem;
+        }
+
+        .l-apply__cachback{
+            span{
+                display: none;
+            }
+        }
+
+        .l-apply__procedure{
+            width: 87.7%;
+            min-width: 260px;
+        }
+        .l-event__pickup{
+            .pu_wrap{
+                width: 93.3vw;
+            }
+        }
+
+        .l-lineup__slide{
+            .swiper-button-prev,
+            .swiper-button-next{
+                width: 2.4rem;
+                height: 4rem;
+                background-size: contain;
+                top: 45.5%;
+            }
+        }
+
+    }
+}
+
+

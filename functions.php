@@ -232,13 +232,12 @@
         global $wpdb;
         
         $sql = $wpdb->get_results("select * from detail");
-        
 
         ob_start();
         // p-individualの横は半角必須
         foreach($sql as $data){
             echo 
-            '<article class="p-individual ' . $data->backcolor . '">
+            '<article id="p-indi_' .$data->id. '" class="p-individual ' . $data->backcolor . '">
                 <div class="p-individual__img">
                     <img src="' . esc_url(get_template_directory_uri() . '/images/tento/' . $data->pc_img). '" alt="' . $data->tento_name. '">
                     <h3>' . $data->tento_name . '</h3>
