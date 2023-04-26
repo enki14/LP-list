@@ -169,7 +169,7 @@
             }   
             &:nth-child(4)::after{
                 @include mixin.background_url('tento/tab/23553848_1.png', 130px, 130px);
-                bottom: -7rem;
+                bottom: -8.5rem;
                 left: 0;
             }
         } 
@@ -200,7 +200,7 @@
 
         .p-individual{
             width: 100%;
-            padding: 2rem 4rem;
+            padding: 4rem;
     
             &__img{
                 img{
@@ -233,11 +233,16 @@
 @include mixin.mqt(sp){
     .postid-212{
         .p-individual{
-            padding: 4rem;
             &__img{
                 margin-bottom: 1.2rem;
                 img{
                     margin-bottom: 1.2rem;
+                }
+                h3{
+                    &::before,
+                    &::after{
+                        display: none;
+                    }
                 }
             }
             &__atl{

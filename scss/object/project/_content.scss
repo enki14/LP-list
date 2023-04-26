@@ -228,7 +228,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            width: 400px;
+            width: 100%;
         }
     }
 
@@ -287,16 +287,23 @@
                 }   
             }
             &__article{
-                padding: 6rem 2rem 4rem;
+                padding: 6rem 3.2rem 4rem;
                 background: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
 
             }
         }
-        #duraAtl_1::before{
-            display: none;
+        #duraAtl_1{
+            border: 3px solid rgba(23, 179, 179, 0.55);
+            &::before{
+                display: none;
+            }
         }
-        #duraAtl_2::before{
-            display: none;
+        #duraAtl_2{
+            border: 3px solid #C9D35A;
+            &::before{
+                display: none;
+            }
         }
 
         .p-schedule{
@@ -337,6 +344,7 @@
             margin-bottom: 3rem;
             &__content{
                 width: 93.3vw;
+                justify-content: space-between;
             }
         }
     }

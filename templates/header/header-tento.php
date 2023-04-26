@@ -61,16 +61,16 @@
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/l-header__camp.jpg'); ?>" class="l-header__img" alt="キャンプファイア">
                 <article class="l-header__content hFour_content">
                     <p class="c-hFour">
-                        今日、アウトドアの需要は高まっています。<br>
-                        LPテントシリーズは、<br>
-                        従来のテントにはない高い快適性や<br>
-                        豪華さを備え、アウトドアでの宿泊体験を<br>
-                        より魅力的なものにします。<br>
+                        <span>今日、アウトドア需要は</span><span>高まっています。</span><br>
+                        <span>LPテントシリーズは、</span><br>
+                        <span>従来のテントにはない</span><span>高い快適性や</span><br>
+                        <span>豪華さを備え、</span><span>アウトドアでの宿泊体験を</span><br>
+                        <span>より魅力的なものにします。</span>
                     </p>
                 </article>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div id="h_pagination" class="swiper-pagination"></div>
     </div>
 </header>
 

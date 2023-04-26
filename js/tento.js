@@ -1,6 +1,7 @@
 
-// const swiperSlides = document.getElementsByClassName('swiper-slide');
-// const breakpoint = 768;
+// const swiperSlides = document.getElementsByClassName('l-header');
+// const pagination = document.getElementById('h_pagination')
+// const breakpoint = 390;
 // let headerSwiper;
 
 // window.addEventListener('load', () =>{
@@ -9,7 +10,10 @@
 //             createSwiper();
 //         }else if(breakpoint >= window.innerWidth){
 //             headerSwiper.autoplay.stop();
+//             pagination.style.display = "none";
+//             headerSwiper.params.direction = "vertical";
 //             headerSwiper = undefined;
+
 //         }
 //     }, 1000);
 // });
@@ -19,6 +23,8 @@
 //         createSwiper();
 //     }else if(breakpoint >= window.innerWidth && headerSwiper){
 //         headerSwiper.autoplay.stop();
+//         pagination.style.display = "none";
+//         headerSwiper.params.direction = 'vertical';
 //         headerSwiper = undefined;
 //     }
 // });
@@ -42,18 +48,24 @@
 //         pagination: {
 //             el: '.swiper-pagination',
 //             type: 'bullets',
+//             clickable: true,
 //         },
     
 //         autoplay: {
 //             delay: 5000,
 //         },
+//         breakpoints:{
+//             390: {
+//                 slidesPerView: swiperSlides.length
+//             }
+//         }
     
 //     });   
     
 // }
 
 headerSwiper = new Swiper('.swiper-container', {
-    loop: true,
+    loop: false,
     loopedSlides: 4,
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -73,15 +85,8 @@ headerSwiper = new Swiper('.swiper-container', {
     autoplay: {
         delay: 5000,
     },
-    breakpoints: {
-        390: {
-            autoplay: false
-        }
-    }
 
 });   
-
-
 
 
 
@@ -200,19 +205,26 @@ function scroll_to_top(){
 
 
 // html構造が複雑だったため、javascriptで処理しようとしたがまだ解決できていない
-const toggle = document.getElementById('navToggle');
-const swiper_pagi = document.getElementsByClassName('swiper-pagination');
-const sp_array = Array.from(swiper_pagi);
-if(toggle.checked){
+// const toggle = document.getElementById('navToggle');
+// const h_pagi = document.getElementById('h_pagination');
+// const sp_array = Array.from(h_pagi.children);
+// console.log(sp_array);
 
-    sp_array.forEach((elem) => {
-        elem.style.display = 'none';
-    });
-}else{
-    sp_array.forEach((elem) => {
-        elem.style.display = 'block';
-    })
-}
+// toggle.addEventListener('click', () => {
+//     if(toggle.checked){
+//         console.log(true);
+    
+//         sp_array.forEach((elem, index) => {
+//             elem.style.zIndex = sp_array.length - index;
+//         });
+//     }else{
+//         console.log(false);
+//         sp_array.forEach((elem, index) => {
+//             elem.style.zIndex = index + 1;
+//         })
+//     }
+// });
+
 
 
 // document.getElementById('navArea').addEventListener('click', () => {

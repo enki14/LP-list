@@ -578,11 +578,6 @@
             margin-top: 6rem;
         }
 
-        .c-fLogo:nth-child(1),
-        .c-fLogo:nth-child(1){
-            margin-left: 3rem;
-        }
-
     }
 }
 
@@ -623,8 +618,8 @@
             padding: 1.4rem 3rem;
             &__inside{
                 img{
-                    width: 60px;
-                    height: 60px;
+                    width: 16.6vw;
+                    height: auto;
                     margin-right: 18px;
                 }
                 span{
@@ -646,14 +641,17 @@
                 height: 90px;
             }
             &:nth-child(1){
+                width: 50%;
+                margin-right: 0;
                 p{
                     font-size: 1.4rem;
                 }
             }
             &:nth-child(2){
+                width: 50%;
                 margin-left: 0;
                 img{
-                    margin: 0 5rem 1.2rem;
+                    margin: 0 auto 1.2rem;
                     line-height: 2.4rem;
                 }
             }

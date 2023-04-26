@@ -295,6 +295,16 @@
             )
         );
 
+        register_post_type('compliance', 
+            array(
+                'label' => 'コンプライアンス情報',
+                'public' => true,
+                'has_archive' => true,
+                'hierarchical' => true,
+                'supports' => $exampleSupports 
+            )
+        );
+
         // 'event_info'の編集画面でタグを設定できるようにする
         register_taxonomy(
             'tag',

@@ -37,10 +37,19 @@
                     </li>
                 </ul>
             <ul class="p-fLink__overview">
-                <li><a href="#">会社概要</a></li>
-                <li><a href="#">個人情報保護方針</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-                <li><a href="#">利用規約</a></li>
+                <?php 
+                    $args = array(
+                        'post_type' => 'compliance',
+                        'orderby' => 'meta_value',
+                        'order' => 'ASC',
+                        'numberposts' => -1
+                    );
+                    $query = new WP_Query($args);
+                    if($query->have_posts()):
+                        while($query->have_posts()): $query->the_post();
+                 ?>
+                <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                <?php endwhile; endif; ?>
             </ul>
         </div>
     </div>

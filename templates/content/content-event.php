@@ -34,9 +34,10 @@
                 <p class="c-timeDay__date"><?php echo $start[0] ?></p>
                 <p class="c-timeDay__time">
                     <span class="start"><?php echo $start[1] ?></span>
-                    <span class="triangle pc tab">▶</span>
+                    <span class="triangle pc_tab_inline">▶</span>
+                    <span class="today_end pc_tab_inline"><?php echo $end[1] ?></span>
                     <p class="c-timeDay__triangle sp">▼</p>                    
-                    <span class="end pRight"><?php echo $end[1] ?></span>
+                    <span class="end pRight sp"><?php echo $end[1] ?></span>
                 </p>
             </dt>
             <dd class="c-schTitle">

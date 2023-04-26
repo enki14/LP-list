@@ -406,6 +406,9 @@ html{
     .sp{
         display: none;
     }
+    .pc_tab_inline{
+        display: inline;
+    }
 
 
     h2{
@@ -479,6 +482,10 @@ html{
         .sp{
             display: none;
         }
+        .pc_tab_inline{
+            display: inline;
+        }
+    
     }
 }
 
@@ -526,6 +533,10 @@ html{
         .sp{
             display: block;
         }
+        .pc_tab_inline{
+            display: none;
+        }
+    
 
         .sectionTitle{
             font-size: 3.2rem;
@@ -567,6 +578,19 @@ html{
             .c-sectionTitle{
                 font-size: 1.4rem;
             }
+        }
+
+        .pc{
+            display: none;
+        }
+        .tab{
+            display: none;
+        }
+        .sp{
+            display: block;
+        }
+        .pc_tab_inline{
+            display: none;
         }
     }
 }

@@ -40,14 +40,15 @@
     }
 
     .c-hFour{
-        font-family: Inter;
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 83px;
-        letter-spacing: 0.05em;
-        text-align: center;
-        color: rgba(255, 255, 255, 1);
-        z-index: 5;
+        position: relative;
+        span{
+            font-family: 'Yu Mincho', 'YuMincho', '游明朝体', 'Yu Mincho Light', 'Noto Serif JP', serif, 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 83px;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 1);
+        }
     }
 
     .c-appCatch{
@@ -81,6 +82,7 @@
             line-height: 22px;
             letter-spacing: 0em;
             text-align: left;
+            margin-bottom: 6px;
         }
         &__time{
             font-size: 20px;
@@ -155,8 +157,14 @@
         }
     
         .c-hFour{
-            font-size: 2.4rem;
-            line-height: 64px;
+            span{
+                display: block;
+                font-size: 2.2rem;
+                line-height: 46px;
+            }
+            br{
+                display: none;
+            }
         }
 
         .c-timeDay{
@@ -190,8 +198,10 @@
             }
         }
         .c-hFour{
-            line-height: 4rem;
-            font-size: 1.6rem;
+            span{
+                line-height: 4rem;
+                font-size: 1.6rem;                    
+            }
         }
         .c-appCatch{
             font-size: 12px;

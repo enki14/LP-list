@@ -461,6 +461,7 @@
             @include mixin.background_url('tento/pc/l-apply__background.png', 100%, auto);
             position: relative;
             background-size: cover;           
+            z-index: -1;
             span{
                 position: absolute;
                 top: 8rem;
@@ -711,8 +712,13 @@
             }
         }
 
-        .l-apply__procedure{
-            width: 93.3%;
+        .l-apply{
+            &__cachback{
+                z-index: -1;
+            }
+            &__procedure{
+                width: 93.3%;
+            }
         }
 
         .l-event{
@@ -734,7 +740,7 @@
             }
             &__pickup{
                 background: transparent;  
-                padding: 4rem 0; 
+                padding: 0; 
 
                 .pu_wrap{
                     width: 89.57vw;
@@ -747,11 +753,6 @@
         }
 
         .l-lineup__slide{
-            .swiper-wrapper{
-                .swiper-slide{
-                    width: 76.1%;
-                }
-            }
             .swiper-button-prev{
                 left: 2.4rem;
             }
@@ -794,6 +795,7 @@
         }
 
         .l-apply__cachback{
+            z-index: -1;
             span{
                 display: none;
             }
@@ -803,6 +805,9 @@
             width: 87.7%;
             min-width: 260px;
         }
+        .l-event__title{
+            height: 160px;
+        }
         .l-event__pickup{
             .pu_wrap{
                 width: 93.3vw;
@@ -810,13 +815,26 @@
         }
 
         .l-lineup__slide{
+            width: 87.2%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+
             .swiper-button-prev,
             .swiper-button-next{
                 width: 2.4rem;
                 height: 4rem;
                 background-size: contain;
-                top: 45.5%;
+                transform: translateY(-30%);
+                z-index: 1;
+                padding: 0;
             }
+            .swiper-button-prev{
+                left: 5px; 
+            }
+            .swiper-button-next{
+                right: 5px; 
+            }
+
         }
 
     }

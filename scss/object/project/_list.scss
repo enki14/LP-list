@@ -254,7 +254,7 @@
 
         img{
             height: 84px;
-            object-fit: cover;
+            object-fit: contain;
 
             &:nth-child(1){
                 width: 250px;
@@ -361,15 +361,15 @@
             img{                    
                 &:nth-child(1){
                     width: 220px;
-                    height: 66px;
+                    height: auto;
                 }
                 &:nth-child(2){
-                    width: 240px;
-                    height: 66px;
+                    width: 200px;
+                    height: auto;
                 }
                 &:nth-child(3){
-                    width: 190px;
-                    height: 69px;
+                    width: 200px;
+                    height: auto;
                 }
             } 
         }
@@ -500,6 +500,18 @@
             &__sns{
                 justify-content: center;
                 line-height: 62px;
+            }
+        }
+        .p-applyBadge{
+            row-gap: 2rem;
+            img:nth-child(1){
+                width: 57vw;
+                height: auto;
+            }
+            img:nth-child(2),
+            img:nth-child(3){
+                width: 55.5vw;
+                height: auto;
             }
         }
     }

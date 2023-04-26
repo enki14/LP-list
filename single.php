@@ -12,6 +12,8 @@
             get_template_part('templates/post/single', 'tentoEvent');    
         elseif(is_singular('corporation')):
             get_template_part('templates/post/single', 'nazuca_co');                   
+        elseif(is_singular('compliance')):
+            get_template_part('templates/post/single', 'compliance');                       
         else:
             if ( have_posts() ): while ( have_posts() ): the_post();
     ?>
