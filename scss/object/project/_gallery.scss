@@ -249,6 +249,12 @@
             }
         }
 
+        .p-setImg{
+            &::after{
+                bottom: 20rem;
+            }
+        }
+
         .p-setVideo{
             iframe{
                 width: 100%;
@@ -298,7 +304,7 @@
             &::after{
                 width: 31.39vw;
                 right: -4rem;
-                top: 12.8rem;
+                top: 14rem;
                 bottom: auto;
                 background-size: contain;
 

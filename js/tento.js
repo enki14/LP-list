@@ -65,7 +65,7 @@
 // }
 
 headerSwiper = new Swiper('.swiper-container', {
-    loop: false,
+    loop: true,
     loopedSlides: 4,
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -83,7 +83,7 @@ headerSwiper = new Swiper('.swiper-container', {
         type: 'bullets',
     },
     autoplay: {
-        delay: 5000,
+        delay: 10000,
     },
 
 });   
