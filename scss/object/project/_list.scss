@@ -504,13 +504,14 @@
         }
         .p-applyBadge{
             row-gap: 2rem;
+            margin-bottom: 4rem;
             img:nth-child(1){
-                width: 57vw;
+                width: 35vw;
                 height: auto;
             }
             img:nth-child(2),
             img:nth-child(3){
-                width: 55.5vw;
+                width: 32vw;
                 height: auto;
             }
         }

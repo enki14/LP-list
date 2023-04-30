@@ -669,6 +669,7 @@ html {
   .postid-212 .nav_top {
     width: 100vw;
     padding: 2.1rem 2.4rem;
+    top: 0;
   }
   .postid-212 .l-header {
     padding-bottom: 2rem;
@@ -1495,9 +1496,18 @@ html {
   .postid-212 .l-apply__procedure {
     width: 87.7%;
     min-width: 260px;
+    padding-bottom: 13.4rem;
   }
   .postid-212 .l-event__title {
     height: 160px;
+  }
+  .postid-212 .l-event__title::before {
+    height: 70px;
+  }
+  .postid-212 .l-event__title h2 {
+    font-size: 3.2rem;
+    line-height: 1.8em;
+    padding-top: 1.8rem;
   }
   .postid-212 .l-event__pickup .pu_wrap {
     width: 93.3vw;
@@ -3729,14 +3739,15 @@ html {
   }
   .postid-212 .p-applyBadge {
     row-gap: 2rem;
+    margin-bottom: 4rem;
   }
   .postid-212 .p-applyBadge img:nth-child(1) {
-    width: 57vw;
+    width: 35vw;
     height: auto;
   }
   .postid-212 .p-applyBadge img:nth-child(2),
   .postid-212 .p-applyBadge img:nth-child(3) {
-    width: 55.5vw;
+    width: 32vw;
     height: auto;
   }
 }
@@ -4192,7 +4203,7 @@ html {
 /***************************************************************/
 @media all and (max-width: 390px) {
   .postid-212 .p-applyImg {
-    margin-bottom: 4rem;
+    margin: 4rem auto;
   }
   .postid-212 .p-applyImg__top {
     margin: 0 auto 1.6rem;
@@ -4225,7 +4236,7 @@ html {
     width: 27.7vw;
     background-size: contain;
     left: 0;
-    bottom: -20%;
+    bottom: -17%;
   }
   .postid-212 .p-eCard:nth-child(2) .article_wrap {
     background: transparent;
@@ -4233,7 +4244,7 @@ html {
   .postid-212 .p-eCard:nth-child(2) .article_wrap #eca_2::before {
     width: 27.7vw;
     background-size: contain;
-    bottom: -5.5rem;
+    bottom: -4.7rem;
     left: 24px;
   }
   .postid-212 .p-eCard:nth-child(3) .article_wrap {
@@ -4242,7 +4253,7 @@ html {
   .postid-212 .p-eCard:nth-child(3) .article_wrap #eca_3::before {
     width: 27.7vw;
     background-size: contain;
-    bottom: -6rem;
+    bottom: -4.8rem;
     left: 0;
   }
 }

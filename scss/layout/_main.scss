@@ -804,9 +804,18 @@
         .l-apply__procedure{
             width: 87.7%;
             min-width: 260px;
+            padding-bottom: 13.4rem;
         }
         .l-event__title{
             height: 160px;
+            &::before{
+                height: 70px;
+            }
+            h2{
+                font-size: 3.2rem;
+                line-height: 1.8em;
+                padding-top: 1.8rem;
+            }
         }
         .l-event__pickup{
             .pu_wrap{

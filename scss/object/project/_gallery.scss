@@ -383,7 +383,7 @@
 @include mixin.mqt(sp){
     .postid-212{
         .p-applyImg{
-            margin-bottom: 4rem;
+            margin: 4rem auto;
             &__top{
                 margin: 0 auto 1.6rem;
             }
@@ -419,7 +419,7 @@
                         width: 27.7vw;
                         background-size: contain;
                         left: 0;
-                        bottom: -20%;
+                        bottom: -17%;
                     }    
                 }
                 
@@ -432,7 +432,7 @@
                     &::before{
                         width: 27.7vw;
                         background-size: contain;
-                        bottom: -5.5rem;
+                        bottom: -4.7rem;
                         left: 24px;
                     }    
                 }
@@ -445,7 +445,7 @@
                     &::before{
                         width: 27.7vw;
                         background-size: contain;
-                        bottom: -6rem;
+                        bottom: -4.8rem;
                         left: 0;
                     }    
                 }
