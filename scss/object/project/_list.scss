@@ -512,10 +512,12 @@
             }
         }
         .p-applyBadge{
-            // row-gap: 2rem;
+            justify-content: center;
+            row-gap: 2rem;
             margin-bottom: 4rem;
             img:nth-child(1){
                 width: 35vw;
+                margin-right: 2rem;
                 height: auto;
             }
             img:nth-child(2),

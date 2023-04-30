@@ -2578,7 +2578,14 @@ html {
   height: 100%;
 }
 .postid-212 .c-proBtn__inside {
-  display: inline;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .postid-212 .c-proBtn__inside img {
   width: 70px;
@@ -2588,7 +2595,6 @@ html {
 .postid-212 .c-proBtn__inside span {
   font-size: 20px;
   font-weight: 400;
-  line-height: 70px;
   letter-spacing: 0.05em;
 }
 .postid-212 .c-proBtn:hover {
@@ -2790,6 +2796,7 @@ html {
 }
 .postid-212 .c-snsBtn i {
   position: absolute;
+  color: #333;
   right: 14px;
   top: 14px;
 }
@@ -3259,6 +3266,9 @@ html {
   .postid-212 .c-timeDay__date {
     font-size: 14px;
     line-height: 25px;
+  }
+  .postid-212 .c-timeDay__time {
+    font-size: 1.2rem;
   }
   .postid-212 .c-spec dl dt {
     font-size: 1.2rem;
@@ -3745,10 +3755,16 @@ html {
     line-height: 62px;
   }
   .postid-212 .p-applyBadge {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 2rem;
     margin-bottom: 4rem;
   }
   .postid-212 .p-applyBadge img:nth-child(1) {
     width: 35vw;
+    margin-right: 2rem;
     height: auto;
   }
   .postid-212 .p-applyBadge img:nth-child(2),
@@ -4445,7 +4461,7 @@ html {
   content: "";
   display: inline-block;
   width: 100%;
-  height: calc(100% + 6px);
+  height: 464px;
   background-image: url("../images/tento/pc/amount.png");
   position: absolute;
   top: 0;
@@ -4455,7 +4471,7 @@ html {
   content: "";
   display: inline-block;
   width: 100%;
-  height: calc(100% + 6px);
+  height: 414px;
   background-image: url("../images/tento/pc/amount_gold.png");
   position: absolute;
   top: 0;
@@ -5299,7 +5315,7 @@ html {
 @media all and (max-width: 390px) {
   .postid-212 #navArea .menu-nazuca-menu-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
   .postid-212 .nav-toggle:checked ~ #burger {
     top: 2rem;
