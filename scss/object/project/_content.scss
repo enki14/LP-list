@@ -254,7 +254,7 @@
         }
         .p-dura:nth-child(2) .p-dura__article{
             &::before{
-                @include mixin.background_url('tento/tab/amount_gold-tab.png', 581px, 579px);
+                @include mixin.background_url('tento/tab/amount_gold-tab.png', 581px, 621px);
             }
         }
         .p-schedule{

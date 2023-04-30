@@ -2800,6 +2800,7 @@ html {
 @media all and (max-width: 767px) {
   .postid-212 .c-hBtn {
     margin-top: 6rem;
+    margin-right: 0;
   }
   .postid-212 .c-detailBtn__text {
     font-size: 1.8rem;
@@ -4518,7 +4519,7 @@ html {
     content: "";
     display: inline-block;
     width: 581px;
-    height: 579px;
+    height: 621px;
     background-image: url("../images/tento/tab/amount_gold-tab.png");
   }
   .postid-212 .p-schedule {
@@ -4937,6 +4938,12 @@ html {
 .postid-212 .swiper-container .swiper-pagination .swiper-pagination-bullet-active:nth-child(4) {
   background: #fff;
 }
+.postid-212 .h_swiperCon {
+  position: relative;
+}
+.postid-212 .h_swiperCon #h_pagination {
+  bottom: 70px;
+}
 .postid-212 .p-slideCard {
   width: 356px;
   border: 1px solid rgb(0, 0, 0);
@@ -4968,6 +4975,9 @@ html {
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
 @media all and (max-width: 767px) {
+  .postid-212 .h_swiperCon #h_pagination {
+    bottom: 5px;
+  }
   .postid-212 .p-slideCard {
     width: auto;
   }

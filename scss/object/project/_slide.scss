@@ -94,8 +94,14 @@
                 background: #fff;
             }
             
-
         }
+    }
+    .h_swiperCon{
+        position: relative;
+        #h_pagination{
+            bottom: 70px;
+        }
+
     }
 
     .p-slideCard{
@@ -138,6 +144,11 @@
 /***************************************************************/
 @include mixin.mqt(spw){
     .postid-212{
+        .h_swiperCon{
+            #h_pagination{
+                bottom: 5px;
+            }
+        }    
         .p-slideCard{
             width: auto;
             img, 

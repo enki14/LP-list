@@ -23,7 +23,7 @@
                         <div class="c-explanation">
                             <p>
                                 LPテントシリーズはシリコンコーディングを採用し、これにより耐熱・防水・耐摩耗に優れた万能な強度を実現いたしました。<br>
-                                ××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××
+                                hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
                             </p>
                             <ul class="c-explanation__ul">
                                 <li>××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××</li>
@@ -44,8 +44,8 @@
                         <div class="c-explanation">
                             <p>
                                 フレームは、テントの形状を保持するために重要な役割を果たします。LPテントシリーズでは伸縮性のあるフィバーグラスを採用し、強度や軽量性をベースに実験を重ねていきました。<br>
-                                ××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××<br>
-                                ××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××
+                                fugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafuga<br>
+                                fugafugafugafugafugafugafugafugafugafugagugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafuga
                             </p>
                         </div>
                     </article>

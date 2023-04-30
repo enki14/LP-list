@@ -21,7 +21,7 @@
         </div>
         <div class="c-backtop__circle"><small>back&nbsp;&nbsp;to</small><p>TOP</p></div>
     </div>
-    <div class="swiper-container">
+    <div class="swiper-container h_swiperCon">
         <div class="swiper-wrapper">
         <?php 
             global $wpdb;
