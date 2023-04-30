@@ -423,6 +423,15 @@
             width: 89.57vw;
             justify-content: space-around;
             row-gap: 3.2rem;
+            img{
+                &:nth-child(1){
+                    width: 180px;
+                }
+                &:nth-child(2),
+                &:nth-child(3){
+                    width: 165px;
+                }
+            }
         }
 
         .p-fLink{
@@ -503,7 +512,7 @@
             }
         }
         .p-applyBadge{
-            row-gap: 2rem;
+            // row-gap: 2rem;
             margin-bottom: 4rem;
             img:nth-child(1){
                 width: 35vw;

@@ -2786,6 +2786,7 @@ html {
   right: 0;
   text-align: center;
   height: 100%;
+  color: #333;
 }
 .postid-212 .c-snsBtn i {
   position: absolute;
@@ -3676,6 +3677,12 @@ html {
             justify-content: space-around;
     row-gap: 3.2rem;
   }
+  .postid-212 .p-applyBadge img:nth-child(1) {
+    width: 180px;
+  }
+  .postid-212 .p-applyBadge img:nth-child(2), .postid-212 .p-applyBadge img:nth-child(3) {
+    width: 165px;
+  }
   .postid-212 .p-fLink {
     row-gap: 2rem;
     -webkit-box-pack: start;
@@ -3738,7 +3745,6 @@ html {
     line-height: 62px;
   }
   .postid-212 .p-applyBadge {
-    row-gap: 2rem;
     margin-bottom: 4rem;
   }
   .postid-212 .p-applyBadge img:nth-child(1) {
@@ -3945,9 +3951,9 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -webkit-justify-content: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -4634,13 +4640,18 @@ html {
   height: 168px;
 }
 .postid-212 .p-hArticle h3 {
-  border-bottom: 2px solid #C9D35A;
-  -webkit-border-image: -webkit-linear-gradient(0.28deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-       -o-border-image: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-          border-image: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-  border-image-slice: 1;
   position: relative;
   z-index: 3;
+}
+.postid-212 .p-hArticle h3::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-linear-gradient(0.28deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
+  background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
 }
 .postid-212 #p-harticle::before {
   top: 69px;
@@ -5063,8 +5074,8 @@ html {
   .postid-212 .drawer .nav-toggle:checked ~ .btn-burger {
     -webkit-animation: fadeout 0.6s ease 0.8s;
             animation: fadeout 0.6s ease 0.8s;
-    top: 8.5vh;
-    right: 27vw;
+    top: 12vh;
+    right: 28vw;
   }
   @-webkit-keyframes fadeout {
     from {

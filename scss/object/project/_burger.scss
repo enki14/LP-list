@@ -72,8 +72,8 @@
     
             .nav-toggle:checked ~ .btn-burger{
                 animation: fadeout .6s ease .8s;
-                top: 8.5vh;
-                right: 27vw;
+                top: 12vh;
+                right: 28vw;
         
             }
             @keyframes fadeout {
