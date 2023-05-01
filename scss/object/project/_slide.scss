@@ -98,6 +98,7 @@
     }
     .h_swiperCon{
         position: relative;
+        z-index: 1;
         #h_pagination{
             bottom: 70px;
         }

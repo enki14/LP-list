@@ -4994,6 +4994,7 @@ html {
 }
 .postid-212 .h_swiperCon {
   position: relative;
+  z-index: 1;
 }
 .postid-212 .h_swiperCon #h_pagination {
   bottom: 70px;
@@ -5106,7 +5107,7 @@ html {
   .postid-212 .drawer .nav-toggle:checked ~ .btn-burger {
     -webkit-animation: fadeout 0.6s ease 0.8s;
             animation: fadeout 0.6s ease 0.8s;
-    top: 12vh;
+    top: 16vh;
     right: 28vw;
   }
   @-webkit-keyframes fadeout {
@@ -5148,19 +5149,20 @@ html {
     border: 10px solid rgba(139, 46, 119, 0.39);
     width: 50%;
     height: 80%;
-    padding: 120px 40px 50px;
+    padding: 100px 40px 110px;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    overflow-y: auto;
   }
   .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav {
     display: block;
   }
   .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li {
-    display: block;
+    display: inline-block;
     position: relative;
     padding-right: 0;
     margin-bottom: 3.2rem;
@@ -5197,19 +5199,13 @@ html {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li a:hover {
-    background: -webkit-linear-gradient(0.28deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-    background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li .sub-menu {
     width: 100%;
     position: relative;
     display: block;
   }
   .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li .sub-menu .sub_li {
-    display: block;
+    display: inline-block;
     position: relative;
     margin-bottom: 2rem;
     text-indent: 0;
@@ -5237,12 +5233,6 @@ html {
     letter-spacing: 0em;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-  }
-  .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li .sub-menu .sub_li a:hover {
-    background: -webkit-linear-gradient(0.28deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-    background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li:nth-child(2)::before {
     content: "";
@@ -5286,7 +5276,7 @@ html {
     padding: 0 0 0 8.3rem;
     background: none;
   }
-  .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .bg_translucent:hover .sub-menu .sub_li a {
+  .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .bg_translucent:hover .sub_li:hover a {
     background: -webkit-linear-gradient(0.28deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
     background: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
     -webkit-background-clip: text;
@@ -5317,12 +5307,12 @@ html {
     right: 2.4rem;
   }
   .drawer .nav-toggle:checked ~ #burger {
-    top: 12vh;
+    top: 15.5vh;
     right: 11vw;
   }
   .drawer #navArea .menu-nazuca-menu-container {
     width: 90%;
-    height: 80%;
+    max-height: 650px;
   }
 }
 /***************************************************************/
@@ -5332,6 +5322,7 @@ html {
   .postid-212 #navArea .menu-nazuca-menu-container {
     width: 100%;
     height: 100vh;
+    max-height: none;
   }
   .postid-212 .nav-toggle:checked ~ #burger {
     top: 2rem;

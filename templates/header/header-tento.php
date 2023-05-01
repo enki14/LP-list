@@ -6,7 +6,7 @@
             <label for="navToggle" id="burger" class="btn-burger">
                 <span class="icon"></span>
             </label>
-            <div id="navArea" class="p-navArea">
+            <div id="navArea" class="p-navArea js-modal-close">
                 <?php wp_nav_menu( array( 
                     'theme_location' => 'header-navigation', 
                     'menu_class' => 'p-nav',
