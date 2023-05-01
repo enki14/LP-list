@@ -26,9 +26,9 @@
                                 hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
                             </p>
                             <ul class="c-explanation__ul">
-                                <li>××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××</li>
-                                <li>××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××</li>
-                                <li>××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××</li>
+                                <li>horohorhorhorohorohorhorhorohorohorhorhorohorohorhorhorohoro</li>
+                                <li>horohorhorhorohorohorhorhorohorohorhorhorohorohorhorhorohoro</li>
+                                <li>horohorhorhorohorohorhorhorohorohorhorhorohorohorhorhorohoro</li>
                             </ul>
                         </div>
                     </article>
@@ -104,9 +104,15 @@
                 </div>
             </div>
             <div class="p-applyBadge sectionContent">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/google-play-badge.png'); ?>" alt="google playのバッジ">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/appstore-badge.png'); ?>" alt="applestoreのバッジ">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/l-apply__microsoft.png'); ?>" alt="microsoftのバッジ">
+                <a href="#">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/google-play-badge.png'); ?>" alt="google playのバッジ">
+                </a>
+                <a href="#">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/appstore-badge.png'); ?>" alt="applestoreのバッジ">
+                </a>
+                <a href="#">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/tento/pc/l-apply__microsoft.png'); ?>" alt="microsoftのバッジ">
+                </a>
             </div>
         </div>
         <div class="l-apply__procedure">

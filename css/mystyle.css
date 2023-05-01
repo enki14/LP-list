@@ -1197,13 +1197,12 @@ html {
   background-image: url("../images/tento/pc/l-apply__background.png");
   position: relative;
   background-size: cover;
-  z-index: -1;
 }
 .postid-212 .l-apply__cachback span {
   position: absolute;
   top: 8rem;
   left: 8.1rem;
-  font-family: Elephant;
+  font-family: "Elephant", "Brush Script MT", Georgia, "Times New Roman", Times, serif, "Times New Roman", "Times", "serif";
   color: #fff;
   font-size: 46px;
   font-weight: 400;
@@ -1430,9 +1429,6 @@ html {
     width: 80vw;
     padding: 2rem;
   }
-  .postid-212 .l-apply__cachback {
-    z-index: -1;
-  }
   .postid-212 .l-apply__procedure {
     width: 93.3%;
   }
@@ -1486,9 +1482,6 @@ html {
   }
   .postid-212 .l-detail__content {
     padding-top: 4rem;
-  }
-  .postid-212 .l-apply__cachback {
-    z-index: -1;
   }
   .postid-212 .l-apply__cachback span {
     display: none;
@@ -2085,12 +2078,20 @@ html {
   padding-left: 1.8rem;
 }
 .postid-212 .c-explanation__ul li {
-  list-style-type: disc;
-  display: list-item;
   margin-bottom: 8px;
+  position: relative;
 }
-.postid-212 .c-explanation__ul li::marker {
-  font-size: 4.8px;
+.postid-212 .c-explanation__ul li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "●";
+  color: rgba(56, 52, 52, 0.76);
+  font-size: 1px;
+  display: inline-block;
+  width: 1.8rem;
+  margin-left: -1.8rem;
+  text-align: center;
 }
 .postid-212 .c-twoColumn {
   display: -webkit-box;
@@ -2738,7 +2739,7 @@ html {
   letter-spacing: 0.05em;
 }
 .postid-212 .c-fLogo .c-logoTitle {
-  font-family: Brush Script MT;
+  font-family: "Brush Script MT", Georgia, "Times New Roman", Times, serif, "Times New Roman", "Times", "serif";
   font-size: 24px;
   font-style: italic;
   font-weight: 400;
@@ -2846,6 +2847,19 @@ html {
     width: 30%;
     bottom: 2px;
   }
+  .postid-212 .c-backtop__circle {
+    width: 60px;
+    height: 60px;
+  }
+  .postid-212 .c-backtop__circle small {
+    width: 60px;
+    top: 3px;
+    font-size: 1.2rem;
+  }
+  .postid-212 .c-backtop__circle p {
+    line-height: 60px;
+    font-size: 1.6rem;
+  }
   .postid-212 .c-detailBtn {
     padding: 2rem 4rem;
   }
@@ -2891,11 +2905,11 @@ html {
     margin: 0 auto 1.2rem;
     line-height: 2.4rem;
   }
-  .postid-212 .c-logoTitle {
+  .postid-212 .c-fLogo .c-logoTitle {
     font-size: 2rem;
     line-height: 2.4rem;
   }
-  .postid-212 .c-logoTitle span {
+  .postid-212 .c-fLogo .c-logoTitle span {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
@@ -3270,6 +3284,9 @@ html {
   .postid-212 .c-timeDay__time {
     font-size: 1.2rem;
   }
+  .postid-212 .c-timeDay .end {
+    font-size: 1.2rem;
+  }
   .postid-212 .c-spec dl dt {
     font-size: 1.2rem;
     line-height: 2.1rem;
@@ -3518,18 +3535,18 @@ html {
   margin: 0 auto 15.8rem;
   width: 877px;
 }
-.postid-212 .p-applyBadge img {
+.postid-212 .p-applyBadge a img {
   height: 84px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.postid-212 .p-applyBadge img:nth-child(1) {
+.postid-212 .p-applyBadge a:nth-child(1) img {
   width: 250px;
 }
-.postid-212 .p-applyBadge img:nth-child(2) {
+.postid-212 .p-applyBadge a:nth-child(2) img {
   width: 280px;
 }
-.postid-212 .p-applyBadge img:nth-child(3) {
+.postid-212 .p-applyBadge a:nth-child(3) img {
   width: 230px;
 }
 .postid-212 .p-fLink {
@@ -3624,15 +3641,15 @@ html {
   .postid-212 .p-applyBadge {
     width: 696px;
   }
-  .postid-212 .p-applyBadge img:nth-child(1) {
+  .postid-212 .p-applyBadge a:nth-child(1) img {
     width: 220px;
     height: auto;
   }
-  .postid-212 .p-applyBadge img:nth-child(2) {
+  .postid-212 .p-applyBadge a:nth-child(2) img {
     width: 200px;
     height: auto;
   }
-  .postid-212 .p-applyBadge img:nth-child(3) {
+  .postid-212 .p-applyBadge a:nth-child(3) img {
     width: 200px;
     height: auto;
   }
@@ -3687,10 +3704,10 @@ html {
             justify-content: space-around;
     row-gap: 3.2rem;
   }
-  .postid-212 .p-applyBadge img:nth-child(1) {
+  .postid-212 .p-applyBadge a:nth-child(1) img {
     width: 180px;
   }
-  .postid-212 .p-applyBadge img:nth-child(2), .postid-212 .p-applyBadge img:nth-child(3) {
+  .postid-212 .p-applyBadge a:nth-child(2) img, .postid-212 .p-applyBadge a:nth-child(3) img {
     width: 165px;
   }
   .postid-212 .p-fLink {
@@ -3762,13 +3779,12 @@ html {
     row-gap: 2rem;
     margin-bottom: 4rem;
   }
-  .postid-212 .p-applyBadge img:nth-child(1) {
+  .postid-212 .p-applyBadge a:nth-child(1) img {
     width: 35vw;
     margin-right: 2rem;
     height: auto;
   }
-  .postid-212 .p-applyBadge img:nth-child(2),
-  .postid-212 .p-applyBadge img:nth-child(3) {
+  .postid-212 .p-applyBadge a:nth-child(2) img, .postid-212 .p-applyBadge a:nth-child(3) img {
     width: 32vw;
     height: auto;
   }

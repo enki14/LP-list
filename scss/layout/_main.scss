@@ -461,12 +461,11 @@
             @include mixin.background_url('tento/pc/l-apply__background.png', 100%, auto);
             position: relative;
             background-size: cover;           
-            z-index: -1;
             span{
                 position: absolute;
                 top: 8rem;
                 left: 8.1rem;
-                font-family: Elephant;
+                font-family: 'Elephant','Brush Script MT', base.$georgia, 'Times New Roman', 'Times', 'serif';
                 color: #fff;
                 font-size: 46px;
                 font-weight: 400;
@@ -713,9 +712,6 @@
         }
 
         .l-apply{
-            &__cachback{
-                z-index: -1;
-            }
             &__procedure{
                 width: 93.3%;
             }
@@ -795,7 +791,6 @@
         }
 
         .l-apply__cachback{
-            z-index: -1;
             span{
                 display: none;
             }

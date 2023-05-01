@@ -252,20 +252,22 @@
         margin: 0 auto 15.8rem;
         width: 877px;
 
-        img{
-            height: 84px;
-            object-fit: contain;
-
-            &:nth-child(1){
+        a{
+            img{
+                height: 84px;
+                object-fit: contain;    
+            }
+            &:nth-child(1) img{
                 width: 250px;
             }
-            &:nth-child(2){
+            &:nth-child(2) img{
                 width: 280px;
             }
-            &:nth-child(3){
+            &:nth-child(3) img{
                 width: 230px;
-            }
-        } 
+            }    
+        }
+
     }
 
 
@@ -358,20 +360,20 @@
 
         .p-applyBadge{
             width: 696px;
-            img{                    
-                &:nth-child(1){
+            a{
+                &:nth-child(1) img{
                     width: 220px;
                     height: auto;
                 }
-                &:nth-child(2){
+                &:nth-child(2) img{
                     width: 200px;
                     height: auto;
                 }
-                &:nth-child(3){
+                &:nth-child(3) img{
                     width: 200px;
                     height: auto;
-                }
-            } 
+                }    
+            }
         }
 
         .p-fLink{
@@ -423,14 +425,14 @@
             width: 89.57vw;
             justify-content: space-around;
             row-gap: 3.2rem;
-            img{
-                &:nth-child(1){
+            a{
+                &:nth-child(1) img{
                     width: 180px;
                 }
-                &:nth-child(2),
-                &:nth-child(3){
+                &:nth-child(2) img,
+                &:nth-child(3) img{
                     width: 165px;
-                }
+                }    
             }
         }
 
@@ -515,15 +517,17 @@
             justify-content: center;
             row-gap: 2rem;
             margin-bottom: 4rem;
-            img:nth-child(1){
-                width: 35vw;
-                margin-right: 2rem;
-                height: auto;
-            }
-            img:nth-child(2),
-            img:nth-child(3){
-                width: 32vw;
-                height: auto;
+            a{
+                &:nth-child(1) img{
+                    width: 35vw;
+                    margin-right: 2rem;
+                    height: auto;
+                }
+                &:nth-child(2) img,
+                &:nth-child(3) img{
+                    width: 32vw;
+                    height: auto;
+                }    
             }
         }
     }

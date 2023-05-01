@@ -498,7 +498,7 @@
             letter-spacing: 0.05em;
         }
         .c-logoTitle{
-            font-family: Brush Script MT;
+            font-family: 'Brush Script MT', base.$georgia, 'Times New Roman', 'Times', 'serif';
             font-size: 24px;
             font-style: italic;
             font-weight: 400;
@@ -625,6 +625,21 @@
                 }
             }
         }
+        .c-backtop{
+            &__circle{
+                width: 60px;
+                height: 60px;
+                small{
+                    width: 60px;
+                    top: 3px;
+                    font-size: 1.2rem;
+                }
+                p{
+                    line-height: 60px;
+                    font-size: 1.6rem;
+                }
+            }
+        }
 
         .c-detailBtn{
             padding: 2rem 4rem;
@@ -675,15 +690,15 @@
                     line-height: 2.4rem;
                 }
             }
-    
-        }
-        .c-logoTitle{
-            font-size: 2rem;
-            line-height: 2.4rem;
-            span{
-                font-size: 1.4rem;
+            .c-logoTitle{
+                font-size: 2rem;
                 line-height: 2.4rem;
+                span{
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
             }
+    
         }
         
         .c-snsBtn{
