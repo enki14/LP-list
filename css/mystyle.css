@@ -2083,13 +2083,14 @@ html {
 }
 .postid-212 .c-explanation__ul li::before {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 0;
-  content: "●";
-  color: rgba(56, 52, 52, 0.76);
-  font-size: 1px;
+  content: "";
+  background: rgba(56, 52, 52, 0.76);
   display: inline-block;
-  width: 1.8rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
   margin-left: -1.8rem;
   text-align: center;
 }
@@ -4150,6 +4151,16 @@ html {
     width: 640px;
     height: 96px;
   }
+  .postid-212 .p-applyImg::before {
+    content: "";
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    background-image: url("../images/tento/tab/23553848_1.png");
+    top: -27rem;
+    left: 3rem;
+    position: absolute;
+  }
 }
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/
@@ -4242,6 +4253,10 @@ html {
 @media all and (max-width: 390px) {
   .postid-212 .p-applyImg {
     margin: 4rem auto;
+  }
+  .postid-212 .p-applyImg::before {
+    top: -12rem;
+    left: 1rem;
   }
   .postid-212 .p-applyImg__top {
     margin: 0 auto 1.6rem;
@@ -4840,13 +4855,7 @@ html {
     background-image: url("../images/tento/tab/22271217_1.png");
   }
   .postid-212 .p-individual:nth-child(4)::after {
-    content: "";
-    display: inline-block;
-    width: 130px;
-    height: 130px;
-    background-image: url("../images/tento/tab/23553848_1.png");
-    bottom: -8.5rem;
-    left: 0;
+    display: none;
   }
 }
 /***************************************************************/
@@ -5166,6 +5175,7 @@ html {
     position: relative;
     padding-right: 0;
     margin-bottom: 3.2rem;
+    width: 100%;
   }
   .postid-212 .drawer .p-navArea .menu-nazuca-menu-container .p-nav .main_li::before {
     left: 0;

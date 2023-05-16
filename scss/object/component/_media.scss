@@ -164,22 +164,18 @@
             padding-left: 1.8rem;
 
             li{
-                // list-style-type: disc;
-                // display: list-item;
                 margin-bottom: 8px;
-                // &::marker{
-                //     font-size: 4.8px;
-                // }
                 position: relative;
                 &::before{
                     position: absolute;
-                    top: 0;
+                    top: 1rem;
                     left: 0;
-                    content: "●";
-                    color: base.$dark;
-                    font-size: 1px;
+                    content: "";
+                    background: base.$dark;
                     display: inline-block;
-                    width: 1.8rem;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 2px;
                     margin-left: -1.8rem;
                     text-align: center;
                 }

@@ -174,16 +174,9 @@
                 }
             }   
             &:nth-child(4)::after{
-                @include mixin.background_url('tento/tab/23553848_1.png', 130px, 130px);
-                bottom: -8.5rem;
-                left: 0;
+                display: none;
             }
         } 
-
-        
-
-        
-        
     }
     
 }

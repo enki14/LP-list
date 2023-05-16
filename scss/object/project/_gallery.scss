@@ -274,6 +274,12 @@
                     height: 96px;
                 }
             }
+            &::before{
+                @include mixin.background_url('tento/tab/23553848_1.png', 130px, 130px);
+                top: -27rem;
+                left: 3rem;
+                position: absolute;
+            }
         }
     
     }
@@ -384,6 +390,10 @@
     .postid-212{
         .p-applyImg{
             margin: 4rem auto;
+            &::before{
+                top: -12rem;
+                left: 1rem;
+            }
             &__top{
                 margin: 0 auto 1.6rem;
             }
