@@ -2,6 +2,31 @@
 @use "../../foundation/base";
 
 
+.home{
+
+    .p-article{
+        padding: 8.352% 1.9% 0 1.45%;
+        width: 50%;
+        .c-season{
+            margin-bottom: 2rem;
+        }
+        .c-comment{
+            margin-bottom: 4rem;
+        }
+        .c-detailLink{
+            text-align: right;
+            padding-right: 4.1rem;
+            a{
+                text-decoration: underline;    
+            }
+            i{
+                color: #333;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
 .postid-212{
     .p-hArticle{
         width: 47.3%;

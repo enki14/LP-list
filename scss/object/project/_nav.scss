@@ -1,0 +1,23 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+.home{
+    .p-logo{
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .p-nav{
+        p{
+            color: #fff;
+            font-size: 2rem;
+            font-family: inter;
+            font-weight: 600;
+            i{
+                margin-left: 2rem;
+            }
+        }
+    }
+}

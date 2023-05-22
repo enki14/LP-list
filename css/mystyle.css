@@ -8,6 +8,109 @@ html {
   margin: 0;
 }
 
+.home {
+  font-family: inter;
+  color: #000;
+}
+.home .pc {
+  display: block;
+}
+.home .tab {
+  display: none;
+}
+.home .sp {
+  display: none;
+}
+.home .pc_tab_inline {
+  display: inline;
+}
+.home h1 {
+  position: absolute;
+  top: 40%;
+  font-family: HGSGyoshotai;
+  font-size: clamp(2.4rem, 1.4rem + 3vw, 5.4rem);
+  font-weight: 400;
+  line-height: 2;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+.home h2 {
+  line-height: 2;
+  text-align: center;
+  width: 100%;
+  padding: 8.2rem 0;
+  -webkit-box-shadow: 0 -8px 3px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -8px 3px -3px rgba(0, 0, 0, 0.2);
+}
+.home h2 span {
+  position: relative;
+  font-size: clamp(2rem, 1.4rem + 1.6vw, 3.6rem);
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.home h2 span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.home h3 {
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.home h3 span {
+  font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.8rem);
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  width: 74.1%;
+}
+.home h3 span::after {
+  content: "";
+  display: inline-block;
+  width: 346px;
+  height: 27.54px;
+  background-image: url("../images/lp-top/pc/h3_btm.png");
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+}
+.home h4 {
+  font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.8rem);
+  font-family: Wide Latin;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.home p,
+.home a,
+.home dd,
+.home li,
+.home span {
+  font-size: clamp(12px, 2vw, 15px);
+  color: #333;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.home ul {
+  list-style: none;
+}
+.home a {
+  text-decoration: none;
+}
+
 .postid-184 {
   font-family: "Yu Mincho", "YuMincho", "游明朝体", "Yu Mincho Light", "Noto Serif JP", serif, "ＭＳ 明朝", "MS Mincho", "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "TsukuBRdGothic-Regular", "Georgia", sans-serif;
   color: #5202A3;
@@ -524,6 +627,49 @@ html {
     display: none;
   }
 }
+.home .l-header {
+  background-image: url("../images/lp-top/pc/header-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home .l-header__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.home .l-header__inner .l-header__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 60px 80px;
+}
+
 .postid-184 .l-header {
   content: "";
   display: inline-block;
@@ -687,6 +833,76 @@ html {
     width: 65%;
   }
 }
+.home main {
+  position: relative;
+  width: 100%;
+  background: #EF9554;
+  margin-top: -6.8%;
+  padding-bottom: 6.8%;
+}
+.home main::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 905px;
+  height: 113px;
+  background-image: url("../images/lp-top/pc/mountain.png");
+  right: 0;
+  top: -111px;
+  -webkit-filter: drop-shadow(0 -5px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0 -5px 2px rgba(0, 0, 0, 0.25));
+}
+.home main .l-one {
+  position: relative;
+  width: 1000px;
+  margin: 8rem auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.home main .l-one:first-of-type {
+  margin-top: 2.68rem;
+}
+.home main .l-one:nth-of-type(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.home main .l-one:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.home main .l-cloudy {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  text-align: right;
+}
+.home main .l-cloudy img {
+  width: 700px;
+  height: 151px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home main .l-cloudy:nth-of-type(odd) {
+  text-align: right;
+}
+.home main .l-cloudy:nth-of-type(even) {
+  text-align: left;
+}
+.home main .l-cloudy:last-of-type {
+  display: none;
+}
+
 .postid-184 main .l-hedding {
   position: relative;
 }
@@ -1528,6 +1744,15 @@ html {
     right: 5px;
   }
 }
+.home .l-footer {
+  background: #323436;
+}
+.home .l-footer__content {
+  width: 321px;
+  margin: 0 auto;
+  padding: 1.55rem 0 2rem 0;
+}
+
 .postid-184 .l-footer {
   background: #F7E1E1;
   position: relative;
@@ -2927,6 +3152,44 @@ html {
     line-height: 18.18px;
   }
 }
+.home .c-blueTitle {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.home .c-blueTitle span {
+  font-family: Wide Latin;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgb(108, 165, 232);
+  -webkit-animation: move 3s ease-in-out infinite alternate;
+          animation: move 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(-80px);
+            transform: translateX(-80px);
+  }
+  100% {
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+}
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(-80px);
+            transform: translateX(-80px);
+  }
+  100% {
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+}
+
 .postid-184 .c-hTitle {
   text-align: center;
   width: 528px;
@@ -3109,6 +3372,16 @@ html {
     line-height: 25px;
   }
 }
+.home .c-copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-family: HGSGyoshotai;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  margin-top: 3rem;
+}
+
 .postid-212 .c-hCatch {
   position: relative;
   padding-left: 40px;
@@ -3296,6 +3569,31 @@ html {
     padding-left: 6.8rem;
   }
 }
+.home .p-sns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+.home .p-sns li {
+  list-style: none;
+}
+.home .p-sns li a i {
+  color: #EF9554;
+}
+.home .p-sns li a i:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #b59133;
+}
+
 .postid-184 .p-pList {
   width: 800px;
   margin: 40px auto 0;
@@ -3868,6 +4166,12 @@ html {
     height: auto;
     padding: 30px 60px;
   }
+}
+
+.home .p-img {
+  width: 50%;
+  text-align: center;
+  margin-top: 1.4rem;
 }
 
 .postid-184 .p-imgArea {
@@ -4662,6 +4966,28 @@ html {
             justify-content: space-between;
   }
 }
+.home .p-article {
+  padding: 8.352% 1.9% 0 1.45%;
+  width: 50%;
+}
+.home .p-article .c-season {
+  margin-bottom: 2rem;
+}
+.home .p-article .c-comment {
+  margin-bottom: 4rem;
+}
+.home .p-article .c-detailLink {
+  text-align: right;
+  padding-right: 4.1rem;
+}
+.home .p-article .c-detailLink a {
+  text-decoration: underline;
+}
+.home .p-article .c-detailLink i {
+  color: #333;
+  margin-left: 5px;
+}
+
 .postid-212 .p-hArticle {
   width: 47.3%;
   padding-right: 1.1rem;
@@ -5338,4 +5664,17 @@ html {
     top: 2rem;
     right: 2rem;
   }
+}
+.home .p-logo img {
+  width: 80px;
+  height: 80px;
+}
+.home .p-nav p {
+  color: #fff;
+  font-size: 2rem;
+  font-family: inter;
+  font-weight: 600;
+}
+.home .p-nav p i {
+  margin-left: 2rem;
 }

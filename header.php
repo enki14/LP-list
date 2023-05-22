@@ -15,10 +15,27 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
-    <?php if(is_front_page() && is_home()): ?>
-        <section>
-            <h1>ここはLP集トップページのヘッダーです</h1>
-        </section>
+    <?php if(is_front_page() || is_home()): ?>
+    <header class="l-header">
+        <div class="l-header__inner">
+            <!-- ロゴとナビゲーションのラッパー -->
+            <div class="l-header__top">
+                <!-- ロゴ -->
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="p-logo">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/ukigumo-logo.png'); ?>" alt="nazucaのロゴ">
+                </a>
+                <!-- ナビゲーション -->
+                <nav class="p-nav">
+                    <p>このページの制作解説<i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                </nav>
+            </div>
+            <h1 class="l-header__title">ランディングページ集</h1>
+        </div>
+    </header>
+
+        
+
+
     <?php 
         elseif(is_single(184)):
             get_template_part('templates/header/header', 'cosmetics');

@@ -305,6 +305,16 @@
             )
         );
 
+        register_post_type('lp-production', 
+            array(
+                'label' => 'LP制作事例',
+                'public' => true,
+                'has_archive' => true,
+                'hierarchical' => true,
+                'supports' => $exampleSupports 
+            )
+        );
+
         // 'event_info'の編集画面でタグを設定できるようにする
         register_taxonomy(
             'tag',

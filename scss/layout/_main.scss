@@ -1,6 +1,62 @@
 @use "../foundation/mixin";
 @use "../foundation/base";
 
+
+.home{
+    main{
+        position: relative;
+        width: 100%;
+        background: #EF9554;
+        margin-top: -6.8%;
+        padding-bottom: 6.8%;
+        &::before{
+            position: absolute;
+            @include mixin.background_url('lp-top/pc/mountain.png', 905px, 113px);
+            right: 0;
+            top: -111px;
+            filter: drop-shadow(0 -5px 2px rgba(0,0,0,0.25));
+        }
+        .l-one{
+            position: relative;
+            width: 1000px;
+            margin: 8rem auto;
+            display: flex;
+            justify-content: space-around;
+        }  
+        .l-one:first-of-type{
+            margin-top: 2.68rem;
+        }
+        .l-one:nth-of-type(odd){
+            flex-direction: row;
+        }
+        .l-one:nth-of-type(even){
+            flex-direction: row-reverse;
+        }  
+
+        .l-cloudy{
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0 4rem;
+            text-align: right;
+            img{
+                width: 700px;
+                height: 151px;
+                object-fit: cover;
+            }
+        }
+        .l-cloudy:nth-of-type(odd){
+            text-align: right;
+        }
+        .l-cloudy:nth-of-type(even){
+            text-align: left;
+        }
+        .l-cloudy:last-of-type{
+            display: none;
+        }
+
+    }
+}
+
 .postid-184{
     main{
         .l-hedding{

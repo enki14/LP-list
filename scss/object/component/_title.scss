@@ -2,6 +2,38 @@
 @use "../../foundation/base";
 
 
+.home{
+    .c-blueTitle{
+        position: absolute;
+        display: block;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        span{
+            font-family: Wide Latin;
+            display: inline-block;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 28px;
+            color: rgba(108, 165, 232, 1);
+            // animationで左右に30pxずつ動かす
+            animation: move 3s ease-in-out infinite alternate;
+            
+        }
+
+        // moveアニメーション
+        @keyframes move {
+            0% {
+                transform: translateX(-80px);
+            }
+            100% {
+                transform: translateX(80px);
+            }
+        }
+
+    }
+}
+
 .postid-184{
     .c-hTitle{
         text-align: center;
