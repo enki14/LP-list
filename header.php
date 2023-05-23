@@ -32,11 +32,9 @@
             <h1 class="l-header__title">ランディングページ集</h1>
         </div>
     </header>
-
-        
-
-
-    <?php 
+    <?php
+        elseif(is_singular('lp-production')):
+            get_template_part('templates/header/header', 'production'); 
         elseif(is_single(184)):
             get_template_part('templates/header/header', 'cosmetics');
         elseif(is_single(212)):

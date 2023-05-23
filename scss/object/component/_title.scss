@@ -9,12 +9,13 @@
         top: 0;
         width: 100%;
         text-align: center;
+        z-index: 3;
         span{
             font-family: Wide Latin;
             display: inline-block;
-            font-size: 28px;
+            font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.8rem);
             font-weight: 400;
-            line-height: 28px;
+            line-height: 1.2;
             color: rgba(108, 165, 232, 1);
             // animationで左右に30pxずつ動かす
             animation: move 3s ease-in-out infinite alternate;
@@ -204,6 +205,20 @@
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/ 
 /***************************************************************/
+@include mixin.mqh(sp){
+    .home{
+        @keyframes move {
+            0% {
+                transform: translateX(-40px);
+            }
+            100% {
+                transform: translateX(40px);
+            }
+        }
+
+    }
+}
+
 @include mixin.mqt(sp){
     .postid-212{
         .c-detailTitle{

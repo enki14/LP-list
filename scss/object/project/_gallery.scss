@@ -7,6 +7,11 @@
         width: 50%;
         text-align: center;
         margin-top: 1.4rem;
+        svg {
+            clipPath path{
+                box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25), inset -2px -2px 3px rgba(0, 0, 0, 0.25);
+            }
+        }
 
     }
 
@@ -299,6 +304,15 @@
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/ 
 /***************************************************************/
+@include mixin.mqh(spw){
+    .home{
+        .p-img{
+            width: 100%;
+            margin-top: 1.8rem;
+        }
+    }
+}
+
 @include mixin.mqt(spw){
     .postid-212{
         .p-hImg{

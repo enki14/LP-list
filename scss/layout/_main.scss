@@ -22,6 +22,21 @@
             margin: 8rem auto;
             display: flex;
             justify-content: space-around;
+            .new_tag{
+                position: absolute;
+                left: -3px;
+                top: -3.6rem;
+                height: 72px;
+                width: 72px;
+                font-family: HGSGyoshotai;
+                font-size: 54px;
+                font-weight: 400;
+                color: rgba(235, 20, 20, 1);
+                border: 3px solid rgba(235, 20, 20, 1);
+                border-radius: 50%;
+                line-height: 66px;
+                text-indent: 6px;            
+            }
         }  
         .l-one:first-of-type{
             margin-top: 2.68rem;
@@ -700,6 +715,27 @@
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/ 
 /***************************************************************/
+@include mixin.mqh(tab){
+    .home{
+        main{
+            &::before{
+                @include mixin.background_url('lp-top/tab/mountain_tab.png', 386.2px, 48.2px);
+                top: -45px;
+            }
+            .l-one{
+                width: 703px;
+            }
+            .l-cloudy{
+                width: 703px;
+                img{
+                    width: 70%;
+                    height: auto;
+                }
+            }
+        } 
+    }
+}
+
 @include mixin.mqt(tab){
     .postid-212{
     
@@ -742,6 +778,23 @@
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/ 
 /***************************************************************/
+@include mixin.mqh(spw){
+    .home{
+        main{
+            #lOne{
+                width: 82vw;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .l-cloudy{
+                width: 82vw;
+                padding: 0;
+            }
+        }
+    }
+}
+
 @include mixin.mqt(spw){
     .postid-212{
         .l-durability{
@@ -820,6 +873,29 @@
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/ 
 /***************************************************************/
+@include mixin.mqh(sp){
+    .home{
+        main{
+            &::before{
+                @include mixin.background_url('lp-top/sp/mountain_sp.png', 181px, 22.6px); 
+                top: -21px;
+            }
+            #lOne{
+                width: 82.9vw;
+                margin: 6rem auto;
+            }
+            #lOne:first-of-type{
+                margin-top: 2.68rem;
+            }
+            #lOne:last-of-type{
+                margin-bottom: 34.5px;
+            }
+            .l-cloudy{
+                width: 82.9vw;
+            }
+        }
+    }
+}
 @include mixin.mqt(sp){
     .postid-212{
         .l-size{

@@ -1,118 +1,104 @@
-<!-- get_header -->
 <?php get_header(); ?>
 <main>
-    <h2><span>自作のランディングページギャラリーへようこそ<span></h2>
-    <section class="l-one">
-        <h4 class="c-blueTitle"><span>Outdoor goods</span></h4>
-        <!-- <div id="container">
-            <svg width="0" height="0" style="position:absolute; top:0; left:0;">
-                <defs>
-                    <clipPath id="clipPath1">
-                        <path d="M472.635 219.645C440 343 376.63 449.01 238.315 439.005C100 429 25.9908 358.29 3.99505 219.645C-18.0006 81 78.0008 0.285156 238.315 0.285156C398.629 0.285156 505.27 96.2903 472.635 219.645Z" fill="#D9D9D9"/>                            
-                        <animate attributeName="d" dur="2s" repeatCount="indefinite" 
-                            to="M471.627 226.646C488.262 347.291 375.622 456.011 237.307 446.006C98.9916 436.001 -17.0284 369.292 2.9866 226.646C23.0016 84 76.0641 46.5388 237.307 7.28601C398.549 -31.9668 454.992 106.001 471.627 226.646z"/>
-                    </clipPath>
-                </defs>
-            </svg>
-            
-            <img id="image" src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/ukigumo-logo.png') ?>" alt="Image">
-        </div> -->
+    <h2><span>自作のランディングページ<br>ギャラリーへようこそ</span></h2>
+    <?php 
+        $args = array(
+            'post_type' => 'lp-production',
+            'posts_per_page' => '-1'
+        );
+
+        $pro = new WP_Query($args);
+        if($pro->have_posts()): while($pro->have_posts()): $pro->the_post(); $counter++;
+            $slide = get_field('slide_show');
+            $slide_1 = $slide['slide_1'];
+            $slide_2 = $slide['slide_2'];
+            $slide_3 = $slide['slide_3'];
+            $slide_4 = $slide['slide_4'];
+            $slide_5 = $slide['slide_5'];
+            $comp = get_field('complete');
+            $desc = get_field('description');
+            $blue_font = get_field('blue_font');
+    ?>
+    <section id="lOne" class="l-one">
+        <?php if ($counter <= 1): ?>
+            <p class="new_tag pc_tab">新</p>
+        <?php endif; ?>
+        <h4 class="c-blueTitle"><span><?php echo $blue_font ?></span></h4>
         <div class="p-img">
-            <svg width="0" height="0" style="position:absolute; top:0; left:0;" viewBox="0 0 479 440">
-                <!-- <clipPath id="clipPath1" class="path_1"> -->
-                    <path d="M472.635 219.645C440 343 376.63 449.01 238.315 439.005C100 429 25.9908 358.29 3.99505 219.645C-18.0006 81 78.0008 0.285156 238.315 0.285156C398.629 0.285156 505.27 96.2903 472.635 219.645Z" fill="#D9D9D9"/>
+            <svg width="0" height="0" style="position:absolute; top:0; left:0;">
+                <clipPath id="clipPath<?php echo $counter ?>" class="path_<?php echo $counter ?>">
+                    <path d="M464.39 216.028C423.894 394.686 341.711 451.856 227.371 437.564C-43.2735 403.733 3.45339 163.622 3.45339 163.622C3.45339 163.622 -1.31166 -11.4628 250.001 1.63873C368.405 1.63873 494.956 81.1806 464.39 216.028Z" fill="#D9D9D9"/>
                         <!-- animate -->
                         <animate attributeName="d" dur="2s" repeatCount="indefinite" 
                         to="M471.627 226.646C488.262 347.291 375.622 456.011 237.307 446.006C98.9916 436.001 -17.0284 369.292 2.9866 226.646C23.0016 84 76.0641 46.5388 237.307 7.28601C398.549 -31.9668 454.992 106.001 471.627 226.646z"/>
                     </path>
-                <!-- </clipPath> -->
-            </svg>
-            <svg width="474" height="447" viewBox="0 0 474 447">
-                <image href="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/ukigumo-logo.png') ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath1)"/>
-            </svg>
-        </div> 
-        <article class="p-article">
-            <h3><span>アウトドア用品</span></h3>
-            <p class="c-season">完成時期：&emsp;2023年4月下旬</p>
-            <p class="c-comment">
-                ３種類のテントをシリーズ化した架空のランディングページです。
-                大自然の中で人々が暮らすことをテーマに、自然背景を多く盛り込
-                み、それによってアクティブな印象を表現しました。各テントのサ
-                イズ・機能性・基本的なスペックといった内容から、対象のテント
-                シリーズを販売する Nazuca という架空の企業が主催するアウトド
-                アイベント、専用アプリの紹介なども購買意欲促進のために、この
-                １枚にぎゅっと盛り込みました。
-            </p>
-            <p class="c-detailLink"><a href="">詳しく確認する</a><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
-        </article>
-    </section>
-    <div class="l-cloudy">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/c-cloudy.png'); ?>" alt="大きな雲">
-    </div>
-    <section class="l-one">
-        <h4 class="c-blueTitle"><span>Cosmetic</span></h4>
-        <div class="p-img">
-            <svg width="0" height="0" style="position:absolute; top:0; left:0;">
-                <clipPath id="clipPath1" class="path_1">
-                    <path d="M472.635 219.645C440 343 376.63 449.01 238.315 439.005C100 429 25.9908 358.29 3.99505 219.645C-18.0006 81 78.0008 0.285156 238.315 0.285156C398.629 0.285156 505.27 96.2903 472.635 219.645Z" fill="#D9D9D9"/>
-                        <!-- animate -->
-                        <animate attributeName="d" dur="2s" repeatCount="indefinite" to="M471.627 226.646C488.262 347.291 375.622 456.011 237.307 446.006C98.9916 436.001 -17.0284 369.292 2.9866 226.646C23.0016 84 76.0641 46.5388 237.307 7.28601C398.549 -31.9668 454.992 106.001 471.627 226.646z"/>
-                    </path>
                 </clipPath>
             </svg>
-            <svg width="469" height="439" viewBox="0 0 479 440">
-                <image href="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/ukigumo-logo.png') ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath1)"/>
-            </svg>
-        </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                <?php if(isset($slide_1['url'])): ?>
+                    <div class="swiper-slide">
+                        <div class="svg_container">
+                            <svg viewBox="0 0 470 440" class="svg_content" xmlns="http://www.w3.org/2000/svg">
+                                <image href="<?php echo esc_url($slide_1['url']) ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath<?php echo $counter ?>)" alt="<?php echo esc_attr($slide_1['alt']) ?>">
+                            </svg>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if(isset($slide_2['url'])): ?>
+                    <div class="swiper-slide">
+                        <div class="svg_container">
+                            <svg viewBox="0 0 470 440" class="svg_content" xmlns="http://www.w3.org/2000/svg">
+                                <image href="<?php echo esc_url($slide_2['url']) ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath<?php echo $counter ?>)" alt="<?php echo esc_attr($slide_2['alt']) ?>">
+                            </svg>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if(isset($slide_3['url'])): ?>
+                    <div class="swiper-slide">
+                        <div class="svg_container">
+                            <svg viewBox="0 0 470 440" class="svg_content" xmlns="http://www.w3.org/2000/svg">
+                                <image href="<?php echo esc_url($slide_3['url']) ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath<?php echo $counter ?>)" alt="<?php echo esc_attr($slide_3['alt']) ?>">
+                            </svg>
+                        </div>                        
+                    </div>
+                <?php endif; ?>
+                <?php if(isset($slide_4['url'])): ?>
+                    <div class="swiper-slide">
+                        <div class="svg_container">
+                            <svg viewBox="0 0 470 440" class="svg_content" xmlns="http://www.w3.org/2000/svg">
+                                <image href="<?php echo esc_url($slide_4['url']) ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath<?php echo $counter ?>)" alt="<?php echo esc_attr($slide_4['alt']) ?>">
+                            </svg>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if(isset($slide_5['url'])): ?>
+                    <div class="swiper-slide">
+                        <div class="svg_container">
+                            <svg viewBox="0 0 470 440" class="svg_content" xmlns="http://www.w3.org/2000/svg">
+                                <image href="<?php echo esc_url($slide_5['url']) ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath<?php echo $counter ?>)" alt="<?php echo esc_attr($slide_5['alt']) ?>">
+                            </svg>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                </div>
+            </div>
+        </div> 
         <article class="p-article">
-            <h3><span>化粧品</span></h3>
-            <p class="c-season">完成時期：&emsp;2023年2月上旬</p>
+            <?php if ($counter <= 1): ?>
+                <p class="new_tag_sp sp">新</p>
+            <?php endif; ?>
+            <h3><span><?php the_title() ?></span></h3>
+            <p class="c-season">完成時期：&emsp;<?php echo $comp ?></p>
             <p class="c-comment">
-                架空のモイスチャークリームをイメージして制作しました。<br>
-                自然由来の化粧品であることをテーマに、草花の写真やイラストを
-                使って雰囲気を出しました。<br>
-                効能ポイントでの詳しい説明や、信頼度を高めるためのバナー、
-                また「お客様の声」としてのアンケートでなどで訴求力を高められ
-                るように基本のプロットに忠実に描きました。
+                <?php echo $desc ?>
             </p>
-            <p class="c-detailLink"><a href="">詳しく確認する</a><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
-        </article>
-    </section>
-    <div class="l-cloudy">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/c-cloudy.png'); ?>" alt="大きな雲">
-    </div><section class="l-one">
-        <h4 class="c-blueTitle"><span></span></h4>
-
-        <div class="p-img">
-            <svg viewBox="0 0 479 440">
-                <!-- <clipPath id="clipPath1" class="path_1"> -->
-                    <path d="M472.635 219.645C440 343 376.63 449.01 238.315 439.005C100 429 25.9908 358.29 3.99505 219.645C-18.0006 81 78.0008 0.285156 238.315 0.285156C398.629 0.285156 505.27 96.2903 472.635 219.645Z" fill="#D9D9D9"/>
-                        <!-- animate -->
-                        <animate attributeName="d" dur="2s" repeatCount="indefinite" to="M471.627 226.646C488.262 347.291 375.622 456.011 237.307 446.006C98.9916 436.001 -17.0284 369.292 2.9866 226.646C23.0016 84 76.0641 46.5388 237.307 7.28601C398.549 -31.9668 454.992 106.001 471.627 226.646z">
-                    </path>
-                <!-- </clipPath> -->
-            </svg>
-            <!-- <svg width="469" height="439" viewBox="0 0 479 440">
-                <image href="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/ukigumo-logo.png') ?>" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipPath1)"/>
-            </svg> -->
-        </div>
-        <article class="p-article">
-            <h3><span>アウトドア用品</span></h3>
-            <p class="c-season">完成時期：&emsp;2023年4月下旬</p>
-            <p class="c-comment">
-                ３種類のテントをシリーズ化した架空のランディングページです。
-                大自然の中で人々が暮らすことをテーマに、自然背景を多く盛り込
-                み、それによってアクティブな印象を表現しました。各テントのサ
-                イズ・機能性・基本的なスペックといった内容から、対象のテント
-                シリーズを販売する Nazuca という架空の企業が主催するアウトド
-                アイベント、専用アプリの紹介なども購買意欲促進のために、この
-                １枚にぎゅっと盛り込みました。
-            </p>
-            <p class="c-detailLink"><a href="">詳しく確認する</a><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+            <p class="c-detailLink"><a href="<?php the_permalink() ?>">詳しく確認する</a><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
         </article>
     </section>
     <div class="l-cloudy">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/c-cloudy.png'); ?>" alt="大きな雲">
     </div>
+    <?php endwhile; endif; wp_reset_postdata(); ?>
 </main>
 <?php get_footer(); ?>

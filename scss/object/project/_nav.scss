@@ -12,7 +12,7 @@
     .p-nav{
         p{
             color: #fff;
-            font-size: 2rem;
+            font-size: clamp(1.4rem, 1rem + 0.6vw, 2rem);
             font-family: inter;
             font-weight: 600;
             i{
@@ -20,4 +20,27 @@
             }
         }
     }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/
+/***************************************************************/
+@include mixin.mqh(spw){
+    .home{
+        .p-logo{
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .p-nav{
+            p{
+                i{
+                    margin-left: 9px;
+                }
+            }
+        }
+    }   
+    
 }

@@ -1,6 +1,22 @@
 @use "../../foundation/mixin";
 @use "../../foundation/base";
 
+
+.home{
+  .swiper-container .swiper-wrapper .swiper-slide .svg_container{
+    position: relative;
+    width: 93.8%;
+    object-fit: cover;
+    background-size: cover;
+    .svg_content{
+        position: absolute;
+        top: 14px;
+        left: 15px;
+    }
+
+  }
+}
+
 .postid-184{
     .p-slide{
         padding-bottom: 11px;
@@ -140,9 +156,23 @@
 }
 
 
+
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/ 
 /***************************************************************/
+@include mixin.mqh(spw){
+    .home{
+        .swiper-container .swiper-wrapper .swiper-slide .svg_container{
+            margin: 0 auto;
+            width: 86%;
+            .svg_content{
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        } 
+    }
+}
 @include mixin.mqt(spw){
     .postid-212{
         .h_swiperCon{

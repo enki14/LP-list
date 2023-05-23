@@ -21,8 +21,8 @@ html {
 .home .sp {
   display: none;
 }
-.home .pc_tab_inline {
-  display: inline;
+.home .pc_tab {
+  display: block;
 }
 .home h1 {
   position: absolute;
@@ -53,6 +53,9 @@ html {
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.home h2 span br {
+  display: none;
+}
 .home h2 span::after {
   content: "";
   position: absolute;
@@ -75,6 +78,7 @@ html {
   position: relative;
   display: inline-block;
   width: 74.1%;
+  z-index: 1;
 }
 .home h3 span::after {
   content: "";
@@ -87,6 +91,7 @@ html {
   position: absolute;
   bottom: -7px;
   left: 0;
+  z-index: -1;
 }
 .home h4 {
   font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.8rem);
@@ -529,6 +534,24 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/
 /***************************************************************/
+@media all and (max-width: 1050px) {
+  .home h3 span::after {
+    width: 100%;
+    background-size: contain;
+  }
+  .home .pc {
+    display: none;
+  }
+  .home .tab {
+    display: block;
+  }
+  .home .sp {
+    display: none;
+  }
+  .home .pc_tab {
+    display: block;
+  }
+}
 @media all and (max-width: 1000px) {
   .postid-212 .sectionContent {
     width: 744px;
@@ -552,6 +575,37 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
+@media all and (max-width: 767px) {
+  .home h2 {
+    padding: 6.2rem 0 3.32rem;
+  }
+  .home h2 span::after {
+    width: calc(100% + 2.4rem);
+  }
+  .home h2 span br {
+    display: block;
+  }
+  .home h3 {
+    margin-bottom: 39.2px;
+  }
+  .home h3 span {
+    width: 334px;
+  }
+  .home h3 span::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/lp-top/sp/h3_btm_spw.png");
+    bottom: -12.5px;
+  }
+  .home .pc_tab {
+    display: none;
+  }
+  .home .sp {
+    display: block;
+  }
+}
 @media all and (max-width: 767px) {
   .postid-212 .sectionContent {
     width: 89.57vw;
@@ -594,6 +648,21 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/
 /***************************************************************/
+@media all and (max-width: 420px) {
+  .home h2 {
+    padding: 4rem 0 3.32rem;
+  }
+  .home h3 span {
+    width: 220px;
+  }
+  .home h3 span::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/lp-top/sp/h3_btm_sp.png");
+  }
+}
 @media all and (max-width: 390px) {
   .postid-212 .sectionContent {
     width: 93.3vw;
@@ -667,7 +736,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 60px 80px;
+  padding: 40px 80px;
 }
 
 .postid-184 .l-header {
@@ -812,6 +881,11 @@ html {
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
 @media all and (max-width: 767px) {
+  .home .l-header__inner .l-header__top {
+    padding: 4rem;
+  }
+}
+@media all and (max-width: 767px) {
   .postid-212 .nav_top {
     width: 100vw;
     padding: 2.1rem 2.4rem;
@@ -863,6 +937,21 @@ html {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+}
+.home main .l-one .new_tag {
+  position: absolute;
+  left: -3px;
+  top: -3.6rem;
+  height: 72px;
+  width: 72px;
+  font-family: HGSGyoshotai;
+  font-size: 54px;
+  font-weight: 400;
+  color: rgb(235, 20, 20);
+  border: 3px solid rgb(235, 20, 20);
+  border-radius: 50%;
+  line-height: 66px;
+  text-indent: 6px;
 }
 .home main .l-one:first-of-type {
   margin-top: 2.68rem;
@@ -1608,6 +1697,26 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/
 /***************************************************************/
+@media all and (max-width: 1050px) {
+  .home main::before {
+    content: "";
+    display: inline-block;
+    width: 386.2px;
+    height: 48.2px;
+    background-image: url("../images/lp-top/tab/mountain_tab.png");
+    top: -45px;
+  }
+  .home main .l-one {
+    width: 703px;
+  }
+  .home main .l-cloudy {
+    width: 703px;
+  }
+  .home main .l-cloudy img {
+    width: 70%;
+    height: auto;
+  }
+}
 @media all and (max-width: 1000px) {
   .postid-212 .l-durability__content .sectionContent {
     width: 744px;
@@ -1630,6 +1739,28 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
+@media all and (max-width: 767px) {
+  .home main #lOne {
+    width: 82vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home main .l-cloudy {
+    width: 82vw;
+    padding: 0;
+  }
+}
 @media all and (max-width: 767px) {
   .postid-212 .l-durability__content .sectionContent {
     width: 89.57vw;
@@ -1684,6 +1815,29 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/
 /***************************************************************/
+@media all and (max-width: 420px) {
+  .home main::before {
+    content: "";
+    display: inline-block;
+    width: 181px;
+    height: 22.6px;
+    background-image: url("../images/lp-top/sp/mountain_sp.png");
+    top: -21px;
+  }
+  .home main #lOne {
+    width: 82.9vw;
+    margin: 6rem auto;
+  }
+  .home main #lOne:first-of-type {
+    margin-top: 2.68rem;
+  }
+  .home main #lOne:last-of-type {
+    margin-bottom: 34.5px;
+  }
+  .home main .l-cloudy {
+    width: 82.9vw;
+  }
+}
 @media all and (max-width: 390px) {
   .postid-212 .l-size__content .sectionContent {
     background: transparent;
@@ -3158,13 +3312,14 @@ html {
   top: 0;
   width: 100%;
   text-align: center;
+  z-index: 3;
 }
 .home .c-blueTitle span {
   font-family: Wide Latin;
   display: inline-block;
-  font-size: 28px;
+  font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.8rem);
   font-weight: 400;
-  line-height: 28px;
+  line-height: 1.2;
   color: rgb(108, 165, 232);
   -webkit-animation: move 3s ease-in-out infinite alternate;
           animation: move 3s ease-in-out infinite alternate;
@@ -3357,6 +3512,28 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/
 /***************************************************************/
+@media all and (max-width: 420px) {
+  @-webkit-keyframes move {
+    0% {
+      -webkit-transform: translateX(-40px);
+              transform: translateX(-40px);
+    }
+    100% {
+      -webkit-transform: translateX(40px);
+              transform: translateX(40px);
+    }
+  }
+  @keyframes move {
+    0% {
+      -webkit-transform: translateX(-40px);
+              transform: translateX(-40px);
+    }
+    100% {
+      -webkit-transform: translateX(40px);
+              transform: translateX(40px);
+    }
+  }
+}
 @media all and (max-width: 390px) {
   .postid-212 .c-detailTitle {
     margin-bottom: 4rem;
@@ -3372,10 +3549,28 @@ html {
     line-height: 25px;
   }
 }
+.home .c-season {
+  margin-bottom: 2rem;
+}
+.home .c-comment {
+  margin-bottom: 4rem;
+}
+.home .c-detailLink {
+  text-align: right;
+  padding-right: 4.1rem;
+}
+.home .c-detailLink a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.home .c-detailLink i {
+  color: #333;
+  margin-left: 5px;
+}
 .home .c-copyright {
   text-align: center;
   color: #fff;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1.318rem + 0.91vw, 2rem);
   font-family: HGSGyoshotai;
   letter-spacing: 2px;
   margin-bottom: 0;
@@ -3530,6 +3725,12 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/
 /***************************************************************/
+@media all and (max-width: 420px) {
+  .home .c-season,
+  .home .c-comment {
+    margin-bottom: 22.4px;
+  }
+}
 @media all and (max-width: 390px) {
   .postid-212 .c-hCatch {
     padding-right: 0.8rem;
@@ -4026,6 +4227,15 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/
 /***************************************************************/
+@media all and (max-width: 420px) {
+  .home .p-sns {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 195px;
+  }
+}
 @media all and (max-width: 390px) {
   .postid-212 .p-size__list {
     background: rgba(255, 255, 255, 0.95);
@@ -4172,6 +4382,10 @@ html {
   width: 50%;
   text-align: center;
   margin-top: 1.4rem;
+}
+.home .p-img svg clipPath path {
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25), inset -2px -2px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25), inset -2px -2px 3px rgba(0, 0, 0, 0.25);
 }
 
 .postid-184 .p-imgArea {
@@ -4469,6 +4683,12 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
+@media all and (max-width: 767px) {
+  .home .p-img {
+    width: 100%;
+    margin-top: 1.8rem;
+  }
+}
 @media all and (max-width: 767px) {
   .postid-212 .p-hImg {
     width: 100%;
@@ -4970,23 +5190,6 @@ html {
   padding: 8.352% 1.9% 0 1.45%;
   width: 50%;
 }
-.home .p-article .c-season {
-  margin-bottom: 2rem;
-}
-.home .p-article .c-comment {
-  margin-bottom: 4rem;
-}
-.home .p-article .c-detailLink {
-  text-align: right;
-  padding-right: 4.1rem;
-}
-.home .p-article .c-detailLink a {
-  text-decoration: underline;
-}
-.home .p-article .c-detailLink i {
-  color: #333;
-  margin-left: 5px;
-}
 
 .postid-212 .p-hArticle {
   width: 47.3%;
@@ -5188,6 +5391,27 @@ html {
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
 @media all and (max-width: 767px) {
+  .home .p-article {
+    width: 100%;
+    position: relative;
+  }
+  .home .p-article .new_tag_sp {
+    position: absolute;
+    top: -1.2rem;
+    left: 7%;
+    font-size: 3.6rem;
+    width: 54px;
+    height: 54px;
+    line-height: 48px;
+    font-family: HGSGyoshotai;
+    font-weight: 400;
+    color: rgb(235, 20, 20);
+    border: 3px solid rgb(235, 20, 20);
+    border-radius: 50%;
+    text-indent: 6px;
+  }
+}
+@media all and (max-width: 767px) {
   .postid-212 .p-hArticle {
     width: 100%;
   }
@@ -5219,6 +5443,19 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/
 /***************************************************************/
+@media all and (max-width: 420px) {
+  .home .p-article {
+    padding-top: 4rem;
+  }
+  .home .p-article .new_tag_sp {
+    top: 0;
+    font-size: 2.7rem;
+    width: 36px;
+    height: 36px;
+    line-height: 31.2px;
+    text-indent: 1.5px;
+  }
+}
 @media all and (max-width: 390px) {
   .postid-212 .p-individual__img {
     margin-bottom: 1.2rem;
@@ -5236,6 +5473,19 @@ html {
     margin-bottom: 3.2rem;
   }
 }
+.home .swiper-container .swiper-wrapper .swiper-slide .svg_container {
+  position: relative;
+  width: 93.8%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+.home .swiper-container .swiper-wrapper .swiper-slide .svg_container .svg_content {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+
 .postid-184 .p-slide {
   padding-bottom: 11px;
 }
@@ -5364,6 +5614,17 @@ html {
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/
 /***************************************************************/
+@media all and (max-width: 767px) {
+  .home .swiper-container .swiper-wrapper .swiper-slide .svg_container {
+    margin: 0 auto;
+    width: 86%;
+  }
+  .home .swiper-container .swiper-wrapper .swiper-slide .svg_container .svg_content {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
 @media all and (max-width: 767px) {
   .postid-212 .h_swiperCon #h_pagination {
     bottom: 5px;
@@ -5671,10 +5932,23 @@ html {
 }
 .home .p-nav p {
   color: #fff;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 1rem + 0.6vw, 2rem);
   font-family: inter;
   font-weight: 600;
 }
 .home .p-nav p i {
   margin-left: 2rem;
+}
+
+/***************************************************************/
+/*********************** メディアクエリ(spw) ********************/
+/***************************************************************/
+@media all and (max-width: 767px) {
+  .home .p-logo img {
+    width: 50px;
+    height: 50px;
+  }
+  .home .p-nav p i {
+    margin-left: 9px;
+  }
 }

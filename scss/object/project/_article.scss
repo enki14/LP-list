@@ -7,23 +7,6 @@
     .p-article{
         padding: 8.352% 1.9% 0 1.45%;
         width: 50%;
-        .c-season{
-            margin-bottom: 2rem;
-        }
-        .c-comment{
-            margin-bottom: 4rem;
-        }
-        .c-detailLink{
-            text-align: right;
-            padding-right: 4.1rem;
-            a{
-                text-decoration: underline;    
-            }
-            i{
-                color: #333;
-                margin-left: 5px;
-            }
-        }
     }
 }
 
@@ -212,6 +195,31 @@
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/ 
 /***************************************************************/
+@include mixin.mqh(spw){
+    .home{
+        .p-article{
+            width: 100%;
+            position: relative;
+            .new_tag_sp{
+                position: absolute;
+                top: -1.2rem;
+                left: 7%;
+                font-size: 3.6rem;
+                width: 54px;
+                height: 54px;
+                line-height: 48px;
+                font-family: HGSGyoshotai;
+                font-weight: 400;
+                color: rgba(235, 20, 20, 1);
+                border: 3px solid rgba(235, 20, 20, 1);
+                border-radius: 50%;
+                text-indent: 6px; 
+            }
+        }
+    }
+}
+
+
 @include mixin.mqt(spw){
     .postid-212{
         .p-hArticle{
@@ -254,6 +262,22 @@
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/ 
 /***************************************************************/
+@include mixin.mqh(sp){
+    .home{
+        .p-article{
+            padding-top: 4rem;
+            .new_tag_sp{
+                top: 0;
+                font-size: 2.7rem;
+                width: 36px;
+                height: 36px;
+                line-height: 31.2px;
+                text-indent: 1.5px;
+    
+            }
+        }
+    }
+}
 @include mixin.mqt(sp){
     .postid-212{
         .p-individual{

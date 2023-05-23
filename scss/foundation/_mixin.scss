@@ -28,6 +28,19 @@ $tento_bp: (
     }
 }
 
+// topページのブレークポイント
+$top_bp: (
+    sp: 'all and (max-width: 420px)',
+    spw: 'all and (max-width: 767px)',
+    tab: 'all and (max-width: 1050px)',
+);
+
+@mixin mqh($bp){
+    @media #{map-get($top_bp, $bp)} {
+        @content;
+    }
+}
+
 
 @mixin clearfix{
     &::after{

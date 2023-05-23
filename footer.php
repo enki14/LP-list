@@ -36,6 +36,8 @@
         <script src="<?php echo esc_url(get_template_directory_uri() . '/js/main.js'); ?>" type="text/javascript" defer></script>
     <?php elseif(is_single(212)): ?>
         <script src="<?php echo esc_url(get_template_directory_uri() . '/js/tento.js'); ?>" type="text/javascript" defer></script>    
+    <?php elseif(is_front_page() || is_home()): ?>
+        <script src="<?php echo esc_url(get_template_directory_uri() . '/js/topPage.js'); ?>" type="text/javascript" defer></script>
     <?php endif; ?>
     <script>
         // const image = document.getElementById('image');
