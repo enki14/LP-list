@@ -3,18 +3,21 @@
 
 
 .home{
-  .swiper-container .swiper-wrapper .swiper-slide .svg_container{
-    position: relative;
-    width: 93.8%;
-    object-fit: cover;
-    background-size: cover;
-    .svg_content{
-        position: absolute;
-        top: 14px;
-        left: 15px;
+  .swiper-container{
+    .swiper-wrapper .swiper-slide .svg_container{
+        position: relative;
+        width: 93.8%;
+        object-fit: cover;
+        background-size: cover;
+        .svg_content{
+            position: absolute;
+            top: 14px;
+            left: 15px;
+        }
     }
 
-  }
+    
+  } 
 }
 
 .postid-184{

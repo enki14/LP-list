@@ -31,6 +31,104 @@
     }
 }
 
+.single-lp-production{
+    header{
+        height: 400px;
+        background: mixin.$main;
+        position: relative;
+
+        @include mixin.mqp(tab_s){
+            height: 320px;
+        }
+
+        @include mixin.mqp(sp){
+            height: 200px;
+        }
+
+        @include mixin.mqp(sp_s){
+            height: 170px;
+        }
+
+        &::before{
+            @include mixin.background_url('lp-pro/pc/small_cloud.png', 80%, 80%);
+            top: 10%;
+            left: 15vw;
+            z-index: 2;
+            background-size: contain;
+            position: absolute;
+
+            @include mixin.mqp(tab_s){
+                top: 18%;
+            }
+
+            @include mixin.mqp(sp){
+                left: 10vw;
+            }
+
+            @include mixin.mqp(sp_s){
+                left: 5vw;
+                width: 90%;
+            }
+        }
+    
+        .ph_wrap{
+            width: 1000px;
+            height: 350px;
+            margin: 0 auto;
+            position: relative;
+
+            @include mixin.mqp(tab){
+                width: 900px;
+            }
+            
+
+            @include mixin.mqp(tab_s){
+                width: 730px;
+            }
+
+            @include mixin.mqp(sp){
+                width: 420px;
+            }
+
+            @include mixin.mqp(sp_s){
+                width: 90%;
+            }
+    
+            img{
+                position: absolute;
+                top: 40%;
+                left: 4%;
+                display: inline-block;
+                width: 900px;
+                height: auto;
+                background-size: cover;
+                z-index: 3;
+
+                @include mixin.mqp(tab){
+                    left: 0;
+                }
+
+                @include mixin.mqp(tab_s){
+                    left: 4%;
+                    width: 650px;
+                }
+
+                @include mixin.mqp(sp){
+                    left: 0;
+                    width: 400px;
+                    top: 25%;
+                }
+
+                @include mixin.mqp(sp_s){
+                    width: 100%;
+                    top: 20%;
+                }
+    
+            }
+        }
+    }
+}
+
 .postid-184{
     .l-header{
         @include mixin.background_url('cosmetics/flower-jumbotron.png', 100%, 696px);

@@ -1,4 +1,4 @@
-    <?php if(is_front_page() || is_home()): ?>
+    <?php if(is_front_page() || is_home() || is_singular('lp-production')): ?>
         <footer class="l-footer">
             <div class="l-footer__content">
                 <ul class="p-sns">

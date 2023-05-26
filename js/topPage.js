@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
         loopedSlides: 5,
         slidesPerView: 1,
         slidesPerGroup: 1,
-        loopedSlides: 5,
         centeredSlides : true,
         effect: 'fade',
     

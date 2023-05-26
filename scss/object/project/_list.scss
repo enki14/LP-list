@@ -1,7 +1,8 @@
 @use "../../foundation/mixin";
 @use "../../foundation/base";
 
-.home{
+.home,
+.single-lp-production{
     .p-sns{
         display: flex;
         justify-content: space-around;
@@ -484,6 +485,15 @@
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/ 
 /***************************************************************/
+@include mixin.mqp(sp){
+    .single-lp-production{
+        .p-sns{
+            justify-content: space-between;
+            width: 195px;
+        }
+    }
+}
+
 @include mixin.mqh(sp){
     .home{
         .p-sns{
@@ -492,6 +502,7 @@
         }
     }
 }
+
 @include mixin.mqt(sp){
     .postid-212{
         .p-size{

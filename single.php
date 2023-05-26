@@ -15,7 +15,9 @@
         elseif(is_singular('compliance')):
             get_template_part('templates/post/single', 'compliance'); 
         elseif(is_tag('event/*')):
-            get_template_part('templates/post/single', 'event');                      
+            get_template_part('templates/post/single', 'event');    
+        elseif(is_singular('lp-production')):
+            get_template_part('templates/post/single', 'production');  
         else:
             if ( have_posts() ): while ( have_posts() ): the_post();
     ?>

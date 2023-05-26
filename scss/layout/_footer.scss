@@ -14,6 +14,20 @@
     }
 }
 
+
+.single-lp-production{
+    .l-footer{
+        background: #323436;
+    
+        &__content{
+            width: 321px;
+            margin: 0 auto;
+            padding: 1.55rem 0 2rem 0;
+        }
+    }
+
+}
+
 .postid-184{
     .l-footer{
         background: base.$pink;

@@ -1,25 +1,25 @@
 <?php get_header(); ?>
 <main>
     <div class="cloudy_wrap">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 147.png'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/small_cloud.png'); ?>" 
         class="cloud" alt="雲その１">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 147.png'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/small_cloud.png'); ?>" 
         class="cloud" alt="雲その２">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 147.png'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/small_cloud.png'); ?>" 
         class="cloud" alt="雲その３">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 147.png'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/small_cloud.png'); ?>" 
         class="cloud" alt="雲その４">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 147.png'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/small_cloud.png'); ?>" 
         class="cloud" alt="雲その５">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 147.png'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/small_cloud.png'); ?>" 
         class="cloud" alt="雲その６">
     </div>
     <div class="main_wrap">
         <section class="title_area">
-            <h1><?php the_title(); ?><span><?php the_field('create_days'); ?></span></h1>
+            <h1><?php the_title(); ?><span><?php the_field('complete'); ?></span></h1>
         </section>
         <article class="midashi_area">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/pc/Group 136.png'); ?>" alt="ポイントの見出し">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-pro/pc/point.png'); ?>" alt="ポイントの見出し">
             <p><?php the_field('point'); ?></p>
         </article>
         <?php 
@@ -115,34 +115,33 @@
         <?php endif; endfor; ?>
         </div>
         <?php 
-            $url_set = get_field('url_set');
-            // get_sub_fieldはなぜか効かなかった
-            $url = $url_set['url'];
-            $url_text = $url_set['url_text'];
-            if(empty($url) && empty($url_text)): else:
+            $url = get_field('url');
+            if(empty($url)): else:
         ?>
 
             <article class="url_area">
             <?php if(empty($url)): else: ?>
                 <a href="<?php echo esc_url($url); ?>" target="_blank">このサイトを見る<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             <?php endif; ?>
-            <?php if(empty($url_text)): else: ?>
-                <p><?php echo $url_text; ?></p>
-            <?php endif; ?>
             </article>
         <?php endif; ?>
         <?php 
-            $git_set = get_field('git_set');
-            $github = $git_set['github'];
-            $git_text = $git_set['git_text'];
-            if(empty($github) && empty($git_text)): else:
+            $github = get_field('github');
+            if(empty($github)): else:
         ?>
             <article class="git_area">
             <?php if(empty($github)): else: ?>
                 <a href="<?php echo esc_url($github); ?>" target="_blank">ソースコードを確認する<i class="fa-brands fa-github"></i></a>
             <?php endif; ?>
-            <?php if(empty($git_text)): else: ?>
-                <p><?php echo $git_text; ?></p>
+            </article>
+        <?php endif; ?>
+        <?php 
+            $design = get_field('layout');
+            if(empty($design)): else:
+        ?>
+            <article class="design_area">
+            <?php if(empty($design)): else: ?>
+                <a href="<?php echo esc_url($design); ?>" target="_blank">デザインを確認する<i class="fa-solid fa-pen-ruler"></i></a>
             <?php endif; ?>
             </article>
         <?php endif; ?>

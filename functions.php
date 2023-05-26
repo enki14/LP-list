@@ -1,4 +1,7 @@
 <?PHP
+global $wp_rewrite;
+$wp_rewrite->flush_rules();
+
 
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
