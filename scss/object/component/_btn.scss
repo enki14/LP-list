@@ -2,6 +2,41 @@
 @use "../../foundation/base";
 
 
+.single-lp-production{
+    .history_back{
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        line-height: 80px;
+        text-align: center;
+        right: 5%;
+        bottom: 80px;
+        background: base.$goldenYellow;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        transition: .5s;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.3rem;
+
+        &:hover{
+            background: base.$gy_hover;
+        }
+
+        @include mixin.mqp(sp){
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            bottom: 60px;
+        }
+
+    }
+
+}
+
 .postid-184{
     .c-Btn{
         position: relative;

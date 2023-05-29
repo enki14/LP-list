@@ -32,22 +32,10 @@
 }
 
 .single-lp-production{
-    header{
+    .l-header{
         height: 400px;
-        background: mixin.$main;
+        background: base.$coralRed;
         position: relative;
-
-        @include mixin.mqp(tab_s){
-            height: 320px;
-        }
-
-        @include mixin.mqp(sp){
-            height: 200px;
-        }
-
-        @include mixin.mqp(sp_s){
-            height: 170px;
-        }
 
         &::before{
             @include mixin.background_url('lp-pro/pc/small_cloud.png', 80%, 80%);
@@ -57,42 +45,13 @@
             background-size: contain;
             position: absolute;
 
-            @include mixin.mqp(tab_s){
-                top: 18%;
-            }
-
-            @include mixin.mqp(sp){
-                left: 10vw;
-            }
-
-            @include mixin.mqp(sp_s){
-                left: 5vw;
-                width: 90%;
-            }
         }
     
-        .ph_wrap{
+        &__content{
             width: 1000px;
             height: 350px;
             margin: 0 auto;
             position: relative;
-
-            @include mixin.mqp(tab){
-                width: 900px;
-            }
-            
-
-            @include mixin.mqp(tab_s){
-                width: 730px;
-            }
-
-            @include mixin.mqp(sp){
-                width: 420px;
-            }
-
-            @include mixin.mqp(sp_s){
-                width: 90%;
-            }
     
             img{
                 position: absolute;
@@ -103,26 +62,6 @@
                 height: auto;
                 background-size: cover;
                 z-index: 3;
-
-                @include mixin.mqp(tab){
-                    left: 0;
-                }
-
-                @include mixin.mqp(tab_s){
-                    left: 4%;
-                    width: 650px;
-                }
-
-                @include mixin.mqp(sp){
-                    left: 0;
-                    width: 400px;
-                    top: 25%;
-                }
-
-                @include mixin.mqp(sp_s){
-                    width: 100%;
-                    top: 20%;
-                }
     
             }
         }
@@ -249,6 +188,17 @@
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/ 
 /***************************************************************/
+@include mixin.mqp(tab){
+  .single-lp-production{
+    .l-header__content{
+        width: 900px;
+        img{
+            left: 0;
+        }
+    }
+  }
+}
+
 @include mixin.mqt(tab){
     .postid-212{
         .l-header{
@@ -263,7 +213,7 @@
 
 
 /***************************************************************/
-/*********************** メディアクエリ(spw) ********************/ 
+/*********************** メディアクエリ(spw)(tab_s) ********************/ 
 /***************************************************************/
 @include mixin.mqh(spw){
     .home{
@@ -271,11 +221,31 @@
             .l-header__top{
                 padding: 4rem;
             }
-    
         }
-    
     }
 }
+@include mixin.mqp(tab_s){
+    .single-lp-production{
+        .l-header{
+            height: 320px;
+
+            &::before{
+                top: 18%;
+            }
+
+            &__content{
+                width: 700px;
+                img{
+                    left: 4%;
+                    width: 650px;
+    
+                }
+            }
+    
+        }        
+    }
+}
+
 @include mixin.mqt(spw){
     .postid-212{
         .nav_top{
@@ -299,10 +269,54 @@
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/ 
 /***************************************************************/
+@include mixin.mqp(sp){
+    .single-lp-production{
+        .l-header{
+            height: 200px;
+
+            &::before{
+                left: 10vw;
+            }
+            &__content{
+                width: 76%;
+                img{
+                    left: 0;
+                    width: 100%;
+                    top: 25%;
+                }
+            }
+        }
+    }
+}
+
 @include mixin.mqt(sp){
     .postid-212{
         .hFour_content{
             width: 65%;    
         }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp_s) ********************/ 
+/***************************************************************/
+@include mixin.mqp(sp_s){
+    .single-lp-production{
+        .l-header{
+            height: 170px;
+            &::before{
+                left: 5vw;
+                width: 90%;
+            }
+            &__content{
+                width: 90%;
+                img{
+                    width: 100%;
+                    top: 20%;
+                }
+            }
+        }
+
     }
 }

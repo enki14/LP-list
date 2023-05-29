@@ -1,5 +1,5 @@
-<header>
-    <div class="ph_wrap">
+<header class="l-header">
+    <div class="l-header__content">
         <?php 
             $header_img = get_field('header_img');
             if(!empty($header_img)): 

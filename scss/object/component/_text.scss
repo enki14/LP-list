@@ -34,6 +34,60 @@
 }
 
 .single-lp-production{
+    
+    .c-point{
+        padding: 2rem 5rem;
+        position: relative;
+        border: 3px solid base.$goldenYellow;
+        // 画像の切り抜きみたいな影として使える
+        filter: drop-shadow(2px 2px 3px base.$gy_hover);
+        text-shadow: none;
+
+        @include mixin.mqp(sp){
+            padding: 2rem 1rem;
+        }
+
+        &::after{
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 1.5rem;
+            left: 1.5rem;
+            border: 3px solid rgba(239,186,48,0.2);
+
+        }
+
+        img{
+            width: 200px;
+
+            @include mixin.mqp(sp){
+                width: 170px;
+            }
+
+            @include mixin.mqp(sp_s){
+                width: 150px;
+            }
+
+        }
+
+        .midashi_url{
+            height: 6rem;
+        }
+
+        a{
+            display: block;
+            font-size: 1.6rem;
+            color: base.$charcoalGray;
+        }
+
+        p{
+            margin-top: 3rem;
+            font-size: 1.6rem;
+        }
+    }
+
     .c-copyright{
         text-align: center;
         color: #fff;

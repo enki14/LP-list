@@ -10,6 +10,172 @@
     }
 }
 
+
+.single-lp-production{
+    .p-proSide{
+        width: 300px;
+        height: 300px;
+        position: relative;
+
+        &__img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            
+
+            img{
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                transition: 0.5s;
+                object-fit: cover;
+                z-index: 2;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+                
+            }
+        }
+    }
+
+    
+
+    .l-product__one:nth-child(2n+1) .p-proSide::after{
+        content: '';
+        background: base.$charcoalGray;
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        top: 3rem;
+        right: 2rem;
+        z-index: -1;
+        border-radius: 5px;
+
+    }
+
+    .l-product__one:nth-child(2n){
+
+        .p-proSide::after{
+            content: '';
+            background: base.$charcoalGray;
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            top: 3rem;
+            left: 2rem;
+            z-index: -1;
+            border-radius: 5px;
+
+        }
+    } 
+
+    .p-articleSide{
+        width: 510px;
+        padding-top: 3rem;
+        z-index: 2;
+
+        h4{
+            position: relative;
+            margin-bottom: 3.2rem;
+
+            &::before{
+                position: absolute;
+                content: '';
+                display: inline-block;
+                top: -3rem;
+                border: 3px solid base.$goldenYellow;
+                border-radius: 3px;
+                background: base.$goldenYellow;
+                width: 10rem;
+                box-shadow: 2px 2px 3px base.$gy_hover;
+            }
+        }
+    }
+
+    .vertical{
+
+        .p-proTop{
+            width: 300px;
+            height: 300px;
+            position: relative;
+
+            &__img{
+                width: 100%;
+                height: 100%;
+                margin-bottom: 3rem;
+                overflow: hidden;
+
+                img{
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-bottom: 3rem;
+                    transition: 0.5s;
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+        &:nth-child(1){
+            margin-left: 4rem;
+
+            .p-proTop::after{
+                content: '';
+                background: base.$charcoalGray;
+                position: absolute;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                top: 3rem;
+                right: 2rem;
+                z-index: -1;
+                border-radius: 5px;
+            }
+        } 
+
+        &:nth-child(2){
+            margin-right: 4rem;
+
+            .p-proTop::after{
+                content: '';
+                background: base.$charcoalGray;
+                position: absolute;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                top: 3rem;
+                left: 2rem;
+                z-index: -1;
+                border-radius: 5px;
+            }
+        } 
+
+        .p-articleBtm{
+            width: 300px;
+            margin-top: 6rem;
+            z-index: 2;
+            position: relative;
+
+            h4{
+                padding-left: 2.5rem;
+                border-left: 3px solid base.$goldenYellow;
+                filter: drop-shadow(2px 2px 3px base.$gy_hover);
+            }
+
+            p{
+                margin-top: 3.2rem;
+            }
+        }
+    }
+}
+
 .postid-212{
     .p-hArticle{
         width: 47.3%;
@@ -193,8 +359,38 @@
 
 
 /***************************************************************/
-/*********************** メディアクエリ(spw) ********************/ 
+/******************** メディアクエリ(spw)(tab_s) ****************/ 
 /***************************************************************/
+@include mixin.mqp(tab_s){
+    .single-lp-production{
+        .p-proSide{
+            width: 250px;
+            height: 250px;
+        }
+        .p-articleSide{
+            width: 390px;
+            padding-top: 3rem;
+
+        }
+
+        .vertical{
+            .p-proTop{
+                width: 250px;
+                height: 250px;
+            }
+            &:nth-child(1){
+                margin-left: 0;
+            }
+            &:nth-child(2){
+                margin-right: 0;
+            }
+            .p-articleBtm{
+                width: 270px;
+            }
+        }
+    }
+}
+
 @include mixin.mqh(spw){
     .home{
         .p-article{
@@ -278,6 +474,34 @@
         }
     }
 }
+
+@include mixin.mqp(sp){
+    .single-lp-production{
+        .p-articleSide{
+            width: 100%;
+            h4{
+                margin-top: 4rem;
+                padding-left: 2.5rem;
+                border-left: 3px solid base.$coralRed;
+                filter: drop-shadow(2px 2px 3px #EF9554);
+                &::before{
+                    display: none;
+                }
+            }
+            p{
+                margin-top: 2rem;
+            }
+        }
+        .vertical{
+            margin-bottom: 10rem;
+            .p-articleBtm{
+                width: 100%;
+                margin-top: 7rem;
+            }
+        }
+    }
+}
+
 @include mixin.mqt(sp){
     .postid-212{
         .p-individual{
@@ -303,5 +527,44 @@
             margin-bottom: 3.2rem;
         }
     }
+}
 
+
+/***************************************************************/
+/*********************** メディアクエリ(sp_s) ********************/ 
+/***************************************************************/
+@include mixin.mqp(sp_s){
+    .single-lp-production{
+        .p-proSide__img{
+            img{
+                width: 95%;
+                height: 95%;
+            }
+        }
+        .l-product__one:nth-child(2n+1) .p-proSide::after,
+        .l-product__one:nth-child(2n) .p-proSide::after{
+            width: 97%;
+            height: 95%;
+        }
+        .p-articleSide{
+            width: 100%;
+        }
+
+        .vertical{
+            .p-proTop__img{
+                img{
+                    width: 95%;
+                    height: 95%;
+                }
+            }
+            &:nth-child(1),
+            &:nth-child(2){
+                .p-proTop::after{
+                    width: 97%;
+                    height: 95%;
+                }
+            }
+        }
+
+    }
 }

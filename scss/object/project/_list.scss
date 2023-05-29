@@ -16,12 +16,12 @@
             a{
 
                 i{
-                    color: #EF9554;
+                    color: base.$coralRed;
                     
                     
                     &:hover{
                         transition: 1.0s;
-                        color: #b59133;
+                        color: #f7753d;
                     }
                 }
             }

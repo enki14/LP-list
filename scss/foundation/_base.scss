@@ -12,6 +12,13 @@ $pale_purple: rgba(139, 46, 119, 0.39);
 $linear_gold: linear-gradient(89.72deg, #C9D35A 0.23%, rgba(84, 132, 62, 0.741667) 99.76%);
 $linear_rainbow: linear-gradient(90deg, #2E6A8B 0%, rgba(84, 132, 62, 0.741667) 25.98%, #2E6A8B 61.82%, rgba(139, 46, 119, 0.39) 100.59%);
 
+// .single-lp-productionの配色
+$coralRed: #ef8254;
+$goldenYellow: #EFBA30;
+$gy_hover: #b59133;
+$charcoalGray: #323436;
+
+
 $georgia: Georgia, 'Times New Roman', Times, serif;
 
 
@@ -145,6 +152,28 @@ html{
     }
 
 }
+
+
+.single-lp-production{
+    margin: 0;
+    line-height: 2;
+    // overflow: hidden;
+    background: #FBFFE0;
+    font-family: 'HGSKyokashotai', 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',YuGothic,'Yu Gothic',sans-serif;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+
+    h1{
+        font-size: 2.3em;
+        margin: 0.83em 0;
+    }
+
+    h4{
+        font-size: 19.2px;
+    }
+}
+
 
 .postid-184{
     font-family: 'Yu Mincho', 'YuMincho', '游明朝体', 'Yu Mincho Light', 'Noto Serif JP', serif, 'ＭＳ 明朝', 'MS Mincho','ＭＳ Ｐ明朝','MS PMincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular','Georgia',sans-serif;
