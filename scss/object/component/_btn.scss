@@ -752,3 +752,14 @@
     }
 }
 
+
+
+@include mixin.mqp(sp_s){
+    .single-lp-production{
+        .history_back{
+            bottom: 120px;
+        }
+    }
+
+}
+
