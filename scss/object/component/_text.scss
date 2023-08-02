@@ -217,6 +217,131 @@
 
 }
 
+.postid-546{
+    .c-navSpan{
+        display: block;
+        color: #000;
+        text-align: center;
+        font-size: 1.4vw;
+        font-weight: 500;
+        line-height: 25.6px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .c-btnSpan{
+        position: relative;
+        display: block;
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 3.2rem;
+    }
+    
+    .buttonSpan{
+        line-height: 2;
+    
+        img{
+            position: relative;
+            top: -3px;
+            width: 21px;
+            height: 25px;
+            margin-left: 1.6rem;
+        }
+    }
+    
+    .c-band{
+        width: 100%;
+        padding: 16px 0;
+        background: base.$mosBlue;
+        p{
+            font-size: base.$font32;
+            line-height: 3.2rem;
+            text-align: center;
+            margin: 2.4rem 0;
+            br{
+                display: none;
+            }
+        }
+    }
+    
+    .bandFooter{
+        padding: 16px 24px 20px;
+        p{
+            font-size: base.$font18;
+            line-height: 1.8rem;
+            margin: 8px 0;
+        }
+    
+    }
+    
+    .contentSpan{
+        line-height: 1;
+    
+        img{
+            position: relative;
+            top: -3px;
+            width: 21px;
+            height: 25px;
+            margin-left: 1.6rem;
+        }
+    }
+    
+    .c-conditions{
+        margin-top: 6rem;
+        display: inline-block;
+        padding: 16px 40px 20px 40px;
+        border: 1px dashed #666;
+        color: #333;
+        font-size: base.$font20;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    
+    .c-flowDesc{
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 72px 60px 40px 40px;
+        align-items: center;
+        gap: 24px;
+        border-radius: 20px;
+        border: 2px solid #7FBABA;
+    
+        &::after{
+            position: absolute;
+            @include mixin.background_url('rental-server/pc/big_check.svg', 80px, 70px);
+            top: -3.5rem;
+            right: 11rem;
+        }
+    
+        p{
+            line-height: 28.8px;
+        }
+    }
+    
+    .c-midashiSpan{
+        display: block;
+        color: #FFB7C8;
+        // font-familyでpoller oneの組み合わせ
+        font-family: 'Poller One', cursive;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 36px;
+        margin-bottom: 1.4rem;
+    }
+    
+    .c-copyright{
+        font-size: 1.4rem;
+        // yu cothicの組み合わせ
+        font-family: 'Yu Gothic', 'Yu Gothic Medium', 'Yu Gothic Regular', '游ゴシック', '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'MS Gothic', sans-serif;
+        color: #fff;
+        line-height: 150%;
+        font-weight: 400;
+        width: 100%;
+    }
+}
+
 
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/ 
@@ -232,6 +357,25 @@
     }
 }
 
+@include mixin.mqr(tab){
+    .postid-546{
+        .c-btnSpan{
+            font-size: 1.7rem;
+            margin-bottom: 1.6rem;
+        }
+        
+        .c-band p{
+            margin: 1.8rem 0;
+        }
+        .contentSpan{
+            font-size: 1.9rem;
+        }
+        .c-flowDesc::after{
+            right: 14.1%;
+        }
+    }
+
+}
 
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/ 
@@ -339,4 +483,70 @@
             } 
         }
     }
+}
+
+@include mixin.mqr(sp){
+    .postid-546{
+        .c-band{
+            padding: 1.6rem 0 2rem;
+            p{
+                line-height: 180%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 2.6% 0;
+    
+            }
+        }
+        .c-flowDesc{
+            padding: 72px 44px 40px 40px;
+            flex-wrap: wrap-reverse;
+            p{
+                font-size: 1.4rem;
+                line-height: 180%;    
+                width: 82.6%;
+                flex-grow: 1;
+            }
+    
+            &::after{
+                right: 7.6%;
+                width: 11.5%;
+                background-size: contain;
+            }
+        }
+        .c-btnSpan{
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .buttonSpan{
+            font-size: clamp(1.4rem, 0.852rem + 2.04vw * 0.625, 1.8rem);
+        }
+        
+        .bandFooter p{
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sps) ********************/ 
+/***************************************************************/
+@include mixin.mqr(sps){
+    .postid-546{
+        .buttonSpan{
+            margin-bottom: 8px;
+        }
+        .c-flowDesc{
+            padding: 40px 16px 32px 16px;
+            &::after{
+                top: -1.6rem;
+            }
+        }
+        .c-band p br{
+            display: block;
+        }
+    }    
 }

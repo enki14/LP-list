@@ -172,6 +172,169 @@
     }
 }
 
+.postid-546{
+    .c-navTitle{
+        img{
+            width: 24.2vw;
+            object-fit: cover;
+        }
+    }
+    
+    .c-mainTitle{
+        img{
+            width: 772px;
+            height: 306px;
+            height: auto;
+        }
+    
+    }
+    
+    .c-h2{
+        position: relative;
+        display: inline;
+    
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            height: 5px;
+            border-radius: 2.5px;
+            width: 160px;
+            bottom: -1.2rem;
+            z-index: 3;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: base.$mosBlue;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            height: 5px;
+            border-radius: 2.5px;
+            width: 104%;
+            bottom: -1.2rem;
+            left: -2%;
+            background: base.$gray;
+        }
+    }
+    
+    .c-h2B{
+        position: relative;
+        display: inline;
+        line-height: 150%;
+        &::after{
+            @include mixin.background_url('rental-server/pc/bamboo.svg', 130px, 66px);
+            position: absolute;
+            top: 0;
+            left: -2.8rem;
+            z-index: -1;
+        }
+    }
+    
+    .c-h2C{
+        line-height: 1.6;
+    }
+    
+    .c-applyTitle{
+        text-align: center;
+        margin-bottom: 4rem;
+        img{
+            width: 483px;
+            height: 61.5px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
+    
+    .c-titleDesc{
+        width: 614px;
+        margin-bottom: 4rem;
+        h3{
+            margin-bottom: 2.4em;
+            .c-h3Comp{
+                width: 555px;
+                height: 70px;
+            }
+        } 
+        p{
+            width: 100%;
+            line-height: 28.8px;
+            letter-spacing: 2.4px;
+        }
+    }
+    
+    .ttlDesc_beside{
+        margin-bottom: 0;
+    }
+    .ttlDesc_v2{
+        margin: 0 auto 4rem 9.2%;
+    }
+    .ttlDesc_v3{
+        margin: 0 auto 4rem 4.4%;
+    }
+    
+    .c-fukidashi{
+        position: absolute;
+        width: 420px;
+        height: 149.5px;
+        top: 0;
+        left: 4.2rem;
+        z-index: 3;
+    }    
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqr(tab){
+    .postid-546{
+        .c-navTitle{
+            img{
+                width: 288px;
+                height: 45px;
+            }
+        }
+    
+        .c-mainTitle{
+            img{
+                width: 579px;
+                height: 230px;
+            }
+        }
+    
+        .c-titleDesc{
+            width: 100%;
+            p{
+                letter-spacing: 2.4px;
+            }
+        }
+        .ttlDesc_beside{
+            p{
+                letter-spacing: 0;
+                width: 100%;
+            }
+        }
+        .ttlDesc_v2{
+            margin-left: 0;
+            p{
+                width: 614px;
+            }
+        }
+        .ttlDesc_v3{
+            margin-left: 0;
+            p{
+                width: 614px;
+            }
+        }
+        .c-fukidashi{
+            width: 53.2%;
+        }
+    }
+}
+
 
 /***************************************************************/
 /*********************** メディアクエリ(spw) ********************/ 
@@ -239,4 +402,95 @@
             }
         }
     }
+}
+
+@include mixin.mqr(sp){
+    .postid-546{
+        .c-navTitle{
+            width: 43.3%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .c-mainTitle img{
+            width: 77.8%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .c-h2{
+            &::before{
+                width: 120px;
+            }
+        }
+        .c-applyTitle img{
+            width: 100%;
+            height: auto;
+        }
+        .ttlDesc_beside{
+            h3{
+                width: 96%;
+                .c-h3Comp{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+    
+            p{
+                font-size: 1.4rem;
+                line-height: 180%;
+            }
+        } 
+        .c-titleDesc p{
+            font-size: 1.4rem;
+            line-height: 180%;
+            width: 100%;
+        }
+    
+        .c-fukidashi{
+            width: 66.4%;
+        }
+    }
+}
+
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sps) ********************/ 
+/***************************************************************/
+@include mixin.mqr(sps){
+    .postid-546{
+        .c-navTitle{
+            display: none;
+        }
+        .c-mainTitle img{
+            width: 100%;
+        }
+        .c-h2{
+            display: block;
+            &::before{
+                width: 100px;
+                height: 4px;
+                border-radius: 2px;
+                bottom: -2.2rem;
+            }
+            &::after{
+                position: relative;
+                width: 100%;
+                left: 0;
+                height: 4px;
+                border-radius: 2px;
+                bottom: -2.2rem;
+            }
+        }
+        .h2_sec{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .c-fukidashi{
+            top: -3rem;
+            left: 2.4rem;
+        }
+    }
+
 }

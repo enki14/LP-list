@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.0/swiper-bundle.min.css">
     <link rel="shortcut icon" href="<?php 
-        if(is_single(184)):
+        if(is_single(546)):
+            echo esc_url(get_template_directory_uri() .'/images/rental-server/favicon_rental.svg');
+        elseif(is_single(184)):
             echo esc_url(get_template_directory_uri() .'/images/cosmetics/l-header__logo--fav.png'); 
         elseif(is_single('lptento-series') || is_single('lp-onepole') || is_single('lp-solo') || is_single('lp-tworoom') || is_single('corporate') || 
         is_singular('event_info') || is_singular('corporation') || is_singular('compliance')):
@@ -38,6 +40,8 @@
         elseif(is_single(184)):
             get_template_part('templates/header/header', 'cosmetics');
         elseif(is_single(212)):
-            get_template_part('templates/header/header', 'tento');            
+            get_template_part('templates/header/header', 'tento');      
+        elseif(is_single(546)):
+            get_template_part('templates/header/header', 'rental');      
         endif; 
     ?>

@@ -56,6 +56,19 @@ $pro_bp: (
     }
 }
 
+// rental-serverのブレークポイント
+$rental_bp: (
+    sps: 'all and (max-width: 430px)',
+    sp: 'all and (max-width: 744px)',
+    tab: 'all and (max-width: 1024px)'
+);
+
+@mixin mqr($bp){
+    @media #{map-get($rental_bp, $bp)} {
+        @content;
+    }
+}
+
 
 @mixin clearfix{
     &::after{

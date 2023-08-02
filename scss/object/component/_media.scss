@@ -262,6 +262,148 @@
     }
 }
 
+.postid-546{
+    .c-navLogo{
+        width: 33.3%;
+        a{
+            img{
+                width: 183px;
+                height: 42px;
+            }
+        }
+    } 
+    
+    .c-overDesc{
+        width: 100%;
+        position: absolute;
+        top: 17px;
+        height: 217px;
+        img{
+            position: absolute;
+            width: calc(100% + 90px);
+            left: -90px;
+            object-fit: cover;
+        }
+    }
+    
+    .c-featDesc{
+        width: 100%;
+        height: 278px;
+        position: relative;
+        img{
+            position: absolute;
+            width: calc(100% + 125px);
+            height: 254.5px;
+            left: -125px;
+            object-fit: cover;
+            top: 2.4rem;
+        }
+    }
+    
+    .c-leftImg{
+        width: 300px;
+        height: 228px;
+    }
+    
+    .c-click{
+        width: 80px;
+        height: 60px;
+    }
+    
+    .c-spWoman{
+        width: 60px;
+        height: 86px;
+    }
+    
+    .c-menWoman{
+        width: 120px;
+        height: 90px;
+    }
+    
+    .c-pay{
+        width: 149px;
+        height: 75px;
+    }
+    
+    .c-gatsPortz{
+        width: 117px;
+        height: 107px;
+    }
+    
+    
+    
+    .c-logo{
+        display: block;
+        padding-top: 1.6rem;
+        margin-bottom: 6.4rem;
+        img{
+            width: 100%;
+            height: 46px;
+            object-fit: cover;
+        }
+    }
+    
+    .c-item_1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+        .twitter{
+            width: 24px;
+            height: 19.5px;
+        }
+    }
+    .c-item_2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6rem;
+        margin-bottom: 2rem;
+        .youtube{
+            width: 24px;
+            height: 16.8px;
+        }
+        .facebook{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .c-item_3{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3.2rem;
+        .line{
+            width: 24px;
+            height: 23px;
+        }
+        .linkedin{
+            width: 22px;
+            height: 22px;
+        }
+    }
+    
+    .c-rental{
+        width: 118px;
+        height: 24px;
+        object-fit: contain;
+    }
+    .c-vps{
+        width: 40px;
+        height: 24px;
+        object-fit: contain;
+    
+    }
+    .c-heiper{
+        width: 115px;
+        height: 24px;
+        object-fit: contain;
+    }
+    .c-gaming{
+        width: 150px;
+        height: 24px;
+        object-fit: contain;
+    }
+}
 
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/ 
@@ -295,6 +437,43 @@
             }
         }
     }
+}
+
+@include mixin.mqr(tab){
+    .postid-546{
+        .c-overDesc{
+            position: relative;
+            margin-top: 8rem;
+            padding-bottom: 1.6rem;
+            height: auto;
+            img{
+                position: relative;
+                width: 100%;
+                height: auto;
+                left: 0;
+                right: 0;
+                margin: auto;
+                aspect-ratio: 712/325;
+            }
+        } 
+        .c-featDesc{
+            height: auto;
+            padding-bottom: 2.4rem;
+            img{
+                position: relative;
+                width: 88.5%;
+                height: auto;
+                left: 0;
+                object-fit: contain;
+                aspect-ratio: 852/253;
+            }
+        }
+        .c-logo{
+            margin-bottom: 0;
+    
+        }
+    }
+
 }
 
 
@@ -370,6 +549,79 @@
             img,
             small{
                 width: 100%;
+            }
+        }
+    }
+}
+
+@include mixin.mqr(sp){
+    .postid-546{
+        .c-navLogo{
+            width: 27.5%;
+            a img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .c-overDesc{
+            margin-top: 5rem;
+            img{
+                aspect-ratio: auto;
+                width: 106.8%;
+                left: -6.8%;
+                right: auto;
+            }
+        } 
+    
+    
+        .c-featDesc{
+            margin-top: 6.4rem;
+            img{
+                aspect-ratio: auto;
+                width: 92.7%;
+            }
+        }
+    
+        .c-rental{
+            width: 103px;
+            height: 21px;
+        }
+        .c-vps{
+            width: 35px;
+            height: 21px;
+        }
+        .c-heiper{
+            width: 101px;
+            height: 21px;
+        }
+        .c-gaming{
+            width: 131px;
+            height: 21px;
+        }
+        .c-logo{
+            width: 255px;
+            img{
+                height: auto;
+            }
+        }
+    }
+
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sps) ********************/ 
+/***************************************************************/
+@include mixin.mqr(sps){
+    .postid-546{
+        .c-navLogo{
+            width: 42.6%;
+        }
+        .c-logo{
+            width: 100%;
+            text-align: center;
+            img{
+                width: 70%;
             }
         }
     }

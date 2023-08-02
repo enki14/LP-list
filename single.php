@@ -1,6 +1,8 @@
 <?php get_header() ?>
     <?php 
-        if(is_single('cosmetics')):
+        if(is_single('rental-server')):
+            get_template_part('templates/post/single', 'rental');
+        elseif(is_single('cosmetics')):
             get_template_part('templates/post/single', 'cosmetics');
         elseif(is_single('lptento-series')):
             get_template_part('templates/post/single', 'tento');   

@@ -866,6 +866,75 @@
 }
 
 
+.postid-546{
+    .l-overview{
+        padding: 97px 0 80px;
+        &__inner{
+            margin: 0 auto;
+            width: 996px;
+        }
+    }
+    
+    .l-feature{
+        padding: 67px 0 120px;
+        &__inner{
+            margin: 0 auto;
+            width: 640px;
+        }
+    }
+    
+    .l-apply{
+        padding: 6rem 0;
+        background: base.$lightBlue;
+        &__inner{
+            margin: 0 auto;
+            width: 615px;
+        }
+    }
+    
+    .l-comparison{
+        padding: 97px 0 80px;
+        &__inner{
+            margin: 0 auto;
+            width: 954px;
+        }
+    }
+    
+    .l-flow{
+        position: relative;
+        padding: 60px 0 120px;
+        &::after{
+            @include mixin.background_url('rental-server/pc/l-flow_bg.png', 100%, 100%);
+            position: absolute;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+        &__inner{
+            margin: 0 auto;
+            width: 790px;
+        }
+    }
+    
+    .l-easy{
+        padding: 80px 0;
+        &__inner{
+            margin: 0 auto;
+            width: 960px;
+        }
+    }
+    
+    .l-faq{
+        padding: 44px 0 144px;
+        &__inner{
+            margin: 0 auto;
+            width: 860px;
+        }
+    }
+}
+
+
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/ 
 /***************************************************************/
@@ -934,6 +1003,48 @@
             }
         }
     }
+}
+
+@include mixin.mqr(tab){
+    .postid-546{
+        .l-overview{
+            padding: 74px 0 60px;
+            &__inner{
+                width: 100%;
+            }
+        }
+    
+        .l-feature{
+            padding: 43px 0 100px;
+            &__inner{
+                width: 94%;
+            }
+        }
+        .l-comparison{
+            padding: 74px 0 60px;
+            &__inner{
+                width: 84.9%;
+            }
+        }
+        .l-flow{
+            &__inner{
+                width: 77.1%;
+            }
+        }
+        .l-easy{
+            padding: 60px 0;
+            &__inner{
+                width: 93.8%;
+            }
+        }
+        .l-faq{
+            padding-top: 24px;
+            &__inner{
+                width: 83.9%;
+            }
+        }
+    }
+
 }
 
 
@@ -1181,6 +1292,30 @@
     }
 }
 
+@include mixin.mqr(sp){
+    .postid-546{
+        .l-overview{
+            padding: 72px 0 60px;
+        }
+        .l-apply__inner{
+            width: 87.2%;
+        }
+        .l-comparison__inner{
+            width: 94.3%;
+        }
+        .l-flow__inner{
+            width: 93.5%;
+        }
+        .l-faq__inner{
+            width: 93.5%;
+        }
+        #footerInner{
+            gap: 4rem;
+            margin-bottom: 4.8rem;
+        }
+    }
+
+}
 
 /***************************************************************/
 /*********************** メディアクエリ(sp_s) ********************/ 

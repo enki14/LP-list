@@ -16,6 +16,10 @@ $wp_rewrite->flush_rules();
     function google_fonts_add() {
         wp_register_style( 'noteSerif', 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
         wp_enqueue_style( 'noteSerif');
+        wp_register_style( 'noteSans', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        wp_enqueue_style( 'noteSans');
+        wp_register_style( 'pollerOne', 'https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+        wp_enqueue_style( 'pollerOne');
     }
     add_action( 'wp_enqueue_scripts', 'google_fonts_add' );
 

@@ -84,6 +84,21 @@
     }
 }
 
+.postid-546{
+    .l-footer{
+        background: #EEEEEE;
+        padding-top: 6.4rem;
+        &__inner{
+            display: flex;
+            justify-content: center;
+            gap: 6rem;
+            flex-wrap: wrap;
+            margin-bottom: 6rem;
+            padding: 0 2rem;
+        }
+    }
+}
+
 /***************************************************************/
 /*********************** メディアクエリ(sp) ********************/ 
 /***************************************************************/

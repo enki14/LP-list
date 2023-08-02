@@ -306,6 +306,170 @@
     }
 }
 
+.postid-546{
+    .p-hArticle{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 772px;
+        text-align: center;
+    
+    
+    }
+    
+    .p-headOver{
+        position: relative;
+        width: 806px;
+        margin: 0 auto;
+        text-align: center;    
+        height: 234px;
+    }
+    .p-headFeature{
+        text-align: center;
+        width: 100%;
+    }
+    .p-headComp{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 11.2rem;
+    }
+    .p-headFlow{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    .p-headEasy{
+        width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 6.4rem;
+        p{
+            margin-top: 6rem;
+            line-height: 180%;
+        }
+    }
+    .p-headFaq{
+        position: relative;
+        display: flex;
+        // justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 3.2rem;
+        &::before{
+            content: '';
+            width: 2px;
+            height: 106px;
+            background: #000;
+            transform: rotate(-40deg);
+            transform-origin: 0% 0%;
+            margin-right: 10rem;
+            margin-top: 5rem;
+    
+        }
+        &::after{
+            content: '';
+            background: #000;
+            width: 2px;
+            height: 106px;
+            transform: rotate(40deg);
+            transform-origin: 0% 0%;
+            margin-left: 10rem;
+            margin-top: 5rem;
+        }
+    
+    }
+    
+    
+    .p-comparison{
+        &__beside{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8rem;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+        &__vertical{
+            display: block;
+        }
+        &__vertical:nth-child(2){
+            margin-bottom: 8rem;
+            .chart_1{
+                width: 776px;
+                height: 549px;
+                margin: 0 auto;
+            }
+    
+        }
+        &__vertical:nth-child(3){
+            .chart_2{
+                width: 870x;
+                height: 535px;
+                margin: 0 auto;
+            }
+        }
+    
+    }
+    
+    .p-flow{
+        &__single{
+            padding-top: 9.4rem;
+            position: relative;
+            &:not(:last-of-type){
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
+    
+    .p-card{
+        width: 293px;
+        img{
+            width: 100%;
+            height: 180px;
+        }
+        .card_text{
+            height: 250px;
+            padding: 2.4rem;
+            border-left: 2px solid base.$mosBlue;
+            border-right: 2px solid base.$mosBlue;
+            border-bottom: 2px solid base.$mosBlue;
+            p{
+                font-weight: 400;
+                line-height: 28.8px;
+            }
+        }
+    }
+    
+    .p-faq{
+        // overflow-y: auto;
+        &__single{
+            margin: auto;
+            &:not(:last-of-type){
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    .active .c-question .c-lamp::before{
+        background: base.$pink_r;
+        transition: .5s;
+    }
+    .active .c-anser{
+        height: auto;
+        padding: 48px 60px 40px 40px;
+        // transition: .5s;
+    }
+    
+    
+    
+    .p-footer-apply{
+        margin: 0 auto 6rem;
+        width: 58.2%;
+    }
+    
+}
 
 /***************************************************************/
 /*********************** メディアクエリ(tab) ********************/ 
@@ -355,6 +519,56 @@
     
 }
 
+@include mixin.mqr(tab){
+    .postid-546{
+        .p-hArticle{
+            width: 579px;
+            top: 55%;
+        }
+    
+        .p-headOver{
+            width: 69.5%;
+            height: auto;
+        }
+    
+        .p-comparison{
+            &__beside{
+                width: 80.8%;
+                margin: 0 auto 8rem;
+            }
+            &__vertical:nth-child(2){
+                width: 89.1%;
+                margin: 0 auto 8rem;
+                .chart_1{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+            &__vertical:nth-child(3){
+                width: 100%;
+                .chart_2{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    
+        .p-flow__single{
+            padding-top: 13.5%;
+        }
+    
+        .p-headEasy{
+            width: 93.7%;
+        }
+    
+        .p-footer-apply{
+            width: 69.8%;
+        }
+    }
+
+}
 
 
 
@@ -529,9 +743,56 @@
     }
 }
 
+@include mixin.mqr(sp){
+    .postid-546{
+        .p-hArticle{
+            width: 100%;
+            top: 57%;
+        }
+        .p-headOver{
+            width: 87.9%;
+        }
+        .p-comparison__beside{
+            width: 87.5%;
+            img{
+                width: 65.1%;
+                height: auto;
+            }
+        }
+        .p-comparison__vertical:nth-child(2),
+        .p-comparison__vertical:nth-child(3){
+            width: 100%;
+            h3 img{
+                width: 79%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        .p-headEasy{
+            p{
+                font-size: 1.4rem;        
+            }
+        }
+    
+        .p-card{
+            width: 273px;
+            img{
+                height: auto;
+                object-fit: cover;
+            }
+            .card_text{
+                padding: 2.2rem;
+            }
+        }
+        .p-footer-apply{
+            width: 67.7%;
+        }
+    }
+
+}
 
 /***************************************************************/
-/*********************** メディアクエリ(sp_s) ********************/ 
+/*********************** メディアクエリ(sp_s)(sps) ********************/ 
 /***************************************************************/
 @include mixin.mqp(sp_s){
     .single-lp-production{
@@ -567,4 +828,52 @@
         }
 
     }
+}
+
+@include mixin.mqr(sps){
+    .postid-546{
+        .p-hArticle{
+            top: 57%;
+        }
+        .p-comparison__beside{
+            width: 100%;
+            .ttlDesc_beside h3{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            } 
+        }
+        .p-comparison__vertical:nth-child(2),
+        .p-comparison__vertical:nth-child(3){
+            width: 100%;
+            h3 img{
+                width: 100%;
+            }
+        }
+        .p-headFaq{
+            &::before{
+                margin-right: 5rem;
+                transform: rotate(-30deg);
+            }
+            &::after{
+                margin-left: 5rem;
+                transform: rotate(30deg);
+            }
+        }
+        .active .c-anser{
+            height: auto;
+            padding: 48px 32px 28px 20px;
+        }
+        .p-card .card_text{
+            height: auto;
+            p{
+                font-size: 1.4rem;
+            }    
+        }
+        .p-footer-apply{
+            width: 100%;
+        }
+    }
+
 }

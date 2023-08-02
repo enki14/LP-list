@@ -28,7 +28,9 @@
         elseif(is_single(184)):
             get_template_part('templates/footer/footer', 'cosmetics');
         elseif(is_single(212)):
-            get_template_part('templates/footer/footer', 'tento');    
+            get_template_part('templates/footer/footer', 'tento');   
+        elseif(is_single(546)):
+            get_template_part('templates/footer/footer', 'rental'); 
         endif; 
     ?>
     <script src="//unpkg.com/swiper@8.4.0/swiper-bundle.min.js"></script>
@@ -36,6 +38,8 @@
         <script src="<?php echo esc_url(get_template_directory_uri() . '/js/main.js'); ?>" type="text/javascript" defer></script>
     <?php elseif(is_single(212)): ?>
         <script src="<?php echo esc_url(get_template_directory_uri() . '/js/tento.js'); ?>" type="text/javascript" defer></script>    
+    <?php elseif(is_single(546)): ?>
+        <script src="<?php echo esc_url(get_template_directory_uri() . '/js/rental.js'); ?>" type="text/javascript" defer></script>
     <?php elseif(is_front_page() || is_home()): ?>
         <script src="<?php echo esc_url(get_template_directory_uri() . '/js/topPage.js'); ?>" type="text/javascript" defer></script>
     <?php endif; ?>

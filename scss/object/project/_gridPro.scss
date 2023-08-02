@@ -1,0 +1,302 @@
+@use "../../foundation/mixin";
+@use "../../foundation/base";
+
+.postid-546{
+    .p-btnArea{
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .footerBtn{
+        gap: 0;
+        // 左右のpaddingを少なくした分space-araoundの両端の余白で調整
+        padding: 40px 16px;
+        display: flex;
+        justify-content: center;
+        background: base.$lightBlue;
+        border: 2px solid base.$mosBlue;
+        flex-wrap: wrap;
+        gap: 40px 96px;
+        .p-btnArea__single{
+            text-align: center;
+        }
+    
+    }
+    
+    .headerBtn{
+        position: relative;
+        // ↓↓↓ 共存するp-btnAreaでdisplay:flexを指定できないのための処置
+        display: flex;
+        gap: 60px;
+        width: 640px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    
+    .contentBtn{
+        display: block;
+        .p-btnArea__single{
+            text-align: center;
+        }
+        .p-btnArea__single:nth-child(1){
+            position: relative;
+            &::before{
+                position: absolute;
+                @include mixin.background_url('rental-server/pc/cherryBlossoms-1.png', 100px, 78px);
+                background-size: cover;
+                left: 0;
+                top: -8px;
+    
+            }
+            &::after{
+                position: absolute;
+                @include mixin.background_url('rental-server/pc/cherryBlossoms-2.png', 100px, 75px);
+                background-size: cover;
+                right: 0;
+                bottom: -3rem;
+            }
+        }
+    }
+    
+    .p-overview{
+    
+        &__table{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6rem;
+            width: 100%;
+            font-size: 1.4rem;
+            table{
+                width: 240px;
+                border-radius: 10px;
+                border-collapse: separate;
+                border-spacing: 0;
+                thead tr th{
+                    text-align: center;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    padding: 0;
+                    img{
+                        padding: 24px 0px 32px;
+                        width: 160px;
+                        height: 180px;
+                        object-fit: cover;
+        
+                    }
+                }
+                tbody{
+                    border: 1px solid base.$gray;
+                } tr{
+                    th{
+                        width: 50%;
+                        padding: 16px 0 16px 10px;
+                        text-align: left;
+                        border-bottom: 1px solid base.$gray;
+                        border-left: 1px solid base.$gray;
+                    }
+                    .c-td{
+                        position: relative;
+                        width: 50%;
+                        padding: 14px 0 14px 10px;
+                        text-align: left;
+                        border-bottom: 1px solid base.$gray;
+                        border-right: 1px solid base.$gray;
+                        strong{
+                            font-size: base.$font18;
+                            font-weight: 700;
+                            line-height: 1;
+                        }
+                        .blank_line{
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 12px;
+                            height: 2px;
+                            background: #333;
+                            left: 1.4rem;
+                        }
+                    }
+                } 
+            } 
+    
+            .lite thead tr th{
+                background: base.$lightBlue;
+                border-left: 1px solid #8BB9B9;
+                border-right: 1px solid #8BB9B9;
+                border: 1px solid #8BB9B9;
+            } 
+            .basic thead tr th{
+                background: base.$mosBlue;
+                border-left: 1px solid #5F9292;
+                border-right: 1px solid #5F9292;
+                border: 1px solid #5F9292;
+            } 
+            .standard thead tr th{
+                background: base.$yellow;
+                border-left: 1px solid #B4B648;
+                border-right: 1px solid #B4B648;
+                border: 1px solid #B4B648;
+            } 
+            .premium thead tr th{
+                background: base.$pink_r;
+                border-left: 1px solid #C68F9C;
+                border-right: 1px solid #C68F9C;
+                border: 1px solid #C68F9C;
+            } 
+        }
+    }
+    
+    
+    .p-feature{
+        padding-top: 6rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 6rem 4rem;
+        img{
+            width: 300px;
+        }
+    }
+    
+    .p-columns{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6.4rem 4rem;
+    }
+    
+    .p-logoArea{
+        display: block;
+        width: 255px;
+        padding-bottom: 4rem;
+        &__sns{
+            display: block;
+            width: 108px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(tab) ********************/ 
+/***************************************************************/
+@include mixin.mqr(tab){
+    .postid-546{
+        .headerBtn{
+            width: 517px;
+            gap: 2.4rem;
+        }
+        .p-overview__table{
+            width: 94.7%;
+            gap: 60px 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 6rem auto 0;
+        }
+    
+        .p-feature{
+            width: 77.1%;
+            margin: 0 auto;
+            justify-content: center;
+        }
+    
+        .p-logoArea{
+            display: flex;
+            gap: 6.4rem;
+            justify-content: center;
+            width: auto;
+            padding-bottom: 0;
+        }
+    
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sp) ********************/ 
+/***************************************************************/
+@include mixin.mqr(sp){
+    .postid-546{
+        .headerBtn{
+            width: 94.3%;
+            justify-content: center;
+        }
+    
+        .p-overview__table table tbody tr{
+            th{
+                line-height: 1.4rem;
+            }
+            td{
+                line-height: 1.8rem;
+            }
+        }
+    
+        .p-feature{
+            width: 81.8%;
+            img{
+                width: 266px;
+            }
+        }
+    
+        .contentBtn{
+            .p-btnArea__single{
+                &:nth-child(1){
+                    margin-bottom: 5.4rem;
+                    &::before{
+                        width: 70px;
+                        height: 54.4px;
+                        left: 8.7%;
+                    }
+                    &::after{
+                        width: 70px;
+                        height: 52.5px;
+                        right: 10.2%;
+                    }
+                }
+            }
+        
+        }
+    
+        .p-columns{
+            gap: 6.4rem
+        }
+    
+        .p-logoArea{
+            flex-wrap: wrap;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+/***************************************************************/
+/*********************** メディアクエリ(sps) ********************/ 
+/***************************************************************/
+@include mixin.mqr(sps){
+    .postid-546{
+        .headerBtn{
+            position: relative;
+            gap: 2rem;
+            flex-wrap: wrap;
+    
+        }
+        .p-feature img{
+            width: 81%;
+        }
+        #contentBtn_1,
+        #contentBtn_2{
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+        .contentBtn .p-btnArea__single:nth-child(1){
+            margin-bottom: 4rem;
+        }
+    }
+}
