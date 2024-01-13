@@ -19,15 +19,25 @@
             <a href="#" class="c-logo"><img src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/logoFooter.png'); ?>" alt="ロゴ"></a>
             <div class="p-logoArea__sns">
                 <div class="c-item_1">
-                    <img class="twitter" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/twitter.svg'); ?>" alt="ツイッター">
+                    <a href="https://twitter.com/">
+                        <img class="twitter" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/twitter.svg'); ?>" alt="ツイッター">
+                    </a>
                 </div>
                 <div class="c-item_2">
-                    <img class="youtube" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/youtube.svg'); ?>" alt="ユーチューブ">
-                    <img class="facebook" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/facebook.svg'); ?>" alt="フェースブック">    
+                    <a href="https://www.youtube.com/">
+                        <img class="youtube" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/youtube.svg'); ?>" alt="ユーチューブ">
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img class="facebook" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/facebook.svg'); ?>" alt="フェースブック">
+                    </a>
                 </div>
                 <div class="c-item_3">
-                    <img class="line" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/line.svg'); ?>" alt="ライン">
-                    <img class="linkedin" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/linkedin.svg'); ?>" alt="リンクトイン">                            
+                    <a href="https://line.me/ja/">
+                        <img class="line" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/line.svg'); ?>" alt="ライン">
+                    </a>
+                    <a href="https://www.linkedin.com/">
+                        <img class="linkedin" src="<?php echo esc_url(get_template_directory_uri() . '/images/rental-server/pc/linkedin.svg'); ?>" alt="リンクトイン">                            
+                    </a>
                 </div>
             </div>
         </div>

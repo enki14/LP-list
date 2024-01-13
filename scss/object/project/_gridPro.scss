@@ -3,7 +3,7 @@
 
 .postid-546{
     .p-btnArea{
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
         gap: 20px;
     }
@@ -283,9 +283,12 @@
             flex-wrap: wrap;
     
         }
-        .p-feature img{
-            width: 81%;
-        }
+        .p-feature{
+            gap: 4rem;
+            img{
+                width: 81%;
+            }
+        } 
         #contentBtn_1,
         #contentBtn_2{
             &::before{
@@ -297,6 +300,9 @@
         }
         .contentBtn .p-btnArea__single:nth-child(1){
             margin-bottom: 4rem;
+        }
+        .p-logoArea{
+            gap:4rem;
         }
     }
 }

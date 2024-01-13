@@ -6,6 +6,7 @@
             'post_type' => 'lp-production',
             'posts_per_page' => '-1'
         );
+        $counter = 0;
 
         $pro = new WP_Query($args);
         if($pro->have_posts()): while($pro->have_posts()): $pro->the_post(); $counter++;

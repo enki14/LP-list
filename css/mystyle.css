@@ -587,7 +587,6 @@ html {
 }
 .postid-546 h2 {
   font-size: clamp(2.4rem, 1.849rem + 1.71875vw, 4.2rem);
-  line-height: 1;
   text-align: center;
 }
 .postid-546 p,
@@ -3358,7 +3357,7 @@ html {
   margin-bottom: 6.4rem;
 }
 .postid-546 .c-logo img {
-  width: 100%;
+  width: 255px;
   height: 46px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -4261,7 +4260,7 @@ html {
   display: inline-block;
   color: #fff;
   padding: 16px 40px 20px;
-  text-shadow: 1px 1px 0 #bdbdbd;
+  text-shadow: 1px 1px 0 #000;
   background: #E7EA5C;
   outline: 1px solid #B4B648;
   outline-offset: -1px;
@@ -6707,9 +6706,9 @@ html {
 }
 .postid-546 .p-btnArea {
   -webkit-box-align: end;
-  -webkit-align-items: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -7007,6 +7006,9 @@ html {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
+  .postid-546 .p-feature {
+    gap: 4rem;
+  }
   .postid-546 .p-feature img {
     width: 81%;
   }
@@ -7020,6 +7022,9 @@ html {
   }
   .postid-546 .contentBtn .p-btnArea__single:nth-child(1) {
     margin-bottom: 4rem;
+  }
+  .postid-546 .p-logoArea {
+    gap: 4rem;
   }
 }
 .postid-184 .p-cContent {

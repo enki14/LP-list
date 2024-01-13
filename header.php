@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.0/swiper-bundle.min.css">
     <link rel="shortcut icon" href="<?php 
         if(is_single(546)):
-            echo esc_url(get_template_directory_uri() .'/images/rental-server/favicon_rental.svg');
+            echo esc_url(get_template_directory_uri() .'/images/rental-server/favicon_rental.png');
         elseif(is_single(184)):
             echo esc_url(get_template_directory_uri() .'/images/cosmetics/l-header__logo--fav.png'); 
         elseif(is_single('lptento-series') || is_single('lp-onepole') || is_single('lp-solo') || is_single('lp-tworoom') || is_single('corporate') || 

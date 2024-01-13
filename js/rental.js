@@ -7,9 +7,8 @@ const shingleDown = (el) => {
     let h = el.offsetHeight; // 要素の高さを取得
     el.style.height = h + 'px';
     el.animate([ // animate(keyframes, options)
-        { height: '0px'},
-        { height: h + 'px'},
-        // { transition: 'height 0.3s ease-in-out'}
+        { height: 'auto'}, // 0pxにすると動きががたつくのでautoにする
+        { height: h + 'px'}
     ], {
         duration: 300,
     });
