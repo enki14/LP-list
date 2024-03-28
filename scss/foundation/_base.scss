@@ -72,7 +72,7 @@ html{
 
     h1{
         position: absolute;
-        top: 40%;
+        top: 36%;
         font-family: 'HGSGyoshotai','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
         // https://min-max-calculator.9elements.com/
         // こちらのサイトでremのまま計算してから推奨値のrem値を若干下げる
@@ -80,6 +80,7 @@ html{
         font-weight: 400;
         line-height: 2;
         text-align: center;
+        text-shadow: 2px 1px 1px #54585c;
         color: #fff;
         width: 100%;
 

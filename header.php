@@ -23,12 +23,12 @@
             <!-- ロゴとナビゲーションのラッパー -->
             <div class="l-header__top">
                 <!-- ロゴ -->
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="p-logo">
+                <a href="<?php echo esc_url('https://ukigumo-x.net'); ?>" class="p-logo">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/images/lp-top/pc/ukigumo-logo.png'); ?>" alt="nazucaのロゴ">
                 </a>
                 <!-- ナビゲーション -->
                 <nav class="p-nav">
-                    <p>このページの制作解説<i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                    <a href="<?php echo esc_url('https://ukigumo-x.net/production/lp%e5%88%b6%e4%bd%9c%e4%b8%80%e8%a6%a7/') ?>">このページの制作解説<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </nav>
             </div>
             <h1 class="l-header__title">ランディングページ集</h1>

@@ -10,11 +10,12 @@
     }
 
     .p-nav{
-        p{
+        a{
             color: #fff;
             font-size: clamp(1.4rem, 1rem + 0.6vw, 2rem);
             font-family: inter;
             font-weight: 600;
+            text-decoration: none;
             i{
                 margin-left: 2rem;
             }
